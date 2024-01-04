@@ -1,0 +1,35 @@
+@font-face {
+    font-weight: 100;
+    font-family: Founder;
+    src: url("../fonts/Founder-Thin-BF64d30a7d712d0.otf");
+}
+
+@font-face {
+    font-weight: 300;
+    font-family: Founder;
+    src: url("../fonts/Founder-Light-BF64d30a7d65af2.otf");
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: Founder;
+    src: url("../fonts/Founder-Regular-BF64d30a7d71317.otf");
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: Founder;
+    src: url("../fonts/Founder-Medium-BF64d30a7d700ed.otf");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: Founder;
+    src: url("../fonts/Founder-Bold-BF64d30a7d4bf9b.otf");
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: Founder;
+    src: url("../fonts/Founder-Black-BF64d30a7d61695.otf");
+}
