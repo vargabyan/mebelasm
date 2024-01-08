@@ -6,13 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Mebelasm</title>
 </head>
 <body>
 
 
 <header>
-    <section class="header container-core">
+    <section class="container-core header">
         <nav class="header_about-company">
             <ul class="header_about-company_items-wrapper">
                 <li class="header_about-company_nav-item">
@@ -69,7 +74,7 @@
         </div>
     </section>
 
-    <section class="header-mobile container-core">
+    <section class="container-core header-mobile">
         <div class="header_mobile_logo-wrapper">
             <a class="header-mobile_logo" href="/">
                 <img src="/images/Frame%202087327193%20(1).png" alt="logo">

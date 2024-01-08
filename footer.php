@@ -1,5 +1,5 @@
 <footer class="footer-wrapper">
-    <div class="footer container-core">
+    <div class="container-core footer">
         <div class="footer_menu-wrapper">
             <ul class="footer_menu_contacts">
                 <li class="footer_menu_contacts_item"><p><a href="tel:+7 343 256 83 02">+7 343 256 83 02</a>Бесплатно по всей России</p></li>
