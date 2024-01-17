@@ -2,6 +2,49 @@
 include __DIR__ . '/head.php';
 ?>
 
+<section class="container-core home-core-slider-wrapper">
+    <div class="home-core-slider_pc">
+        <div class="home-core-slider_offer">
+            <p class="home-core-slider_offer_text">
+                Скидки до 50% на диваны
+                <span>Новогодняя распродажа</span>
+            </p>
+            <a class="home-core-slider_offer_detail" href="">Подробнее</a>
+        </div>
+        <div class="swiper home-core-slider_swiper">
+            <div class="swiper-wrapper">
+                <?php for($i = 0; $i < 5; $i++) { ?>
+                    <div class="swiper-slide">
+                        <div class="home-core-slider-item">
+                            <img src="/images/40ffc326f5a1c0f4f8cb5141d439db0c.jpeg" alt="">
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+            <div class="home-core-slider_btn-and-pagination-wrapper">
+                <div class="home-core-slider_next"></div>
+                <div class="swiper-pagination"></div>
+                <div class="home-core-slider_prev"></div>
+            </div>
+        </div>
+    </div>
+    <div class="home-core-slider_mobile">
+        <?php for($i = 0; $i < 5; $i++) { ?>
+            <a class="home-core-slider_mobile_item-wrapper" href="">
+                <div class="home-core-slider_mobile_item">
+                    <div class="home-core-slider_mobile_img-wrapper">
+                        <img src="/images/40ffc326f5a1c0f4f8cb5141d439db0c.jpeg" alt="">
+                    </div>
+                    <p class="home-core-slider_mobile_text">
+                        Скидки до 50% на диваны
+                        <span>Новогодняя распродажа</span>
+                    </p>
+                </div>
+            </a>
+        <?php } ?>
+    </div>
+</section>
+
 <?php
 $categoryData = [
     ['photo' => 'images/347 копия 1.png', 'title' => 'Премиум <br> мебель'],
@@ -139,8 +182,67 @@ $catalogData = [
     </div>
 </section>
 
-<section class=" container-core">
+<?php
+$we_offer = [
+    ['title' => 'Гарантия до 18 месяцев', 'image' => '/images/56a332892a2fee4a1bc8b60acae96067.png'],
+    ['title' => 'Гибкая система <br> скидок', 'image' => '/images/56a332892a2fee4a1bc8b60acae96067.png'],
+    ['title' => 'Собственное <br> производство', 'image' => '/images/56a332892a2fee4a1bc8b60acae96067.png'],
+    ['title' => 'Мебель по ГОСТУ', 'image' => '/images/56a332892a2fee4a1bc8b60acae96067.png'],
+]
+?>
 
+<section class="container-core we-offer">
+    <?php foreach ($we_offer as $item) { ?>
+        <div class="we-offer_item">
+            <p class="we-offer_title"><?= $item['title'] ?></p>
+            <img class="we-offer_img" src="<?= $item['image'] ?>" alt="">
+        </div>
+    <?php } ?>
+</section>
+
+
+
+<section class="container-core map-wrapper " data-map-wrapper>
+    <h1 class="map_header site-header">Наши магазины</h1>
+    <div class="map">
+        <div class="map-and-list">
+            <button class="map-and-list_item active" data-select-map><span>На карте</span></button>
+            <button class="map-and-list_item" data-select-list><span>Списком</span></button>
+        </div>
+        <div class="map_cities-and-other-wrapper">
+            <div class="map_cities_pc">
+                <a class="map_cities_pc_item active" href="">Екатеринбург</a>
+                <a class="map_cities_pc_item" href="">Нижневартовск</a>
+                <a class="map_cities_pc_item" href="">Ханты-Мансийск</a>
+                <a class="map_cities_pc_item" href="">Челябинск</a>
+            </div>
+            <label class="map_cities_mobile">
+                <select class="map_cities_mobile_items-wrapper">
+                    <option value="">Екатеринбург</option>
+                    <option value="">Нижневартовск</option>
+                    <option value="">Ханты-Мансийск</option>
+                    <option value="">Челябинск</option>
+                </select>
+            </label>
+            <div class="map_chart-wrapper active" data-content-map>
+                <img class="map_chart" src="/images/e8c4fc59baf947f5cf6229478a244422.png" alt="">
+            </div>
+            <div class="map_list-wrapper" data-content-city-list>
+                <?php for ($i = 0; $i < 12; $i++) { ?>
+                <div class="map_list_item">
+                    <img class="map_list_item_img" src="/images/Component%2041.png" alt="">
+                    <div class="map_list_item_description">
+                        <p class="map_list_item_title">ТД «РИМ», ул. Окружная 5</p>
+                        <div class="map_list_item_other">
+                            <p class="map_list_item_grade">5.0</p>
+                            <p class="map_list_item_user-selection">Выбор пользователей</p>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
 </section>
 
 <?php
