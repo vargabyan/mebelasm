@@ -60,12 +60,12 @@ $categoryData = [
 ];
 ?>
 
-<div class="container-core category-and-catalog_header-wrapper">
+<div class="container-core category-and-catalog_header-wrapper" data-page-type="home">
     <h1 class="category-and-catalog_header">Категории</h1>
     <a class="category-and-catalog_see-all" href="">Смотреть все</a>
 </div>
 
-<section class="container-core category" data-page="home">
+<section class="container-core category" data-page-type="home">
     <?php foreach ($categoryData as $item) { ?>
 
         <a class="category_item" href="">

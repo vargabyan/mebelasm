@@ -2,14 +2,32 @@
 include __DIR__ . '/head.php';
 ?>
 
-<?php
-include __DIR__ . '/breadcrumb.php';
-breadcrumb([['url' => '', 'name' => 'Малые формы']]);
-?>
-
-<section>
-
+<section class="store-card-furniture-factory">
+    <div class="store-card-furniture-factory_map-wrapper">
+        <img class="store-card-furniture-factory_map" src="images/e8c4fc59baf947f5cf6229478a244422.png" alt="">
+        <button class="store-card-furniture-factory_map_btn">Развернуть карту</button>
+    </div>
+    <div class="container-core store-card-furniture-factory_content">
+        <img class="store-card-furniture-factory_content_img" src="images/cfc26de4f5ac1d83571fd33cfdf7c351.png" alt="">
+        <div class="store-card-furniture-factory_content-text-wrapper">
+            <?php
+            include __DIR__ . '/breadcrumb.php';
+            breadcrumb([['url' => '', 'name' => 'Магазины'], ['url' => '', 'name' => '«Модуль» Мебельная фабрика']]);
+            ?>
+            <p class="store-card-furniture-factory_content-text">
+                <span>«Модуль» Мебельная фабрика</span>
+                Современная мебельная фабрика, которая предлагает широкий ассортимент мебели для создания стильного и
+                комфортного интерьера вашего дома. Мы специализируемся на производстве модульной мебели, что позволяет
+                нашим клиентам подобрать идеальный вариант для своего помещения.
+            </p>
+        </div>
+        <div class="store-card-furniture-factory_btn-wrapper">
+            <a class="store-card-furniture-factory_btn" href="tel:+7 343 256 83 02">+7 343 256 83 02</a>
+            <a class="store-card-furniture-factory_btn" href="mailto:info@mebelasm.ru">info@mebelasm.ru</a>
+        </div>
+    </div>
 </section>
+
 
 <?php
 $categoryData = [
@@ -26,12 +44,8 @@ $categoryData = [
 ];
 ?>
 
-<div class="container-core category-and-catalog_header-wrapper">
-    <h1 class="category-and-catalog_header">Категории</h1>
-    <a class="category-and-catalog_see-all" href="">Смотреть все</a>
-</div>
 
-<section class="container-core category" data-page="home">
+<section class="container-core category" data-page-type="store-card">
     <?php foreach ($categoryData as $item) { ?>
 
         <a class="category_item" href="">
@@ -40,6 +54,47 @@ $categoryData = [
         </a>
 
     <?php } ?>
+</section>
+
+
+<section class="container-core filter-catalog">
+    <ul class="filter-catalog_pc">
+        <li>
+            <button class="filter-catalog_item">Категория</button>
+        </li>
+        <li>
+            <button class="filter-catalog_item">Сначала популярные</button>
+        </li>
+        <li>
+            <button class="filter-catalog_item">Ткань</button>
+        </li>
+        <li>
+            <button class="filter-catalog_item">Цвет</button>
+        </li>
+        <li>
+            <button class="filter-catalog_item">Цена</button>
+        </li>
+        <li>
+            <button class="filter-catalog_item">Размер</button>
+        </li>
+        <li>
+            <button class="filter-catalog_item">Размер</button>
+        </li>
+        <li>
+            <button class="filter-catalog_btn-show-all">Показать все</button>
+        </li>
+    </ul>
+    <ul class="filter-catalog_mobile">
+        <li>
+            <button class="filter-catalog_item">Категория</button>
+        </li>
+        <li>
+            <button class="filter-catalog_item">По умолчанию</button>
+        </li>
+        <li>
+            <button class="filter-catalog_btn-filter"></button>
+        </li>
+    </ul>
 </section>
 
 
@@ -235,7 +290,8 @@ $question_and_answer = [
 <section class="container-core questions-and-answer show-more">
     <?php foreach ($question_and_answer as $item) { ?>
         <div class="questions-and-answer_item" data-questions-and-answer-item>
-            <div class="questions-and-answer_item-question" data-questions-and-answer-question><?= $item['question'] ?></div>
+            <div class="questions-and-answer_item-question"
+                 data-questions-and-answer-question><?= $item['question'] ?></div>
             <div class="questions-and-answer_item-answer" data-questions-and-answer-answer><?= $item['answer'] ?></div>
         </div>
     <?php } ?>
@@ -247,10 +303,14 @@ $question_and_answer = [
 <section class="container-core seo show-more" data-seo-wrapper>
     <h3 class="seo_title">Headline for seo-text</h3>
     <div class="seo-tex-wrapper">
-        <p class="seo_text close" data-seo-text>Real estate is not just houses, apartments or commercial properties. It is the place where we live,
-            work and develop. It is a space that provides comfort, security and coziness for each of us. In this section you
-            will find everything related to real estate - from renting apartments to buying mansions, from investing in real
-            estate to getting a mortgage loan. We offer you only proven and reliable options so that you can choose exactly
+        <p class="seo_text close" data-seo-text>Real estate is not just houses, apartments or commercial properties. It
+            is the place where we live,
+            work and develop. It is a space that provides comfort, security and coziness for each of us. In this section
+            you
+            will find everything related to real estate - from renting apartments to buying mansions, from investing in
+            real
+            estate to getting a mortgage loan. We offer you only proven and reliable options so that you can choose
+            exactly
             what is right for you and your family. With us your real estate will become a reality!
         </p>
         <button class="seo_btn-show-all" data-seo-btn-show-all>Show all</button>

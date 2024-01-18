@@ -1557,6 +1557,11 @@ button {
     height: 100%;
 }
 
+.card-product_thumbsSlider .swiper-slide-thumb-active {
+    outline: auto 2px #1C8354;
+    border-radius: 12px;
+}
+
 .card-product_thumbsSlider_item {
     display: flex;
     align-items: center;
@@ -2405,6 +2410,141 @@ button {
 }
 
 
+.store-card-furniture-factory {
+    display: flex;
+    flex-direction: column;
+}
+
+.store-card-furniture-factory_map-wrapper {
+    position: relative;
+}
+
+.store-card-furniture-factory_map {
+    width: 100%;
+    height: 474px;
+    object-fit: cover;
+}
+
+.store-card-furniture-factory_map_btn {
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    height: 66px;
+    padding: 20px 24px;
+    gap: 10px;
+    border-radius: 100px;
+    background: var(--Secondary-0);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+    border: none;
+    width: max-content;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+}
+
+.store-card-furniture-factory_map_btn:before {
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 18L2 22V6L9 2M9 18L16 22M9 18V2M16 22L22 18V2L16 6M16 22V6M16 6L9 2' stroke='%231C8354' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.store-card-furniture-factory_content {
+    margin-top: -180px;
+    position: relative;
+    display: flex;
+    padding: 80px 60px;
+    flex-direction: column;
+    gap: 48px;
+    border-radius: 40px;
+    background: #1C8354;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.store-card-furniture-factory_content .breadcrumb_home {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M21 21V9L12 2.25L3 9V21L21 21Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.store-card-furniture-factory_content .breadcrumb_item {
+    color: var(--Secondary-0);
+}
+
+.store-card-furniture-factory_content_img {
+    position: absolute;
+    height: 820px;
+    right: -180px;
+    bottom: -100px;
+    z-index: -1;
+}
+
+.store-card-furniture-factory_content-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 800px;
+}
+
+.store-card-furniture-factory_content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    color: var(--Secondary-0);
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.store-card-furniture-factory_content-text span {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1.12px;
+}
+
+.store-card-furniture-factory_btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.store-card-furniture-factory_btn {
+    display: flex;
+    height: 66px;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    text-decoration: none;
+
+    color: var(--Secondary-100);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+}
+
+.store-card-furniture-factory_btn:nth-child(1) {
+    background: #FAF066;
+}
+
+.store-card-furniture-factory_btn:nth-child(2) {
+    background: var(--Secondary-0);
+}
+
+
 
 
 
@@ -2800,6 +2940,33 @@ button {
         display: flex;
         flex-direction: column;
     }
+
+
+    .category[data-page-type="home"] {
+        display: flex;
+        overflow: scroll;
+    }
+
+    .category[data-page-type="home"]::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category[data-page-type="home"] .category_item {
+        overflow: unset;
+    }
+
+    .category[data-page-type="store-card"] {
+        display: flex;
+        overflow: scroll;
+    }
+
+    .category[data-page-type="store-card"]::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category[data-page-type="store-card"] .category_item {
+        overflow: unset;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2822,6 +2989,11 @@ button {
         max-height: 100%;
         width: 100%;
         height: 100%;
+    }
+
+
+    .store-card-furniture-factory_content_img {
+        display: none;
     }
 }
 
@@ -2916,24 +3088,13 @@ button {
     }
 
     .category-and-catalog_header {
-        color: var(--Secondary-100);
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 130%;
-        letter-spacing: -0.32px;
+        font-size: 18px;
+        line-height: 24px;
     }
 
     .category-and-catalog_see-all {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-
-        color: var(--2);
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 130%;
-        letter-spacing: -0.2px;
-        text-decoration: none;
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .category-and-catalog_see-all:after {
@@ -2983,10 +3144,11 @@ button {
     .category_title {
         position: unset;
 
-        width: max-content;
         font-size: 12px;
         font-weight: 400;
         line-height: 16px;
+        width: 100%;
+        text-align: center;
     }
 
     .category_title br {
@@ -3584,6 +3746,11 @@ button {
         height: 100%;
     }
 
+    .card-product_thumbsSlider .swiper-slide-thumb-active {
+        outline: auto 1px #1C8354;
+        border-radius: 4px;
+    }
+
     .card-product_thumbsSlider_item {
         width: 50px;
         height: 40px;
@@ -3791,8 +3958,8 @@ button {
     }
 
     .card-review[data-page-type="store-card"] {
-        max-width: 1760px;
-        margin-top: 168px;
+        max-width: 320px;
+        margin-top: 60px;
     }
 
     .cart-review_header {
@@ -3819,6 +3986,7 @@ button {
     }
 
     .cart-review_item-wrapper {
+        display: flex;
         flex-direction: column;
         gap: 20px;
     }
@@ -3901,20 +4069,8 @@ button {
     }
 
     .card-review_btn-show-more-review {
-        display: flex;
-        align-self: center;
-        color: #1C8354;
-        width: max-content;
-        background: unset;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-
-        text-align: center;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 130%;
-        letter-spacing: -0.48px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
 
@@ -4072,6 +4228,84 @@ button {
         font-weight: 500;
         line-height: 24px
     }
+
+
+    .store-card-furniture-factory {
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .store-card-furniture-factory_map_btn {
+        gap: 8px;
+        border-radius: 12px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .store-card-furniture-factory_content {
+        margin-top: -195px;
+        gap: 24px;
+        padding: 20px;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .store-card-furniture-factory_content-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .store-card-furniture-factory_content-text span {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .store-card-furniture-factory_btn-wrapper {
+        flex-direction: column;
+    }
+
+    .store-card-furniture-factory_btn {
+        padding: 12px 20px;
+        height: 44px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+
+    .category-and-catalog_header-wrapper[data-page-type="home"] {
+        width: 360px;
+        padding: 20px 20px 0 20px;
+        background: var(--Secondary-4);
+    }
+
+
+    .category[data-page-type="home"] {
+        margin-top: 0;
+        width: 360px;
+        padding: 0 20px 20px 20px;
+        background: var(--Secondary-4);
+    }
+
+    .category[data-page-type="home"] .category_item {
+        width: 80px;
+    }
+
+    .category[data-page-type="home"] .category_img {
+        width: 80px;
+        height: 83px;
+        border-radius: 12px;
+    }
+
+    .category[data-page-type="store-card"] .category_img {
+        width: 90px;
+        height: 90px;
+        padding: 26px 7px;
+        border-radius: 12px;
+        background: var(--Secondary-4);
+    }
+
 
 
 

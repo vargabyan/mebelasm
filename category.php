@@ -20,7 +20,7 @@ $categoryData = [
 
 <h1 class="container-core site-header">Малые формы</h1>
 
-<section class="container-core filter-category" data-page="home">
+<section class="container-core filter-category">
     <?php foreach ($categoryData as $item) { ?>
 
         <a class="filter-category_item" href="">
