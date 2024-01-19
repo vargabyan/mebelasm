@@ -62,6 +62,46 @@ window.addEventListener('load', (e) => {
 })
 
 
+new Swiper('.our-team_swiper', {
+    navigation: {
+        nextEl: '.our-team_swiper-button-next',
+        prevEl: '.our-team_swiper-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        }
+    }
+});
+
+
+new Swiper('.completed-projects-swiper', {
+    loop: true,
+    spaceBetween: 20,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+});
+
+
 document.addEventListener('click', (e) => {
     const btnAddBasket = e.target.closest('[data-catalog-item-add-basket]');
     const btnAddFavorites = e.target.closest('[data-catalog-item-add-to-favorites]');
@@ -217,5 +257,34 @@ document.addEventListener('click', (e) => {
         })
     }
 })
+
+
+document.addEventListener('click', (e) => {
+    const wrapper = e.target.closest('[data-contact-information-wrapper]')
+    const btn = e.target;
+
+    if (wrapper) {
+        const allBtn = document.querySelectorAll('[data-contact-information-btn]')
+        const contents = document.querySelectorAll('[data-contact-information-content-item]')
+
+        allBtn.forEach((elem) => {
+            if (elem === btn) {
+
+                allBtn.forEach((eachBtn, index) => {
+                    if (elem === eachBtn) {
+                        eachBtn.classList.add('active')
+                        contents[index].classList.add('active')
+                    } else {
+                        eachBtn.classList.remove('active')
+                        contents[index].classList.remove('active')
+                    }
+                })
+            }
+        })
+    }
+})
+
+
+
 
 

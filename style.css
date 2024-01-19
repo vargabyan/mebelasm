@@ -2545,6 +2545,528 @@ button {
 }
 
 
+.furniture-for-restaurants-and-cafes {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.furniture-for-restaurants-and-cafes_content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.furniture-for-restaurants-and-cafes_text {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 12px;
+
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.furniture-for-restaurants-and-cafes_text span {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -1.12px;
+}
+
+.furniture-for-restaurants-and-cafes_img {
+    height: 605px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+
+.completed-projects {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.completed-projects_header {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.8px
+}
+
+.completed-projects-slider-wrapper {
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.completed-projects-slider-wrapper .swiper-pagination {
+    display: none;
+}
+
+.completed-projects_img {
+    height: 599px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.completed-projects_content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.completed-projects_content_title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.64px;
+}
+
+.completed-projects_content_item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.completed-projects_content_item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.completed-projects_content_item_img {
+    width: 99px;
+    height: 66px;
+    object-fit: cover;
+}
+
+.completed-projects_content_item_text {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.completed-projects_content_item_text span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.our-advantages {
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
+    margin-top: 40px;
+    gap: 52px;
+}
+
+.our-advantages_header {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1.12px;
+}
+
+.our-advantages_item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
+    min-height: 725px;
+    gap: 24px;
+}
+
+.our-advantages_content {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.our-advantages_content-line-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.our-advantages_content-line {
+    width: 100%;
+    border: solid 1px var(--Secondary-10);
+}
+
+.our-advantages_content-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--Secondary-10);
+}
+
+.our-advantages_item {
+    position: relative;
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    min-height: 334px;
+}
+
+.our-advantages_item.content-img:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.38) 14.27%, rgba(0, 0, 0, 0.00) 21.59%);
+}
+
+.our-advantages_item.content-img .our-advantages_item_text {
+    color: var(--Secondary-0);
+}
+
+.our-advantages_item.content-img .our-advantages_item_text span {
+    color: var(--Secondary-0);
+}
+
+.our-advantages_item_text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1;
+
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 140%
+}
+
+.our-advantages_item_text span {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.48px
+}
+
+.our-advantages_item_img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+.order-restaurants-furniture {
+    margin-top: 48px;
+    display: flex;
+    padding: 48px;
+    gap: 48px;
+    border-radius: 40px;
+    background: rgba(22, 125, 47, 0.10);
+    overflow: hidden;
+}
+
+.order-restaurants-furniture_text-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+}
+
+.order-restaurants-furniture_title {
+    max-width: 580px;
+    width: 100%;
+
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.8px;
+}
+
+.order-restaurants-furniture_title span {
+    color: var(--2);
+}
+
+.order-restaurants-furniture_sub-title {
+    max-width: 358px;
+
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.order-restaurants-furniture_btn-wrapper {
+    display: flex;
+    position: relative;
+    max-width: 638px;
+    width: 100%;
+}
+
+.order-restaurants-furniture_btn-submit-your-application {
+    padding: 25px;
+    border-radius: 16px;
+    background: #FFE040;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 79px;
+    z-index: 1;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.48px;
+}
+
+.order-restaurants-furniture_img {
+    position: absolute;
+    width: 669px;
+    top: -370px;
+    right: -190px;
+    z-index: 0;
+}
+
+
+.our-team {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.our-team_header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.our-team_header {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.8px;
+}
+
+.our-team_btn-wrapper {
+    width: 116px;
+    display: flex;
+    gap: 20px;
+}
+
+.our-team_swiper-button-prev,
+.our-team_swiper-button-next {
+    display: block;
+    content: '';
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.our-team_swiper-button-prev.swiper-button-disabled,
+.our-team_swiper-button-next.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: context-menu;
+}
+
+.our-team_swiper-button-prev {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48' fill='none'%3E%3Ccircle cx='24' cy='24' r='23' stroke='%231C1C1C' stroke-width='2'/%3E%3Cpath d='M13.2929 23.2929C12.9024 23.6834 12.9024 24.3166 13.2929 24.7071L19.6569 31.0711C20.0474 31.4616 20.6805 31.4616 21.0711 31.0711C21.4616 30.6805 21.4616 30.0474 21.0711 29.6569L15.4142 24L21.0711 18.3431C21.4616 17.9526 21.4616 17.3195 21.0711 16.9289C20.6805 16.5384 20.0474 16.5384 19.6569 16.9289L13.2929 23.2929ZM34 23L14 23L14 25L34 25L34 23Z' fill='%23494949'/%3E%3C/svg%3E");
+}
+
+.our-team_swiper-button-next {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48' fill='none'%3E%3Ccircle cx='24' cy='24' r='23' stroke='%231C1C1C' stroke-width='2'/%3E%3Cpath d='M34.7071 23.2929C35.0976 23.6834 35.0976 24.3166 34.7071 24.7071L28.3431 31.0711C27.9526 31.4616 27.3195 31.4616 26.9289 31.0711C26.5384 30.6805 26.5384 30.0474 26.9289 29.6569L32.5858 24L26.9289 18.3431C26.5384 17.9526 26.5384 17.3195 26.9289 16.9289C27.3195 16.5384 27.9526 16.5384 28.3431 16.9289L34.7071 23.2929ZM14 23L34 23L34 25L14 25L14 23Z' fill='%23494949'/%3E%3C/svg%3E");
+}
+
+.our-team_slider-wrapper {
+
+}
+
+.our-team_swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.our-team_item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.our-team_item_img-wrapper {
+    margin-top: 65px;
+    height: 327px;
+    display: flex;
+    padding: 0 40px;
+    justify-content: center;
+    align-items: end;
+    align-self: stretch;
+    border-radius: 20px;
+    background: var(--Secondary-4, #F9F9F9);
+}
+
+.our-team_item_img {
+    max-width: 346px;
+    width: 100%;
+    height: 387px;
+    object-fit: cover;
+}
+
+.our-team_item_text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    font-size: 16px;
+    line-height: 26px
+}
+
+.our-team_item_text span {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.48px;
+}
+
+.our-team_mobile {
+    display: none;
+}
+
+
+.contact_information {
+    margin-top: 48px;
+    display: flex;
+    padding: 80px 0;
+    flex-direction: column;
+    /*align-items: center;*/
+    gap: 62px;
+}
+
+.contact_information_header {
+    text-align: center;
+
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.8px
+}
+
+.contact_information_content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.contact_information_btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--Secondary-10);
+}
+
+.contact_information_btn {
+    padding: 12px 24px;
+    border: none;
+    background: unset;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.contact_information_btn.active {
+    border-bottom: 2px solid var(--Primary-100);
+    cursor: context-menu;
+}
+
+.contact_information_content_items {
+    width: 100%;
+}
+
+.contact_information_content_item {
+    display: none;
+    flex-direction: column;
+    /*align-items: center;*/
+    gap: 32px;
+}
+
+.contact_information_content_item.active {
+    display: flex;
+}
+
+.contact_information_contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.contact_information_contacts_title {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.contact_information_contacts_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    text-decoration: none;
+    width: 100%;
+
+    color: var(--Primary-100);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.64px;
+}
+
+.contact_information_contacts_item:after {
+    display: block;
+    content: '';
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M8 3H15.1C17.3402 3 18.4603 3 19.316 3.43597C20.0686 3.81947 20.6805 4.43139 21.064 5.18404C21.5 6.03969 21.5 7.15979 21.5 9.4V16.5M6.7 21H14.8C15.9201 21 16.4802 21 16.908 20.782C17.2843 20.5903 17.5903 20.2843 17.782 19.908C18 19.4802 18 18.9201 18 17.8V9.7C18 8.57989 18 8.01984 17.782 7.59202C17.5903 7.21569 17.2843 6.90973 16.908 6.71799C16.4802 6.5 15.9201 6.5 14.8 6.5H6.7C5.5799 6.5 5.01984 6.5 4.59202 6.71799C4.21569 6.90973 3.90973 7.21569 3.71799 7.59202C3.5 8.01984 3.5 8.57989 3.5 9.7V17.8C3.5 18.9201 3.5 19.4802 3.71799 19.908C3.90973 20.2843 4.21569 20.5903 4.59202 20.782C5.01984 21 5.5799 21 6.7 21Z' stroke='%23167D2F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    cursor: pointer;
+}
+
+.contact_information_person-data-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.contact_information_person_photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    object-fit: cover;
+}
+
+.contact_information_person_name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.contact_information_person_name span {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.48px;
+}
+
+
+
+
+
+
 
 
 
@@ -2933,6 +3455,19 @@ button {
         height: 100%;
     }
 
+
+    .order-restaurants-furniture {
+        flex-wrap: wrap;
+    }
+
+    .order-restaurants-furniture_text-wrapper {
+        z-index: 2;
+    }
+
+    .order-restaurants-furniture_img {
+        top: -420px;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -2994,6 +3529,24 @@ button {
 
     .store-card-furniture-factory_content_img {
         display: none;
+    }
+
+
+    .order-restaurants-furniture_text-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .order-restaurants-furniture_btn-wrapper {
+        height: 170px;
+    }
+
+    .order-restaurants-furniture_img {
+        top: -340px;
+    }
+
+
+    .questions-and-answer {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     }
 }
 
@@ -4305,6 +4858,339 @@ button {
         border-radius: 12px;
         background: var(--Secondary-4);
     }
+
+
+    .furniture-for-restaurants-and-cafes {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .furniture-for-restaurants-and-cafes_content {
+
+    }
+
+    .furniture-for-restaurants-and-cafes_text {
+        padding: 0;
+        gap: 12px;
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .furniture-for-restaurants-and-cafes_text span {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    .furniture-for-restaurants-and-cafes_img {
+        height: 254px;
+        border-radius: 12px;
+    }
+
+
+    .our-advantages {
+        padding-top: 0;
+        margin-top: 60px;
+        gap: 52px;
+    }
+
+    .our-advantages_header {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px
+    }
+
+    .our-advantages_item-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .our-advantages_content-dot {
+        width: 4px;
+        height: 4px;
+    }
+
+    .our-advantages_item {
+        padding: 0;
+        min-height: 100%;
+    }
+
+    .our-advantages_item.content-img .our-advantages_item_text {
+        font-weight: 200;
+    }
+
+    .our-advantages_item.content-img:after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.38) 14.27%, rgba(0, 0, 0, 0.00) 43.59%);
+    }
+
+    .our-advantages_item.content-img:after {
+        border-radius: 12px;
+    }
+
+    .our-advantages_item.content-img {
+        padding: 12px;
+        height: 357px;
+    }
+
+    .our-advantages_item_text {
+        gap: 12px;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .our-advantages_item_text span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px
+    }
+
+    .our-advantages_item_img {
+        border-radius: 12px;
+    }
+
+
+    .completed-projects_header {
+        font-size: 18px;
+        line-height: 24px
+    }
+
+    .completed-projects-slider-wrapper {
+        border-radius: 12px;
+    }
+
+    .completed-projects-swiper {
+        padding-bottom: 20px !important;
+    }
+
+    .completed-projects-slider-wrapper .swiper-pagination {
+        display: block;
+    }
+
+    .completed-projects-swiper .swiper-pagination-bullet {
+        width: 4px;
+        height: 4px;
+    }
+
+    .completed-projects-swiper .swiper-pagination-bullet-active {
+        background: var(--Primary-100);
+    }
+
+    .completed-projects_img {
+        height: 228px;
+        border-radius: 12px;
+    }
+
+    .completed-projects_content_title {
+        font-size: 16px;
+        line-height: 20px
+    }
+
+
+
+    .order-restaurants-furniture {
+        margin-top: 60px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .order-restaurants-furniture_text-wrapper {
+        gap: 12px;
+    }
+
+    .order-restaurants-furniture_title {
+        font-size: 24px;
+        line-height: 32px
+    }
+
+    .order-restaurants-furniture_sub-title {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .order-restaurants-furniture_btn-wrapper {
+        max-width: 100%;
+    }
+
+    .order-restaurants-furniture_btn-submit-your-application {
+        padding: 14px 12px;
+        border-radius: 12px;
+        background: #167D2F;
+        height: 48px;
+        width: 100%;
+
+        color: var(--Secondary-0);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .order-restaurants-furniture_img {
+        top: -370px;
+        right: -273px;
+    }
+
+
+    .our-team {
+        margin-top: 60px;
+        gap: 20px;
+    }
+
+    .our-team_header {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+
+    .our-team_btn-wrapper {
+        display: none;
+    }
+
+    .our-team_slider-wrapper {
+        width: 360px;
+        margin: 0 -20px;
+    }
+
+    .our-team_swiper {
+        display: none !important;
+    }
+
+    .our-team_item {
+        width: 300px;
+    }
+
+    .our-team_item:first-child {
+        padding-left: 20px;
+    }
+
+    .our-team_item:last-child {
+        padding-left: 20px;
+    }
+
+    .our-team_item_img-wrapper {
+        margin-top: 0;
+        height: 100%;
+        width: 300px;
+        padding: 17px 12px 0 12px;
+    }
+
+    .our-team_item_img {
+        max-width: 346px;
+        width: 100%;
+        height: 387px;
+        object-fit: cover;
+    }
+
+    .our-team_item_text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .our-team_item_text span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .our-team_mobile {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+
+    .contact_information {
+        margin-top: 60px;
+        padding: 40px 0;
+        gap: 20px;
+    }
+
+    .contact_information_header {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+
+    .contact_information_content-wrapper {
+        gap: 20px;
+    }
+
+    .contact_information_btn-wrapper {
+        gap: 8px;
+        justify-content: center;
+        border-bottom: none;
+    }
+
+    .contact_information_btn {
+        padding: 8px 12px;
+        gap: 4px;
+        border-radius: 6px;
+        background: var(--Secondary-4);
+
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .contact_information_btn.active {
+        border: none;
+        background: var(--Primary-100);
+        color: var(--Secondary-0);
+    }
+
+    .contact_information_content_items {
+
+    }
+
+    .contact_information_content_item {
+        gap: 12px;
+    }
+
+    .contact_information_content_item.active {
+        display: flex;
+    }
+
+    .contact_information_contacts {
+        gap: 12px;
+    }
+
+    .contact_information_contacts_title {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .contact_information_contacts_item {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .contact_information_contacts_item:after {
+        display: none;
+    }
+
+    .contact_information_person-data-wrapper {
+        gap: 16px;
+    }
+
+    .contact_information_person_photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact_information_person_name {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .contact_information_person_name span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
 
 
 
