@@ -285,6 +285,25 @@ document.addEventListener('click', (e) => {
 })
 
 
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-job-vacancy-category-item]')
+
+    if (btn && window.innerWidth < 570) {
+        const wrapper = btn.closest('[data-job-vacancy-category-item-wrapper]')
+
+        if (wrapper) {
+            const allBtnIncludeOneWrapper = wrapper.querySelectorAll('[data-job-vacancy-category-item]')
+
+            allBtnIncludeOneWrapper.forEach((elem, index) => {
+                if (index !== 0) {
+                    elem.classList.toggle('active')
+                }
+            })
+        }
+    }
+})
+
+
 
 
 
