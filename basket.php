@@ -14,39 +14,57 @@ breadcrumb([['url' => '', 'name' => 'Корзина']]);
 
 <section class="container-core basket">
     <div class="basket_item-wrapper">
-
-        <div class="basket_item">
-            <div class="basket_item_content">
-                <div class="basket_item_img-wrapper">
-                    <img class="basket_item_img" src="images/6488721d1c97c2b22d02f93991769f85.png" alt="">
+        <?php for ($i = 0; $i < 3; $i++) { ?>
+            <div class="basket_item" data-basket-item>
+                <button class="basket_item_btn-open-modal-for-delete mobile-version" data-basket-item-btn-open-modal-for-delete></button>
+                <div class="basket_item_content">
+                    <div class="basket_item_img-wrapper">
+                        <img class="basket_item_img" src="images/6488721d1c97c2b22d02f93991769f85.png" alt="">
+                    </div>
+                    <div class="basket_item_characteristic-wrapper">
+                        <p class="basket_item_characteristic_product-name">Лазурит 5 ст большой диван</p>
+                        <p class="basket_item_characteristic_available-date">Доступно для доставки<span>до 23 января</span></p>
+                        <p class="basket_item_characteristic_color">Цвет<span style=""></span></p>
+                        <p class="basket_item_characteristic_size">Размер<span>Д 180 Ш 200 В 220</span></p>
+                        <p class="basket_item_prices mobile-version">45 000 ₽<span>60 000 ₽</span></p>
+                    </div>
+                    <div class="basket_item_quantity-wrapper">
+                        <button class="basket_item_quantity-btn" data-basket-item-quantity-btn-decrement>-</button>
+                        <p class="basket_item_quantity" data-basket-item-quantity-value>1</p>
+                        <button class="basket_item_quantity-btn" data-basket-item-quantity-btn-increment>+</button>
+                    </div>
+                    <div class="basket_item_prices-wrapper">
+                        <p class="basket_item_prices">45 000 ₽<span>60 000 ₽</span></p>
+                        <div class="basket_item_action-wrapper">
+                            <button class="basket_item_action">В избранное</button>
+                            <button class="basket_item_action">Удалить</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="basket_item_characteristic-wrapper">
-                    <p class="basket_item_characteristic_product-name">Лазурит 5 ст большой диван</p>
-                    <p class="basket_item_characteristic_available-date">Доступно для доставки<span>до 23 января</span></p>
+                <hr class="basket_item_line">
+                <p class="basket_item_characteristic_available-date mobile-version">Доступно для доставки<span>до 23 января</span></p>
+                <div class="basket_item_btn-open-hidden-content" data-basket-item-btn-open-hidden-content>Размер и цвет</div>
+                <div class="basket_item_color-wrapper-for-mobile" data-basket-item-content>
                     <p class="basket_item_characteristic_color">Цвет<span style=""></span></p>
                     <p class="basket_item_characteristic_size">Размер<span>Д 180 Ш 200 В 220</span></p>
                 </div>
-                <div class="basket_item_quantity-wrapper">
-                    <button class="basket_item_quantity-btn">-</button>
-                    <p class="basket_item_quantity">1</p>
-                    <button class="basket_item_quantity-btn">+</button>
-                </div>
-                <div class="basket_item_prices-wrapper">
-                    <p class="basket_item_prices">45 000 ₽<span>60 000 ₽</span></p>
-                    <div class="basket_item_action-wrapper">
-                        <button class="basket_item_action">В избранное</button>
-                        <button class="basket_item_action">Удалить</button>
+                <div class="basket_item_btn-open-hidden-content" data-basket-item-btn-open-hidden-content>Дополнительные услуги</div>
+                <form action="" class="basket_item_form" data-basket-item-content>
+                    <div class="basket_item_form_switch-wrapper">
+                        <label class="basket_item_form_switch"><input type="checkbox"><span class="basket_item_form_slider"></span></label>
+                        Сборка<span>+470 ₽</span>
                     </div>
-                </div>
+                    <div class="basket_item_form_switch-wrapper">
+                        <label class="basket_item_form_switch"><input type="checkbox" checked><span class="basket_item_form_slider"></span></label>
+                        Погрузка / разгрузка<span>+2 000 ₽</span>
+                    </div>
+                    <div class="basket_item_form_file-wrapper">
+                        <label class="basket_item_form_file"><input type="file"></label>
+                        Комплектующие
+                    </div>
+                </form>
             </div>
-            <hr class="basket_item_line">
-            <form action="" class="basket_item_form">
-                <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
-                <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
-                <label><input type="file"><span></span></label>
-            </form>
-        </div>
-
+        <?php } ?>
     </div>
     <div class="basket_pay-for-it">
         <div class="basket_pay-for-it_additionally-wrapper">
@@ -60,6 +78,26 @@ breadcrumb([['url' => '', 'name' => 'Корзина']]);
     </div>
 </section>
 
+
+<section class="basket_modal-for-delete" data-basket-modal-for-delete>
+    <div class="basket_modal-for-delete_content">
+        <div class="basket_modal-for-delete_title-wrapper">
+            <p class="basket_modal-for-delete_title">Действия с товаром</p>
+            <button class="basket_modal-for-delete_btn-close" data-basket-modal-for-delete-btn-close></button>
+        </div>
+        <div class="basket_item_action-wrapper">
+            <button class="basket_item_action">В избранное</button>
+            <button class="basket_item_action">Удалить</button>
+        </div>
+    </div>
+</section>
+
+
+<section class="container-core basket_we-recommend_header-wrapper">
+    <h3 class="basket_we-recommend_header">Мы рекомендуем</h3>
+    <a class="basket_we-recommend_see-all" href="">Смотреть все</a>
+</section>
+
 <?php
 $catalogData = [
     ['photo' => ['images/xn2sd9oi8sg0qb15dz4we23qm16lwz1v 1.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
@@ -69,7 +107,7 @@ $catalogData = [
 ];
 ?>
 
-<section class="container-core catalog">
+<section class="container-core catalog" data-page-type="basket">
     <?php foreach ($catalogData as $item) { ?>
 
         <a class="catalog_item" href="" data-catalog-item>

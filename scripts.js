@@ -304,6 +304,65 @@ document.addEventListener('click', (e) => {
 })
 
 
+document.addEventListener('click', (e) => {
+    const btnDecrement = e.target.closest('[data-basket-item-quantity-btn-decrement]')
+    const btnIncrement = e.target.closest('[data-basket-item-quantity-btn-increment]')
+
+    if (btnDecrement) {
+        const wrapper = btnDecrement.closest('[data-basket-item]')
+        const value = wrapper.querySelector('[data-basket-item-quantity-value]')
+
+        if (+value.textContent > 1) {
+            value.textContent = +value.textContent - 1
+        }
+    }
+    if (btnIncrement) {
+        const wrapper = btnIncrement.closest('[data-basket-item]')
+        const value = wrapper.querySelector('[data-basket-item-quantity-value]')
+
+        if (+value.textContent >=1) {
+            value.textContent = +value.textContent + 1
+        }
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-basket-item-btn-open-hidden-content]')
+
+    if (btn && window.innerWidth < 768) {
+        const wrapper = btn.closest('[data-basket-item]')
+        wrapper.querySelectorAll('[data-basket-item-btn-open-hidden-content]').forEach((elem, index) => {
+            if (btn === elem) {
+                const contents = wrapper.querySelectorAll('[data-basket-item-content]')
+
+                contents[index].classList.toggle('active')
+
+            }
+        })
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-basket-item-btn-open-modal-for-delete]')
+
+    if (btn) {
+        const content = document.querySelector('[data-basket-modal-for-delete]')
+
+        content.classList.add('active')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-basket-modal-for-delete-btn-close]')
+
+    if (btn) {
+        const content = document.querySelector('[data-basket-modal-for-delete]')
+
+        content.classList.remove('active')
+    }
+})
+
+
 
 
 
