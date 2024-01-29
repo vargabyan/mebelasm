@@ -343,22 +343,51 @@ document.addEventListener('click', (e) => {
 })
 
 document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-basket-item-btn-open-modal-for-delete]')
+    const btn = e.target.closest('[data-btn-open-modal-additional-for-mobile]')
 
     if (btn) {
-        const content = document.querySelector('[data-basket-modal-for-delete]')
+        const content = document.querySelector('[data-modal-additional-for-mobile]')
 
         content.classList.add('active')
     }
 })
 
 document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-basket-modal-for-delete-btn-close]')
+    const btn = e.target.closest('[data-modal-additional-for-mobile-btn-close]')
 
     if (btn) {
-        const content = document.querySelector('[data-basket-modal-for-delete]')
+        const content = document.querySelector('[data-modal-additional-for-mobile]')
 
         content.classList.remove('active')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-contacts-page_modal-for-mobile_label]')
+
+    if (btn) {
+        const content = document.querySelector('[data-modal-additional-for-mobile]')
+
+        setTimeout(() => {
+            content.classList.remove('active')
+        }, 100)
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-contacts-page_tag-wrapper] button')
+
+    if (btn) {
+        allButton = document.querySelectorAll('[data-contacts-page_tag-wrapper] button')
+        const content = document.querySelector('[data-modal-additional-for-mobile]')
+
+        allButton.forEach(elemBtn => {
+            if (elemBtn === btn) {
+                elemBtn.classList.add('active')
+            } else {
+                elemBtn.classList.remove('active')
+            }
+        })
     }
 })
 

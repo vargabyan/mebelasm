@@ -16,7 +16,7 @@ breadcrumb([['url' => '', 'name' => 'Корзина']]);
     <div class="basket_item-wrapper">
         <?php for ($i = 0; $i < 3; $i++) { ?>
             <div class="basket_item" data-basket-item>
-                <button class="basket_item_btn-open-modal-for-delete mobile-version" data-basket-item-btn-open-modal-for-delete></button>
+                <button class="basket_item_btn-open-modal-for-delete btn-ellipses mobile-version" data-btn-open-modal-additional-for-mobile></button>
                 <div class="basket_item_content">
                     <div class="basket_item_img-wrapper">
                         <img class="basket_item_img" src="images/6488721d1c97c2b22d02f93991769f85.png" alt="">
@@ -79,11 +79,11 @@ breadcrumb([['url' => '', 'name' => 'Корзина']]);
 </section>
 
 
-<section class="basket_modal-for-delete" data-basket-modal-for-delete>
-    <div class="basket_modal-for-delete_content">
-        <div class="basket_modal-for-delete_title-wrapper">
-            <p class="basket_modal-for-delete_title">Действия с товаром</p>
-            <button class="basket_modal-for-delete_btn-close" data-basket-modal-for-delete-btn-close></button>
+<section class="modal-additional-for-mobile" data-modal-additional-for-mobile>
+    <div class="modal-additional-for-mobile_content">
+        <div class="modal-additional-for-mobile_title-wrapper">
+            <p class="modal-additional-for-mobile_title">Действия с товаром</p>
+            <button class="modal-additional-for-mobile_btn-close" data-modal-additional-for-mobile-btn-close></button>
         </div>
         <div class="basket_item_action-wrapper">
             <button class="basket_item_action">В избранное</button>
