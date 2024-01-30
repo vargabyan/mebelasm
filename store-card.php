@@ -4,7 +4,8 @@ include __DIR__ . '/head.php';
 
 <section class="store-card-furniture-factory">
     <div class="store-card-furniture-factory_map-wrapper">
-        <img class="store-card-furniture-factory_map" src="images/e8c4fc59baf947f5cf6229478a244422.png" alt="">
+        <iframe class="store-card-furniture-factory_map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
+                width="100%" height="800" frameborder="0"></iframe>
         <button class="store-card-furniture-factory_map_btn">Развернуть карту</button>
     </div>
     <div class="container-core store-card-furniture-factory_content">

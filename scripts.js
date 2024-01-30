@@ -88,17 +88,25 @@ new Swiper('.our-team_swiper', {
 });
 
 
-new Swiper('.completed-projects-swiper', {
-    loop: true,
-    spaceBetween: 20,
-    pagination: {
-        el: '.swiper-pagination',
-    },
-    centeredSlides: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+new Swiper('.partners-swiper', {
+    breakpoints: {
+        320: {
+            spaceBetween: 12,
+            slidesPerView: 3.5,
+        },
+        768: {
+            spaceBetween: 20,
+            slidesPerView: 4,
+        },
+        992: {
+            spaceBetween: 30,
+            slidesPerView: 4,
+        },
+        1200: {
+            spaceBetween: 40,
+            slidesPerView: 4,
+        }
+    }
 });
 
 
@@ -378,7 +386,7 @@ document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-contacts-page_tag-wrapper] button')
 
     if (btn) {
-        allButton = document.querySelectorAll('[data-contacts-page_tag-wrapper] button')
+        const allButton = document.querySelectorAll('[data-contacts-page_tag-wrapper] button')
         const content = document.querySelector('[data-modal-additional-for-mobile]')
 
         allButton.forEach(elemBtn => {
@@ -388,6 +396,20 @@ document.addEventListener('click', (e) => {
                 elemBtn.classList.remove('active')
             }
         })
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-company-group-btn-read-more]')
+
+    if (btn) {
+        const wrapper = btn.closest('[data-company-group]')
+        const items = wrapper.querySelectorAll('[data-company-group_item]')
+
+        items.forEach(item => {
+            item.style['display'] = 'flex';
+        })
+        btn.style['display'] = 'none';
     }
 })
 
