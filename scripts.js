@@ -415,7 +415,7 @@ document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-placing-an-order-map-btn-close]')
 
     if (btn) {
-        const wrapper = btn.closest('[data-data-placing-an-order-map-btn-open-map-wrapper]')
+        const wrapper = btn.closest('[data-placing-an-order-map-btn-open-map-wrapper]')
 
         wrapper.classList.remove('active')
     }
@@ -487,6 +487,24 @@ document.addEventListener('click', (e) => {
                 }
             })
         }
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-placing-an-order-conditions-radio-container-input]:checked')
+
+    if (btn) {
+        const wrapper = btn.closest('[data-placing-an-order-conditions-item-wrapper]')
+        const allCheckboxWrapper = wrapper.querySelectorAll('[data-placing-an-order-conditions-item]')
+        const checkboxWrapper = btn.closest('[data-placing-an-order-conditions-item]')
+
+        allCheckboxWrapper.forEach( el => {
+            if (el === checkboxWrapper) {
+                el.classList.add('active')
+            } else {
+                el.classList.remove('active')
+            }
+        })
     }
 })
 

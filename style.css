@@ -5222,6 +5222,7 @@ button {
     padding: 24px;
     flex-direction: column;
     gap: 20px;
+    border: solid 2px var(--Secondary-4);
 
     border-radius: 16px;
     background: var(--Secondary-4);
@@ -5341,7 +5342,12 @@ button {
 
 .placing-an-order_conditions_radio-container input {
     position: absolute;
+    margin: 0;
     opacity: 0;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
 }
 
@@ -5355,30 +5361,14 @@ button {
     border-radius: 50%;
 }
 
-.placing-an-order_conditions_radio-container.radio-delivery:hover input ~ .placing-an-order_conditions_checkmark.checkmark-delivery {
+.placing-an-order_conditions_radio-container:hover input ~ .placing-an-order_conditions_checkmark {
     border: solid 2px var(--Primary-100);
 }
 
-.placing-an-order_conditions_radio-container.radio-delivery input:checked ~ .placing-an-order_conditions_checkmark.checkmark-delivery {
-    border: solid 2px var(--Primary-100);
-    background: var(--Primary-100);
-}
-
-.placing-an-order_conditions_radio-container.radio-payment:hover input ~ .placing-an-order_conditions_checkmark.checkmark-payment {
-    border: solid 2px var(--Primary-100);
-}
-
-.placing-an-order_conditions_radio-container.radio-payment input:checked ~ .placing-an-order_conditions_checkmark.checkmark-payment {
+.placing-an-order_conditions_radio-container input:checked ~ .placing-an-order_conditions_checkmark {
     border: solid 2px var(--Primary-100);
     background: var(--Primary-100);
 }
-
-/*.placing-an-order_conditions_checkmark:after {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    display: none;*/
-/*}*/
-
 
 .placing-an-order_goods-at-the-basket {
     display: flex;

@@ -19,12 +19,12 @@ include __DIR__ . '/head.php';
             <div class="placing-an-order_conditions">
                 <h3 class="placing-an-order_conditions_title">Условия доставки</h3>
 
-                <div class="placing-an-order_conditions_item-wrapper">
-                    <div class="placing-an-order_conditions_item active">
+                <div class="placing-an-order_conditions_item-wrapper" data-placing-an-order-conditions-item-wrapper>
+                    <div class="placing-an-order_conditions_item active" data-placing-an-order-conditions-item>
                         <div class="placing-an-order_conditions_item_radio-wrapper">
-                            <label class="placing-an-order_conditions_radio-container radio-delivery">
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="placing-an-order_conditions_checkmark checkmark-delivery"></span>
+                            <label class="placing-an-order_conditions_radio-container">
+                                <input type="radio" checked="checked" name="radio-delivery" data-placing-an-order-conditions-radio-container-input>
+                                <span class="placing-an-order_conditions_checkmark"></span>
                             </label>
                             <p class="placing-an-order_conditions_item_actions">Самовывоз<span>Сегодня</span></p>
                             <p class="placing-an-order_conditions_item_price">Бесплатно</p>
@@ -34,11 +34,11 @@ include __DIR__ . '/head.php';
                             <button type="button" class="placing-an-order_conditions_item_change-address" data-placing-an-order-map-btn-open>Изменить</button>
                         </div>
                     </div>
-                    <div class="placing-an-order_conditions_item">
+                    <div class="placing-an-order_conditions_item" data-placing-an-order-conditions-item>
                         <div class="placing-an-order_conditions_item_radio-wrapper">
-                            <label class="placing-an-order_conditions_radio-container radio-delivery">
-                                <input type="radio" name="radio">
-                                <span class="placing-an-order_conditions_checkmark checkmark-delivery"></span>
+                            <label class="placing-an-order_conditions_radio-container">
+                                <input type="radio" name="radio-delivery" data-placing-an-order-conditions-radio-container-input>
+                                <span class="placing-an-order_conditions_checkmark"></span>
                             </label>
                             <p class="placing-an-order_conditions_item_actions">Доставка<span>С 23 сентября</span></p>
                             <p class="placing-an-order_conditions_item_price"> от 750 ₽ </p>
@@ -47,7 +47,7 @@ include __DIR__ . '/head.php';
                 </div>
             </div>
 
-            <div class="map-wrapper" data-page-type="placing-an-order" data-data-placing-an-order-map-btn-open-map-wrapper>
+            <div class="map-wrapper" data-page-type="placing-an-order" data-placing-an-order-map-btn-open-map-wrapper>
                 <h3 class="map_header placing-an-order_conditions_title">Выберите магазин</h3>
                 <div class="map">
                     <div class="map_cities-and-other-wrapper">
@@ -74,21 +74,21 @@ include __DIR__ . '/head.php';
 
             <div class="placing-an-order_conditions">
                 <h3 class="placing-an-order_conditions_title">Оплата</h3>
-                <div class="placing-an-order_conditions_item-wrapper">
-                    <div class="placing-an-order_conditions_item active">
+                <div class="placing-an-order_conditions_item-wrapper" data-placing-an-order-conditions-item-wrapper>
+                    <div class="placing-an-order_conditions_item active" data-placing-an-order-conditions-item>
                         <div class="placing-an-order_conditions_item_radio-wrapper">
-                            <label class="placing-an-order_conditions_radio-container radio-payment">
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="placing-an-order_conditions_checkmark checkmark-payment"></span>
+                            <label class="placing-an-order_conditions_radio-container">
+                                <input type="radio" checked="checked" name="radio-payment" data-placing-an-order-conditions-radio-container-input>
+                                <span class="placing-an-order_conditions_checkmark"></span>
                             </label>
                             <p class="placing-an-order_conditions_item_actions">Наличные<span>При получении</span></p>
                         </div>
                     </div>
-                    <div class="placing-an-order_conditions_item">
+                    <div class="placing-an-order_conditions_item" data-placing-an-order-conditions-item>
                         <div class="placing-an-order_conditions_item_radio-wrapper">
-                            <label class="placing-an-order_conditions_radio-container radio-payment">
-                                <input type="radio" name="radio">
-                                <span class="placing-an-order_conditions_checkmark checkmark-payment"></span>
+                            <label class="placing-an-order_conditions_radio-container">
+                                <input type="radio" name="radio-payment" data-placing-an-order-conditions-radio-container-input>
+                                <span class="placing-an-order_conditions_checkmark"></span>
                             </label>
                             <p class="placing-an-order_conditions_item_actions">По карте</p>
                         </div>
