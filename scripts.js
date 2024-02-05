@@ -405,7 +405,7 @@ document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-placing-an-order-map-btn-open]')
 
     if (btn) {
-        const wrapper = document.querySelector('[data-data-placing-an-order-map-btn-open-map-wrapper]')
+        const wrapper = document.querySelector('[data-placing-an-order-map-btn-open-map-wrapper]')
 
         wrapper.classList.add('active')
     }
