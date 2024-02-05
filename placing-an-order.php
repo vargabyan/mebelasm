@@ -22,9 +22,9 @@ include __DIR__ . '/head.php';
                 <div class="placing-an-order_conditions_item-wrapper">
                     <div class="placing-an-order_conditions_item active">
                         <div class="placing-an-order_conditions_item_radio-wrapper">
-                            <label class="placing-an-order_conditions_radio-container">
+                            <label class="placing-an-order_conditions_radio-container radio-delivery">
                                 <input type="radio" checked="checked" name="radio">
-                                <span class="placing-an-order_conditions_checkmark"></span>
+                                <span class="placing-an-order_conditions_checkmark checkmark-delivery"></span>
                             </label>
                             <p class="placing-an-order_conditions_item_actions">Самовывоз<span>Сегодня</span></p>
                             <p class="placing-an-order_conditions_item_price">Бесплатно</p>
@@ -36,9 +36,9 @@ include __DIR__ . '/head.php';
                     </div>
                     <div class="placing-an-order_conditions_item">
                         <div class="placing-an-order_conditions_item_radio-wrapper">
-                            <label class="placing-an-order_conditions_radio-container">
+                            <label class="placing-an-order_conditions_radio-container radio-delivery">
                                 <input type="radio" name="radio">
-                                <span class="placing-an-order_conditions_checkmark"></span>
+                                <span class="placing-an-order_conditions_checkmark checkmark-delivery"></span>
                             </label>
                             <p class="placing-an-order_conditions_item_actions">Доставка<span>С 23 сентября</span></p>
                             <p class="placing-an-order_conditions_item_price"> от 750 ₽ </p>
@@ -77,18 +77,18 @@ include __DIR__ . '/head.php';
                 <div class="placing-an-order_conditions_item-wrapper">
                     <div class="placing-an-order_conditions_item active">
                         <div class="placing-an-order_conditions_item_radio-wrapper">
-                            <label class="placing-an-order_conditions_radio-container">
+                            <label class="placing-an-order_conditions_radio-container radio-payment">
                                 <input type="radio" checked="checked" name="radio">
-                                <span class="placing-an-order_conditions_checkmark"></span>
+                                <span class="placing-an-order_conditions_checkmark checkmark-payment"></span>
                             </label>
                             <p class="placing-an-order_conditions_item_actions">Наличные<span>При получении</span></p>
                         </div>
                     </div>
                     <div class="placing-an-order_conditions_item">
                         <div class="placing-an-order_conditions_item_radio-wrapper">
-                            <label class="placing-an-order_conditions_radio-container">
+                            <label class="placing-an-order_conditions_radio-container radio-payment">
                                 <input type="radio" name="radio">
-                                <span class="placing-an-order_conditions_checkmark"></span>
+                                <span class="placing-an-order_conditions_checkmark checkmark-payment"></span>
                             </label>
                             <p class="placing-an-order_conditions_item_actions">По карте</p>
                         </div>
@@ -127,7 +127,7 @@ include __DIR__ . '/head.php';
             <hr class="placing-an-order_goods-at-the-basket_line">
             <p class="placing-an-order_total-prices">Итого<span>90 500 ₽</span></p>
             <label>
-                <input class="placing-an-order_btn-submit green-btn" type="submit" value="Оформить заказ">
+                <input class="placing-an-order_btn-submit green-btn" disabled type="submit" value="Оформить заказ">
             </label>
         </div>
     </form>

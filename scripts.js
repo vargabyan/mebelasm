@@ -19,18 +19,6 @@ new Swiper('.home-core-slider_swiper', {
 
 
 window.addEventListener('load', (e) => {
-    // const btnAddBasket = e.target.closest('[data-catalog-item-add-basket]');
-    // const btnAddFavorites = e.target.closest('[data-catalog-item-add-to-favorites]');
-    //
-    // if (btnAddBasket || btnAddFavorites) {
-    //     e.preventDefault();
-    // }
-
-    function size() {
-        console.log('+++')
-        return window.innerWidth < 570 ? "vertical" : "horizontal"
-    }
-
     const cardProductThumbsSlider = new Swiper(".card-product_thumbsSlider", {
         direction: "vertical",
         spaceBetween: 12,
@@ -294,7 +282,7 @@ document.addEventListener('click', (e) => {
 
 
 document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-job-vacancy-category-item]')
+    const btn = e.target.closest('[data-job-vacancy-category-item-first]')
 
     if (btn && window.innerWidth < 570) {
         const wrapper = btn.closest('[data-job-vacancy-category-item-wrapper]')
@@ -482,6 +470,25 @@ document.addEventListener('click', (e) => {
     }
 })
 
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-footer-menu-links-item-first]')
+
+    if (btn && window.innerWidth < 570) {
+        const wrapper = btn.closest('[data-footer-menu-links]')
+
+        if (wrapper) {
+            const allBtnIncludeOneWrapper = wrapper.querySelectorAll('[data-footer-menu-links-item]')
+
+            allBtnIncludeOneWrapper.forEach((elem, index) => {
+                if (index !== 0) {
+                    elem.classList.toggle('active')
+                }
+            })
+        }
+    }
+})
 
 
 

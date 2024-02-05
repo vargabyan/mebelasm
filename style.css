@@ -30,6 +30,7 @@
     --Main-System-14px: 14px;
     --Main-System-2px: 2px;
     --Main-System-16px: 16px;
+    --Main-System-4px: 4px;
 }
 
 body {
@@ -5354,20 +5355,29 @@ button {
     border-radius: 50%;
 }
 
-.placing-an-order_conditions_radio-container:hover input ~ .placing-an-order_conditions_checkmark {
+.placing-an-order_conditions_radio-container.radio-delivery:hover input ~ .placing-an-order_conditions_checkmark.checkmark-delivery {
     border: solid 2px var(--Primary-100);
 }
 
-.placing-an-order_conditions_radio-container input:checked ~ .placing-an-order_conditions_checkmark {
+.placing-an-order_conditions_radio-container.radio-delivery input:checked ~ .placing-an-order_conditions_checkmark.checkmark-delivery {
     border: solid 2px var(--Primary-100);
     background: var(--Primary-100);
 }
 
-.placing-an-order_conditions_checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+.placing-an-order_conditions_radio-container.radio-payment:hover input ~ .placing-an-order_conditions_checkmark.checkmark-payment {
+    border: solid 2px var(--Primary-100);
 }
+
+.placing-an-order_conditions_radio-container.radio-payment input:checked ~ .placing-an-order_conditions_checkmark.checkmark-payment {
+    border: solid 2px var(--Primary-100);
+    background: var(--Primary-100);
+}
+
+/*.placing-an-order_conditions_checkmark:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    display: none;*/
+/*}*/
 
 
 .placing-an-order_goods-at-the-basket {
@@ -5454,12 +5464,17 @@ button {
     border: none;
     width: 100%;
     cursor: pointer;
+    opacity: 0.3;
 
     color: var(--Secondary-0);
     font-size: 32px;
     font-weight: 500;
     line-height: 120%;
     letter-spacing: -0.64px;
+}
+
+.placing-an-order_btn-submit.active {
+    opacity: 1;
 }
 
 .map-wrapper[data-page-type="placing-an-order"] {
@@ -10095,6 +10110,29 @@ button {
 
     .footer_menu_links {
         gap: 20px;
+    }
+
+    .footer_menu_links_item {
+        display: none;
+        align-items: center;
+        gap: var(--Main-System-4px);
+    }
+
+    .footer_menu_links_item:first-child {
+        display: flex;
+    }
+
+    .footer_menu_links_item.active {
+        display: flex;
+    }
+
+    .footer_menu_links_item:first-child::after {
+        display: block;
+        content: '';
+        width: var(--Main-System-16px, 16px);
+        height: var(--Main-System-16px, 16px);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%231C1C1C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        cursor: pointer;
     }
 
     .footer_menu_links_item:first-child a {

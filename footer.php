@@ -7,27 +7,27 @@
                 <li class="footer_menu_contacts_item"><a href="mailto:info@mebelasm.ru">info@mebelasm.ru</a></li>
             </ul>
             <nav class="footer_menu_links-wrapper">
-                <ul class="footer_menu_links">
-                    <li class="footer_menu_links_item"><a href="">О компании</a></li>
-                    <li class="footer_menu_links_item"><a href="">Наши магазины</a></li>
-                    <li class="footer_menu_links_item"><a href="">Работа у нас</a></li>
-                    <li class="footer_menu_links_item"><a href="">История компании</a></li>
-                    <li class="footer_menu_links_item"><a href="">Партнеры</a></li>
-                    <li class="footer_menu_links_item"><a href="">Команда</a></li>
+                <ul class="footer_menu_links" data-footer-menu-links>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item-first><a href="">О компании</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Наши магазины</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Работа у нас</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">История компании</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Партнеры</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Команда</a></li>
                 </ul>
-                <ul class="footer_menu_links">
-                    <li class="footer_menu_links_item"><a href="">Мебель для бизнеса</a></li>
-                    <li class="footer_menu_links_item"><a href="">Хостелы и отели</a></li>
-                    <li class="footer_menu_links_item"><a href="">Рестораны и кафе</a></li>
-                    <li class="footer_menu_links_item"><a href="">Офисы и коворки</a></li>
+                <ul class="footer_menu_links" data-footer-menu-links>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item-first><a href="">Мебель для бизнеса</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Хостелы и отели</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Рестораны и кафе</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Офисы и коворки</a></li>
                 </ul>
-                <ul class="footer_menu_links">
-                    <li class="footer_menu_links_item"><a href="">Ассортимент</a></li>
-                    <li class="footer_menu_links_item"><a href="">Диваны</a></li>
-                    <li class="footer_menu_links_item"><a href="">Кресла</a></li>
-                    <li class="footer_menu_links_item"><a href="">Диваны</a></li>
-                    <li class="footer_menu_links_item"><a href="">Пуфики</a></li>
-                    <li class="footer_menu_links_item see-all"><a href="">Смотреть все</a></li>
+                <ul class="footer_menu_links" data-footer-menu-links>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item-first><a href="">Ассортимент</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Диваны</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Кресла</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Диваны</a></li>
+                    <li class="footer_menu_links_item" data-footer-menu-links-item><a href="">Пуфики</a></li>
+                    <li class="footer_menu_links_item see-all" data-footer-menu-links-item><a href="">Смотреть все</a></li>
                 </ul>
             </nav>
         </div>

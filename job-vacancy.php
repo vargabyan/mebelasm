@@ -71,7 +71,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
 
             <div class="job-vacancy_category">
                 <ul class="job-vacancy_category_item-wrapper" data-job-vacancy-category-item-wrapper>
-                    <li class="job-vacancy_category_item" data-job-vacancy-category-item>
+                    <li class="job-vacancy_category_item" data-job-vacancy-category-item-first>
                         Реклама и PR
                     </li>
                     <li class="job-vacancy_category_item" data-job-vacancy-category-item>
@@ -103,7 +103,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                     </li>
                 </ul>
                 <ul class="job-vacancy_category_item-wrapper" data-job-vacancy-category-item-wrapper>
-                    <li class="job-vacancy_category_item" data-job-vacancy-category-item>
+                    <li class="job-vacancy_category_item" data-job-vacancy-category-item-first>
                         Управление
                     </li>
                     <li class="job-vacancy_category_item" data-job-vacancy-category-item>
@@ -135,7 +135,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                     </li>
                 </ul>
                 <ul class="job-vacancy_category_item-wrapper" data-job-vacancy-category-item-wrapper>
-                    <li class="job-vacancy_category_item" data-job-vacancy-category-item>
+                    <li class="job-vacancy_category_item" data-job-vacancy-category-item-first>
                         Производство
                     </li>
                     <li class="job-vacancy_category_item" data-job-vacancy-category-item>
