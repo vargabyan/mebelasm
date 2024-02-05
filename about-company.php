@@ -69,7 +69,10 @@ include __DIR__ . '/head.php';
 </section>
 
 <section class="container-core map-wrapper" data-page-type="about-company" data-map-wrapper>
-    <h1 class="map_header site-header">Наши магазины</h1>
+    <div class="about-company_header-wrapper">
+        <h1 class="about-company_header">Наши магазины</h1>
+        <a class="about-company_show-all" href="">Показать все</a>
+    </div>
     <div class="map">
         <div class="map-and-list">
             <button class="map-and-list_item active" data-select-map><span>На карте</span></button>

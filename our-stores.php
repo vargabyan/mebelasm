@@ -119,10 +119,8 @@ breadcrumb([['url' => '', 'name' => 'Магазины']]);
                 </select>
             </label>
             <div class="map_chart-wrapper active" data-content-map>
-                <div class="map_chart">
-                    <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
-                            width="100%" height="800" frameborder="0"></iframe>
-                </div>
+                <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
+                        width="100%" height="800" frameborder="0"></iframe>
             </div>
             <div class="map_list-wrapper" data-content-city-list>
                 <?php for ($i = 0; $i < 12; $i++) { ?>

@@ -413,6 +413,75 @@ document.addEventListener('click', (e) => {
     }
 })
 
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-placing-an-order-map-btn-open]')
+
+    if (btn) {
+        const wrapper = document.querySelector('[data-data-placing-an-order-map-btn-open-map-wrapper]')
+
+        wrapper.classList.add('active')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-placing-an-order-map-btn-close]')
+
+    if (btn) {
+        const wrapper = btn.closest('[data-data-placing-an-order-map-btn-open-map-wrapper]')
+
+        wrapper.classList.remove('active')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-success-page-grade-wrapper]')
+
+    if (btn) {
+        const wrapper = document.querySelector('[data-help-us-become-better-modal-wrapper]')
+
+        wrapper.classList.add('active')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-help-us-become-better-modal_btn-close]')
+
+    if (btn) {
+        const wrapper = document.querySelector('[data-help-us-become-better-modal-wrapper]')
+
+        wrapper.classList.remove('active')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btnSignIN = e.target.closest('[data-btn-sign-in]')
+    const btnSignUp = e.target.closest('[data-btn-sign-up]')
+
+    if (btnSignIN) {
+        const wrapper = btnSignIN.closest('[data-sing-in-sign-up]')
+        const formSignIN = wrapper.querySelector('[data-sing-in-form]')
+        const formSignUp = wrapper.querySelector('[data-sing-up-form]')
+        const _btnSignUp = wrapper.querySelector('[data-btn-sign-up]')
+
+        formSignIN.classList.add('active')
+        formSignUp.classList.remove('active')
+        btnSignIN.classList.remove('not-active')
+        _btnSignUp.classList.add('not-active')
+
+    }
+    if (btnSignUp) {
+        const wrapper = btnSignUp.closest('[data-sing-in-sign-up]')
+        const formSignIN = wrapper.querySelector('[data-sing-in-form]')
+        const formSignUp = wrapper.querySelector('[data-sing-up-form]')
+        const _btnSignIN = wrapper.querySelector('[data-btn-sign-in]')
+
+        formSignUp.classList.add('active')
+        formSignIN.classList.remove('active')
+        btnSignUp.classList.remove('not-active')
+        _btnSignIN.classList.add('not-active')
+    }
+})
+
 
 
 
