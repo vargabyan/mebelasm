@@ -65,7 +65,12 @@
                 <li class="header_nav-panel_links_item"><a href="">Магазины</a></li>
                 <li class="header_nav-panel_links_item"><a href="">Войти</a></li>
                 <li class="header_nav-panel_links_item"><a href="">Избр.</a></li>
-                <li class="header_nav-panel_links_item"><a href="">Корзина</a></li>
+                <li class="header_nav-panel_links_item">
+                    <a class="core-basket-icon" href="">
+                        Корзина
+                        <span>2</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div class="header_sub-title-wrapper">
@@ -86,3 +91,30 @@
         </label>
     </section>
 </header>
+
+
+<section class="mobile-bottom-mini-menu">
+    <ul class="mobile-bottom-mini-menu_item-wrapper">
+        <li class="mobile-bottom-mini-menu_item">
+            <a href="">Меню</a>
+        </li>
+        <li class="mobile-bottom-mini-menu_item">
+            <a href="">Каталог</a>
+        </li>
+        <li class="mobile-bottom-mini-menu_item">
+            <a href="">Контакты</a>
+        </li>
+        <li class="mobile-bottom-mini-menu_item">
+            <a href="">Магазины</a>
+        </li>
+        <li class="mobile-bottom-mini-menu_item">
+            <a href="">Избр.</a>
+        </li>
+        <li class="mobile-bottom-mini-menu_item">
+            <a class="mobile-bottom-mini-menu_basket" href="">
+                Корзина
+                <span>2</span>
+            </a>
+        </li>
+    </ul>
+</section>

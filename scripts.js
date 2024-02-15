@@ -316,7 +316,7 @@ document.addEventListener('click', (e) => {
         const wrapper = btnIncrement.closest('[data-basket-item]')
         const value = wrapper.querySelector('[data-basket-item-quantity-value]')
 
-        if (+value.textContent >=1) {
+        if (+value.textContent >= 1) {
             value.textContent = +value.textContent + 1
         }
     }
@@ -471,7 +471,6 @@ document.addEventListener('click', (e) => {
 })
 
 
-
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-footer-menu-links-item-first]')
 
@@ -498,13 +497,89 @@ document.addEventListener('click', (e) => {
         const allCheckboxWrapper = wrapper.querySelectorAll('[data-placing-an-order-conditions-item]')
         const checkboxWrapper = btn.closest('[data-placing-an-order-conditions-item]')
 
-        allCheckboxWrapper.forEach( el => {
+        allCheckboxWrapper.forEach(el => {
             if (el === checkboxWrapper) {
                 el.classList.add('active')
             } else {
                 el.classList.remove('active')
             }
         })
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-filter-catalog-btn-show-all]')
+
+    if (btn) {
+        const wrapper = btn.closest('[data-filter-catalog-wrapper-pc]')
+        const allItem = wrapper.querySelectorAll('[data-filter-catalog-item]')
+        const allBtn = wrapper.querySelectorAll('[data-filter-catalog-btn-show-all]')
+
+        allItem.forEach((el, index) => {
+            if (index >= 7) {
+                el.classList.toggle('open-all');
+            }
+        })
+
+        allBtn[0].classList.toggle('btn-open-filter')
+        allBtn[1].classList.toggle('btn-open-filter')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-btn-open-drop-menu]')
+    if (btn) {
+        const wrapper = e.target.closest('[data-filter-catalog-item]')
+        const dropMenu = wrapper.querySelector('[data-filter-menu-dropdown-wrapper]')
+        dropMenu.classList.toggle('open-filter-drop-menu')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const dropMenu = e.target.closest('[data-filter-menu-dropdown-wrapper]')
+    if (!dropMenu) {
+        const allDropMenu = document.querySelectorAll('[data-filter-menu-dropdown-wrapper]')
+        allDropMenu.forEach(el => {
+
+            if (el.closest('[data-filter-catalog-item]').querySelector('[data-btn-open-drop-menu]') !== e.target.closest('[data-btn-open-drop-menu]')) {
+                el.classList.remove('open-filter-drop-menu')
+            }
+        })
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-filter-menu-dropdown-btn-cencel]')
+    if (btn) {
+        const dropMenu = btn.closest('[data-filter-menu-dropdown-wrapper]')
+        const allInput = dropMenu.querySelectorAll('.filter-menu_dropdown_item_container input')
+
+        allInput.forEach( inp => {
+            inp.checked = false;
+        })
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-filter-sizes-menu-dropdown-btn-cencel]')
+    if (btn) {
+        const dropMenu = btn.closest('[data-filter-menu-dropdown-wrapper]')
+        const allInput = dropMenu.querySelectorAll('.menu_dropdown-for-sizes_item input')
+
+        allInput.forEach( inp => {
+            inp.value = '';
+        })
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-filter-menu-dropdown-btn-submit]')
+    if (btn) {
+        e.preventDefault();
+        const dropMenu = btn.closest('[data-filter-menu-dropdown-wrapper]')
+
+        dropMenu.classList.toggle('open-filter-drop-menu')
     }
 })
 
