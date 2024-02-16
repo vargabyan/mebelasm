@@ -516,14 +516,22 @@ document.addEventListener('click', (e) => {
         const allItem = wrapper.querySelectorAll('[data-filter-catalog-item]')
         const allBtn = wrapper.querySelectorAll('[data-filter-catalog-btn-show-all]')
 
-        allItem.forEach((el, index) => {
-            if (index >= 7) {
-                el.classList.toggle('open-all');
-            }
-        })
+        if (window.innerWidth > 570) {
+            allItem.forEach((el, index) => {
+                if (index >= 7) {
+                    el.classList.toggle('open-all');
+                }
+            })
 
-        allBtn[0].classList.toggle('btn-open-filter')
-        allBtn[1].classList.toggle('btn-open-filter')
+            allBtn[0].classList.toggle('btn-open-filter')
+            allBtn[1].classList.toggle('btn-open-filter')
+        } else {
+            allItem.forEach((el, index) => {
+                if (index >= 1) {
+                    el.classList.toggle('open-all');
+                }
+            })
+        }
     }
 })
 
@@ -531,15 +539,15 @@ document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-btn-open-drop-menu]')
     if (btn) {
         const wrapper = e.target.closest('[data-filter-catalog-item]')
-        const dropMenu = wrapper.querySelector('[data-filter-menu-dropdown-wrapper]')
+        const dropMenu = wrapper.querySelector('[data-filter-menu-dropdown-background]')
         dropMenu.classList.toggle('open-filter-drop-menu')
     }
 })
 
 document.addEventListener('click', (e) => {
-    const dropMenu = e.target.closest('[data-filter-menu-dropdown-wrapper]')
+    const dropMenu = e.target.closest('[data-filter-menu-dropdown-background]')
     if (!dropMenu) {
-        const allDropMenu = document.querySelectorAll('[data-filter-menu-dropdown-wrapper]')
+        const allDropMenu = document.querySelectorAll('[data-filter-menu-dropdown-background]')
         allDropMenu.forEach(el => {
 
             if (el.closest('[data-filter-catalog-item]').querySelector('[data-btn-open-drop-menu]') !== e.target.closest('[data-btn-open-drop-menu]')) {
@@ -552,7 +560,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-filter-menu-dropdown-btn-cencel]')
     if (btn) {
-        const dropMenu = btn.closest('[data-filter-menu-dropdown-wrapper]')
+        const dropMenu = btn.closest('[data-filter-menu-dropdown-background]')
         const allInput = dropMenu.querySelectorAll('.filter-menu_dropdown_item_container input')
 
         allInput.forEach( inp => {
@@ -564,7 +572,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-filter-sizes-menu-dropdown-btn-cencel]')
     if (btn) {
-        const dropMenu = btn.closest('[data-filter-menu-dropdown-wrapper]')
+        const dropMenu = btn.closest('[data-filter-menu-dropdown-background]')
         const allInput = dropMenu.querySelectorAll('.menu_dropdown-for-sizes_item input')
 
         allInput.forEach( inp => {
@@ -574,10 +582,12 @@ document.addEventListener('click', (e) => {
 })
 
 document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-filter-menu-dropdown-btn-submit]')
-    if (btn) {
+    const btnSubmit = e.target.closest('[data-filter-menu-dropdown-btn-submit]')
+    const btnClose = e.target.closest('[data-filter-menudropdown-btn-close]')
+
+    if (btnSubmit || btnClose) {
         e.preventDefault();
-        const dropMenu = btn.closest('[data-filter-menu-dropdown-wrapper]')
+        const dropMenu = e.target.closest('[data-filter-menu-dropdown-background]')
 
         dropMenu.classList.toggle('open-filter-drop-menu')
     }
