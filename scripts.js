@@ -552,8 +552,11 @@ document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-btn-open-drop-menu]')
     if (btn) {
         const wrapper = e.target.closest('[data-filter-catalog-item]')
-        const dropMenu = wrapper.querySelector('[data-filter-menu-dropdown-background]')
+        const dropMenu = wrapper.querySelector('[data-filter-menu-dropdown-background]');
         dropMenu.classList.toggle('open-filter-drop-menu')
+
+        const locationParam = (dropMenu.offsetWidth - btn.offsetWidth) / 2;
+        dropMenu.style['left'] = `-${locationParam}px`
 
         if (window.innerWidth < 570) {
             document.querySelector('body').style['overflow'] = 'hidden';

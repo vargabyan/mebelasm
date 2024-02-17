@@ -1285,6 +1285,10 @@ button {
     position: absolute;
 }
 
+[data-filter-catalog-item]:first-child .filter-menu_dropdown_background {
+    left: 0 !important;
+}
+
 [data-filter-catalog-item]:first-child .filter-menu_dropdown_wrapper:before {
     left: 40px;
     margin: 0;
@@ -7156,11 +7160,15 @@ button {
 
 
     .home-core-slider_mobile {
-        width: 340px;
+        width: 360px;
     }
 
     .home-core-slider-wrapper {
         width: 360px;
+        padding-left: 20px;
+    }
+
+    .home-core-slider_mobile_item-wrapper:first-child {
         padding-left: 20px;
     }
 
