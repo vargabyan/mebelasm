@@ -137,7 +137,33 @@ $filterColorsParamsData = [
             </div>
         </li>
         <li data-filter-catalog-item>
-            <button class="filter-catalog_item">Ткань</button>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Ткань</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Выбор категории</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="filter-menu_dropdown">
+                            <?php foreach ($filterCategoryParamsData as $key => $item) { ?>
+                                <label class="filter-menu_dropdown_item_container"><?= $item ?>
+                                    <input type="radio" name="radio-<?= $key ?>">
+                                    <span class="filter-menu_dropdown_item_checkmark"></span>
+                                </label>
+                            <?php } ?>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button" data-filter-menu-dropdown-btn-cencel>
+                                Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </li>
         <li data-filter-catalog-item>
             <button class="filter-catalog_item" data-btn-open-drop-menu>Цвет</button>

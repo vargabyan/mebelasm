@@ -1321,6 +1321,7 @@ button {
 .filter-menu_dropdown_btn {
     width: 100%;
     display: flex;
+    justify-content: center;
     height: 52px;
     padding: var(--Main-System-12px);
     align-items: center;
@@ -6536,12 +6537,13 @@ button {
 
     .mobile-bottom-mini-menu_item a {
         display: flex;
+        gap: 8px;
         flex-direction: column;
         align-items: center;
         text-decoration: none;
 
         color: var(--Secondary-40);
-        font-size: clamp(10px, 5vw, 20px);
+        font-size: clamp(10px, 3vw, 20px);
         font-weight: 400;
         line-height: 16px
     }
@@ -6583,16 +6585,18 @@ button {
 
     .mobile-bottom-mini-menu_basket span {
         position: absolute;
-        right: 0;
+        right: 18px;
+        top: -6px;
         display: flex;
-        width: 24px;
-        height: 24px;
+        width: clamp(16px, 3.9vw, 24px);
+        height: clamp(16px, 3.9vw, 24px);
         justify-content: center;
         align-items: center;
         border-radius: 100px;
         background: #FF2C2C;
 
         color: var(--Secondary-0);
+        font-size: clamp(12px, 2vw, 16px);
     }
 
 
@@ -7008,6 +7012,7 @@ button {
         right: 0;
         top: 0;
         bottom: 0;
+        z-index: 109;
     }
 
     .modal-additional-for-mobile.active {
@@ -7430,11 +7435,12 @@ button {
 
     .filter-menu_dropdown_wrapper {
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         padding: var(--Main-System-20px);
         gap: var(--Main-System-10px);
-        border-radius: var(--Main-System-20px) var(--Main-System-20px) 0 0;
+        border-radius: unset;
     }
 
     .filter-menu_dropdown_title-wrapper {
@@ -7451,6 +7457,8 @@ button {
 
     .filter-menu_dropdown_wrapper form {
         margin: auto;
+        height: 100%;
+        justify-content: space-between;
     }
 
     .filter-menu_dropdown_title {
@@ -7463,6 +7471,7 @@ button {
     .filter-menu_dropdown {
         margin-top: 20px;
         width: 320px;
+        height: 100%;
     }
 
     .filter-menu_dropdown_item_container {
@@ -10539,6 +10548,16 @@ button {
         text-align: start;
         font-size: 14px;
         line-height: 20px;
+    }
+
+
+    .mobile-bottom-mini-menu_item a {
+        font-size: clamp(10px, 2vw, 20px);
+    }
+
+    .mobile-bottom-mini-menu_basket span {
+        top: -4px;
+        right: 4px;
     }
 
 

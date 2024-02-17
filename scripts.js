@@ -534,6 +534,19 @@ document.addEventListener('click', (e) => {
         }
     }
 })
+document.addEventListener('click', (e) => {
+    const dropMenu = e.target.closest('[data-filter-menu-dropdown-background]')
+    const hasOpenDropMenu = document.querySelector('.open-filter-drop-menu')
+
+    if (!dropMenu && hasOpenDropMenu) {
+
+        hasOpenDropMenu.classList.remove('open-filter-drop-menu')
+
+        if (window.innerWidth < 570) {
+            document.querySelector('body').style['overflow'] = '';
+        }
+    }
+})
 
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-btn-open-drop-menu]')
@@ -541,21 +554,13 @@ document.addEventListener('click', (e) => {
         const wrapper = e.target.closest('[data-filter-catalog-item]')
         const dropMenu = wrapper.querySelector('[data-filter-menu-dropdown-background]')
         dropMenu.classList.toggle('open-filter-drop-menu')
+
+        if (window.innerWidth < 570) {
+            document.querySelector('body').style['overflow'] = 'hidden';
+        }
     }
 })
 
-document.addEventListener('click', (e) => {
-    const dropMenu = e.target.closest('[data-filter-menu-dropdown-background]')
-    if (!dropMenu) {
-        const allDropMenu = document.querySelectorAll('[data-filter-menu-dropdown-background]')
-        allDropMenu.forEach(el => {
-
-            if (el.closest('[data-filter-catalog-item]').querySelector('[data-btn-open-drop-menu]') !== e.target.closest('[data-btn-open-drop-menu]')) {
-                el.classList.remove('open-filter-drop-menu')
-            }
-        })
-    }
-})
 
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-filter-menu-dropdown-btn-cencel]')
@@ -588,8 +593,11 @@ document.addEventListener('click', (e) => {
     if (btnSubmit || btnClose) {
         e.preventDefault();
         const dropMenu = e.target.closest('[data-filter-menu-dropdown-background]')
-
         dropMenu.classList.toggle('open-filter-drop-menu')
+
+        if (window.innerWidth < 570) {
+            document.querySelector('body').style['overflow'] = '';
+        }
     }
 })
 

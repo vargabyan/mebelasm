@@ -24,16 +24,16 @@
                     <p>Екатеринбург</p>
                 </li>
                 <li class="header_about-company_nav-item">
-                    <a href="">О компании</a>
+                    <a href="/about-company.php">О компании</a>
                 </li>
                 <li class="header_about-company_nav-item">
-                    <a href="">Работа в компании</a>
+                    <a href="/job-vacancy.php">Работа в компании</a>
                 </li>
                 <li class="header_about-company_nav-item yellow-btn">
-                    <a href="">Для бизнеса</a>
+                    <a href="/we-work-with-business.php">Для бизнеса</a>
                 </li>
                 <li class="header_about-company_nav-item">
-                    <a href="">Бонусная программа</a>
+                    <a href="/bonus-program.php">Бонусная программа</a>
                 </li>
             </ul>
             <ul class="header_contacts">
@@ -51,7 +51,7 @@
                                 src="/images/Frame%202087327193%20(2).png" alt="logo"></a></li>
                 <li class="header_nav-panel_other_catalog-wrapper">
                     <button class="header_nav-panel_other_catalog green-btn">
-                        <a href="">Каталог</a>
+                        <a href="/catalog.php">Каталог</a>
                     </button>
                 </li>
                 <li class="header_nav-panel_other_search-wrapper">
@@ -61,12 +61,12 @@
                 </li>
             </ul>
             <ul class="header_nav-panel_links-wrapper">
-                <li class="header_nav-panel_links_item"><a href="">Контакты</a></li>
-                <li class="header_nav-panel_links_item"><a href="">Магазины</a></li>
-                <li class="header_nav-panel_links_item"><a href="">Войти</a></li>
+                <li class="header_nav-panel_links_item"><a href="/contacts.php">Контакты</a></li>
+                <li class="header_nav-panel_links_item"><a href="/our-stores.php">Магазины</a></li>
+                <li class="header_nav-panel_links_item"><a href="/personal-area.php">Войти</a></li>
                 <li class="header_nav-panel_links_item"><a href="">Избр.</a></li>
                 <li class="header_nav-panel_links_item">
-                    <a class="core-basket-icon" href="">
+                    <a class="core-basket-icon" href="/basket.php">
                         Корзина
                         <span>2</span>
                     </a>
@@ -99,19 +99,19 @@
             <a href="">Меню</a>
         </li>
         <li class="mobile-bottom-mini-menu_item">
-            <a href="">Каталог</a>
+            <a href="/catalog.php">Каталог</a>
         </li>
         <li class="mobile-bottom-mini-menu_item">
-            <a href="">Контакты</a>
+            <a href="/contacts.php">Контакты</a>
         </li>
         <li class="mobile-bottom-mini-menu_item">
-            <a href="">Магазины</a>
+            <a href="our-stores.php">Магазины</a>
         </li>
         <li class="mobile-bottom-mini-menu_item">
             <a href="">Избр.</a>
         </li>
         <li class="mobile-bottom-mini-menu_item">
-            <a class="mobile-bottom-mini-menu_basket" href="">
+            <a class="mobile-bottom-mini-menu_basket" href="/basket.php">
                 Корзина
                 <span>2</span>
             </a>
