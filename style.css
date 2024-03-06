@@ -2208,6 +2208,7 @@ button {
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
 
     font-size: 20px;
     font-weight: 500;
@@ -2241,6 +2242,7 @@ button {
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
 }
 
 .card-about_card-product_store_item:before {
@@ -3380,6 +3382,10 @@ button {
 .job-vacancy_sample-of-cities {
 }
 
+.job-vacancy_btn-open-filter {
+    display: none;
+}
+
 .job-vacancy_sample-of-cities_form {
     width: max-content;
     display: flex;
@@ -3546,7 +3552,7 @@ button {
 }
 
 .job-vacancy_category_item p span {
-    color: var(--Secondary-60, #777);
+    color: var(--Secondary-60);
 
     font-size: 20px;
     line-height: 28px
@@ -6410,6 +6416,8 @@ button {
 
 .modal-successful_btn {
     text-decoration: none;
+    border: none;
+    cursor: pointer;
 
     color: var(--Secondary-0);
     font-size: 20px;
@@ -6853,6 +6861,7 @@ button {
     width: 100%;
     border: none;
     cursor: pointer;
+    text-decoration: none;
 
     font-size: 20px;
     font-weight: 500;
@@ -7502,8 +7511,11 @@ button {
         width: 650px;
     }
 
+    .job-vacancy {
+        gap: 18px;
+    }
 
-    .job-vacancy_sample-of-cities {
+    .job-vacancy_sample-of-cities_form {
         display: none;
     }
 
@@ -9561,8 +9573,19 @@ button {
         flex-direction: column;
     }
 
-    .job-vacancy_sample-of-cities {
+    .job-vacancy_sample-of-cities_form {
         display: none;
+    }
+
+    .job-vacancy_btn-open-filter {
+        display: block;
+        border: none;
+        padding: 0;
+        background: unset;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
     }
 
     .job-vacancy_main {

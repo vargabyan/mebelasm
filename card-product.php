@@ -111,18 +111,18 @@ $images = [
                     </div>
                 </div>
                 <div class="card-about_card-product_btn-wrapper">
-                    <button class="card-about_card-product_btn-add-basket">Добавить в корзину</button>
+                    <button class="card-about_card-product_btn-add-basket" data-card-about-card-product-btn-add-basket>Добавить в корзину</button>
                     <button class="card-about_card-product_btn-order">Сделать предзаказ</button>
-                    <button class="card-about_card-product_btn-installment-plan">В рассрочку, 0%</button>
+                    <button class="card-about_card-product_btn-installment-plan" data-Interest-free-installments-btn>В рассрочку, 0%</button>
                 </div>
                 <div class="card-about_card-product_btn-other-wrapper">
                     <button class="card-about_card-product_btn-favorite">В избранное</button>
-                    <button class="card-about_card-product_btn-get-notifications">Узнать о снижении цены</button>
+                    <button class="card-about_card-product_btn-get-notifications" data-card-about-card-product-btn-get-notifications>Узнать о снижении цены</button>
                 </div>
             </div>
-            <p class="card-about_card-product_in-stock">В наличии в 2 магазинах</p>
+            <p class="card-about_card-product_in-stock" data-card-about-card-product-in-stock>В наличии в 2 магазинах</p>
             <div class="card-about_card-product_stores">
-                <div class="card-about_card-product_store_item">
+                <div class="card-about_card-product_store_item" data-card-about-card-product-store-item>
                     <p class="card-about_card-product_store_text"><span>АСМ-Мебель</span> Вся мебель из этого магазина
                     </p>
                 </div>
@@ -444,12 +444,12 @@ $question_and_answer = [
 </section>
 
 
-<section class="card-product_modal-wrapper active_">
+<section class="card-product_modal-wrapper" data-mode-notifications-about-price>
     <div class="card-product_modal">
         <div class="card-product_modal_head-wrapper">
             <div class="card-product_modal_head_btn-wrapper">
                 <p class="card-product_modal_title">Узнать о снижении цены</p>
-                <button class="send-resume-modal_btn-close"></button>
+                <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close></button>
             </div>
             <p class="card-product_modal_subtitle">Мы отправим на номер телефона СМС-уведомление, когда цена на товар снизится</p>
         </div>
@@ -466,12 +466,12 @@ $question_and_answer = [
 </section>
 
 
-<section class="card-product_modal-wrapper active_">
+<section class="card-product_modal-wrapper" data-modal-Interest-free-installments>
     <div class="card-product_modal">
         <div class="card-product_modal_head-wrapper">
             <div class="card-product_modal_head_btn-wrapper">
                 <p class="card-product_modal_title">Беспроцентная рассрочка от СБЕРБАНКА</p>
-                <button class="send-resume-modal_btn-close"></button>
+                <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close></button>
             </div>
             <p class="card-product_modal_subtitle">Оставьте заявку, чтобы мы смогли связаться с вами по поводу оформления рассрочки</p>
         </div>
@@ -493,11 +493,11 @@ $question_and_answer = [
 </section>
 
 
-<section class="card-product_modal-wrapper active_">
+<section class="card-product_modal-wrapper" data-modal-different-stores>
     <div class="card-product_modal different-stores">
         <div class="card-product_modal_head_btn-wrapper">
             <p class="card-product_modal_title">Наличие в магазинах присутствия</p>
-            <button class="send-resume-modal_btn-close"></button>
+            <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close></button>
         </div>
         <div class="in-different-stores_wrapper">
             <?php for ($i = 0; $i < 2; $i++) { ?>
@@ -512,7 +512,7 @@ $question_and_answer = [
                         </p>
                     </div>
                     <div class="in-different-stores_btn-wrapper">
-                        <button class="in-different-stores_btn">Забронировать</button>
+                        <button class="in-different-stores_btn" data-in-different-stores-btn>Забронировать</button>
                     </div>
                 </div>
             <?php } ?>
@@ -521,11 +521,11 @@ $question_and_answer = [
 </section>
 
 
-<section class="card-product_modal-wrapper active_">
+<section class="card-product_modal-wrapper" data-booking-modal-wrapper>
     <div class="card-product_modal booking-modal-wrapper">
         <div class="booking-modal_title-wrapper">
             <p class="booking-modal_title">Забронировать товар</p>
-            <button class="booking-modal_btn-go-to-back">Назад</button>
+            <button class="booking-modal_btn-go-to-back" data-booking-modal-btn-go-to-back>Назад</button>
         </div>
         <div class="booking-modal_good-view">
             <img class="booking-modal_good-view_img" src="./images/6488721d1c97c2b22d02f93991769f85.png" alt="">
@@ -557,11 +557,11 @@ $question_and_answer = [
 </section>
 
 
-<section class="card-product_modal-wrapper active">
+<section class="card-product_modal-wrapper" data-modal-add-in-basket>
     <div class="card-product_modal add-in-basket-modal">
         <div class="card-product_modal_head_btn-wrapper">
             <p class="card-product_modal_title">Наличие в магазинах присутствия</p>
-            <button class="send-resume-modal_btn-close"></button>
+            <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close></button>
         </div>
         <div class="add-in-basket-modal_description-wrapper">
             <img class="add-in-basket-modal_img" src="./images/6488721d1c97c2b22d02f93991769f85.png" alt="">
@@ -574,8 +574,8 @@ $question_and_answer = [
             </div>
         </div>
         <div class="add-in-basket-modal_btn-wrapper">
-            <button class="add-in-basket-modal_btn">Продолжить покупки</button>
-            <button class="add-in-basket-modal_btn green-btn">В корзину</button>
+            <button class="add-in-basket-modal_btn" data-add-in-basket-modal-btn-continue>Продолжить покупки</button>
+            <a class="add-in-basket-modal_btn green-btn" href="/basket.php">В корзину</a>
         </div>
     </div>
 </section>

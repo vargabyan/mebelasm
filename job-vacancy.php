@@ -13,6 +13,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
 
     <div class="job-vacancy">
         <div class="job-vacancy_sample-of-cities">
+            <button class="job-vacancy_btn-open-filter" data-job-vacancy-btn-open-filter>фильтры</button>
             <form class="job-vacancy_sample-of-cities_form" action="">
                 <ul class="job-vacancy_sample-of-cities_item-wrapper">
                     <li>Город</li>
@@ -226,7 +227,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                     людей. Если у Вас есть какие-то конкретные интересы или навыки, которые Вы хотели бы применить в
                     работе, то отправляйте свое резюме, мы обязательно рассмотрим его
                 </p>
-                <button class="send-vc_btn-send green-btn">Отправить резюме</button>
+                <button class="send-vc_btn-send green-btn" data-send-vc-btn-send>Отправить резюме</button>
             </div>
         </div>
     </div>
@@ -303,12 +304,12 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
 </section>
 
 
-<section class="send-resume-modal-wrapper ">
+<section class="send-resume-modal-wrapper" data-send-resume>
     <div class="send-resume-modal">
         <div class="send-resume-modal_header-wrapper">
             <div class="send-resume-modal_header_btn-wrapper">
                 <p class="send-resume-modal_header"><span>Отправить резюме</span></p>
-                <button class="send-resume-modal_btn-close"></button>
+                <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close></button>
             </div>
             <p class="send-resume-modal_header_subtitle">Расскажите о себе, чтобы мы могли связаться с вами </p>
         </div>
@@ -326,7 +327,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
             <label class="send-resume-modal_form_label"><input type="text"
                                                                placeholder="Какую должность вы рассматриваете?"></label>
             <div class="send-resume-modal_footer-wrapper">
-                <input class="send-resume-modal_btn-submit green-btn" type="submit" value="Оставить заявку">
+                <input class="send-resume-modal_btn-submit green-btn" type="submit" value="Оставить заявку" data-send-resume-modal-btn-submit>
                 <p class="send-resume-modal_footer_subtitle">
                     Нажимая «Оставить заявку», вы соглашаетесь с
                     <a class="" href="">политикой конфиденциальности</a>
@@ -370,18 +371,18 @@ $job_vacancy_filter = [
 ]
 ?>
 
-<section class="send-resume-modal-wrapper job-vacancy-filter-modal_active_">
+<section class="send-resume-modal-wrapper" data-job-vacancy-filter-modal>
     <div class="send-resume-modal">
         <div class="send-resume-modal_header_btn-wrapper">
             <p class="send-resume-modal_header"><span>Добавить фильтры</span></p>
-            <button class="send-resume-modal_btn-close"></button>
+            <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close></button>
         </div>
-        <form class="job-vacancy-filter-modal_form" action="">
+        <form class="job-vacancy-filter-modal_form" action="" data-job-vacancy-filter-modal-form>
             <div class="job-vacancy-filter-modal_item-wrapper">
                 <?php foreach ($job_vacancy_filter as $item) { ?>
                     <p class="job-vacancy-filter-modal_item_title"><?= $item['title'] ?></p>
                     <?php foreach ($item['values'] as $values) { ?>
-                        <label class="job-vacancy-filter-modal_input_container">
+                        <label class="job-vacancy-filter-modal_input_container" data-job-vacancy-filter-modal-input-container>
                             <?= $values ?>
                             <input type="checkbox">
                             <span class="job-vacancy-filter-modal_input_checkmark"></span>
@@ -390,21 +391,21 @@ $job_vacancy_filter = [
                 <?php } ?>
             </div>
             <div class="job-vacancy-filter-modal_footer-wrapper">
-                <button class="job-vacancy-filter-modal_btn-submit" type="button">Сбросить</button>
-                <input class="job-vacancy-filter-modal_btn-submit green-btn" type="submit" value="Оставить заявку">
+                <button class="job-vacancy-filter-modal_btn-submit" type="button" data-job-vacancy-filter-modal_btn-clean>Сбросить</button>
+                <input class="job-vacancy-filter-modal_btn-submit green-btn" type="submit" value="Применить" data-job-vacancy-filter-modal_btn-submit>
             </div>
         </form>
     </div>
 </section>
 
 
-<section class="send-resume-modal-wrapper modal-successful-wrapper_active_">
+<section class="send-resume-modal-wrapper" data-modal-successful-wrapper>
     <div class="modal-successful">
         <div class="modal-successful_title-wrapper">
             <p class="modal-successful_title">Резюме успешно отправлено</p>
             <button class="send-resume-modal_btn-close"></button>
         </div class="modal-successful_">
-        <a class="modal-successful_btn green-btn" href="/">Супер</a>
+        <button class="modal-successful_btn green-btn" data-modal-successful-btn>Супер</button>
     </div>
 </section>
 

@@ -569,7 +569,7 @@ document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-filter-menu-dropdown-btn-cencel]')
     if (btn) {
         const dropMenu = btn.closest('[data-filter-menu-dropdown-background]')
-        const allInput = dropMenu.querySelectorAll('.filter-menu_dropdown_item_container input')
+        const allInput = dropMenu.querySelectorAll('.filter-menu_dropdown_item_container input:checked')
 
         allInput.forEach( inp => {
             inp.checked = false;
@@ -603,6 +603,234 @@ document.addEventListener('click', (e) => {
         }
     }
 })
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-vc-btn-send]')
+
+    if (btn) {
+        const model = document.querySelector('[data-send-resume]')
+
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-close]')
+
+    if (btn && btn.closest('[data-send-resume]')) {
+        const model = btn.closest('[data-send-resume]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-submit]')
+
+    if (btn) {
+        e.preventDefault()
+        const wrapperModel = btn.closest('[data-send-resume]')
+        const model = document.querySelector('[data-modal-successful-wrapper]')
+
+        wrapperModel.classList.remove('active')
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-modal-successful-btn]')
+
+    if (btn) {
+        const model = btn.closest('[data-modal-successful-wrapper]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-job-vacancy-btn-open-filter]')
+
+    if (btn) {
+        const model = document.querySelector('[data-job-vacancy-filter-modal]')
+
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-close]')
+
+    if (btn && btn.closest('[data-job-vacancy-filter-modal]')) {
+        const model = btn.closest('[data-job-vacancy-filter-modal]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-job-vacancy-filter-modal_btn-submit]')
+
+    if (btn) {
+        e.preventDefault()
+        const model = btn.closest('[data-job-vacancy-filter-modal]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-job-vacancy-filter-modal_btn-clean]')
+
+    if (btn) {
+        const wrapperForm = btn.closest('[data-job-vacancy-filter-modal-form]')
+        const inputItem = wrapperForm.querySelectorAll('[data-job-vacancy-filter-modal-input-container] input:checked')
+
+        inputItem.forEach( item => {
+            item.checked = false;
+        })
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-card-about-card-product-btn-get-notifications]')
+
+    if (btn) {
+        const model = document.querySelector('[data-mode-notifications-about-price]')
+
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-close]')
+
+    if (btn && btn.closest('[data-mode-notifications-about-price]')) {
+        const model = btn.closest('[data-mode-notifications-about-price]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-Interest-free-installments-btn]')
+
+    if (btn) {
+        const model = btn.querySelector('[data-modal-Interest-free-installments]')
+
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-close]')
+
+    if (btn && btn.closest('[data-modal-Interest-free-installments]')) {
+        const model = btn.closest('[data-modal-Interest-free-installments]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-card-about-card-product-in-stock]')
+    const ItemBtn = e.target.closest('[data-card-about-card-product-store-item]')
+
+    if (btn || ItemBtn) {
+        const model = document.querySelector('[data-modal-different-stores]')
+
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-close]')
+
+    if (btn && btn.closest('[data-modal-different-stores]')) {
+        const model = btn.closest('[data-modal-different-stores]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-in-different-stores-btn]')
+
+    if (btn) {
+        const oldModel = document.querySelector('[data-modal-different-stores]')
+        const model = document.querySelector('[data-booking-modal-wrapper]')
+
+        oldModel.classList.remove('active')
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-booking-modal-btn-go-to-back]')
+
+    if (btn) {
+        const oldModel = document.querySelector('[data-modal-different-stores]')
+        const model = btn.closest('[data-booking-modal-wrapper]')
+
+        oldModel.classList.add('active')
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-card-about-card-product-btn-add-basket]')
+
+    if (btn) {
+        const model = document.querySelector('[data-modal-add-in-basket]')
+
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-close]')
+
+    if (btn && btn.closest('[data-modal-add-in-basket]')) {
+        const model = btn.closest('[data-modal-add-in-basket]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const continueBtn = e.target.closest('[data-add-in-basket-modal-btn-continue]')
+
+    if (continueBtn && continueBtn.closest('[data-modal-add-in-basket]')) {
+        const model = continueBtn.closest('[data-modal-add-in-basket]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
 
 
 
