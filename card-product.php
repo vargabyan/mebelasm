@@ -443,6 +443,143 @@ $question_and_answer = [
     </div>
 </section>
 
+
+<section class="card-product_modal-wrapper active_">
+    <div class="card-product_modal">
+        <div class="card-product_modal_head-wrapper">
+            <div class="card-product_modal_head_btn-wrapper">
+                <p class="card-product_modal_title">Узнать о снижении цены</p>
+                <button class="send-resume-modal_btn-close"></button>
+            </div>
+            <p class="card-product_modal_subtitle">Мы отправим на номер телефона СМС-уведомление, когда цена на товар снизится</p>
+        </div>
+        <form class="card-product_modal-request" action="">
+            <label class="card-product_modal-request_label">
+                <input type="tel" placeholder="+7">
+            </label>
+            <div class="card-product_modal-request_footer_btn-wrapper">
+                <input class="card-product_modal_btn green-btn" type="submit" value="Оставить заявку">
+                <p class="card-product_modal-request_footer_subtitle">Нажимая «Оставить заявку», вы соглашаетесь с <a href="/policy">политикой конфиденциальности</a></p>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section class="card-product_modal-wrapper active_">
+    <div class="card-product_modal">
+        <div class="card-product_modal_head-wrapper">
+            <div class="card-product_modal_head_btn-wrapper">
+                <p class="card-product_modal_title">Беспроцентная рассрочка от СБЕРБАНКА</p>
+                <button class="send-resume-modal_btn-close"></button>
+            </div>
+            <p class="card-product_modal_subtitle">Оставьте заявку, чтобы мы смогли связаться с вами по поводу оформления рассрочки</p>
+        </div>
+        <form class="card-product_modal-request" action="">
+            <div class="card-product_modal-request_input-wrapper">
+                <label class="card-product_modal-request_label">
+                    <input type="text" placeholder="Ваше имя">
+                </label>
+                <label class="card-product_modal-request_label">
+                    <input type="tel" placeholder="+7">
+                </label>
+            </div>
+            <div class="card-product_modal-request_footer_btn-wrapper">
+                <input class="card-product_modal_btn green-btn" type="submit" value="Оставить заявку">
+                <p class="card-product_modal-request_footer_subtitle">Нажимая «Оставить заявку», вы соглашаетесь с <a href="/policy">политикой конфиденциальности</a></p>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section class="card-product_modal-wrapper active_">
+    <div class="card-product_modal different-stores">
+        <div class="card-product_modal_head_btn-wrapper">
+            <p class="card-product_modal_title">Наличие в магазинах присутствия</p>
+            <button class="send-resume-modal_btn-close"></button>
+        </div>
+        <div class="in-different-stores_wrapper">
+            <?php for ($i = 0; $i < 2; $i++) { ?>
+                <div class="in-different-stores">
+                    <div class="in-different-stores_title-wrapper">
+                        <p class="in-different-stores_title">Асм-мебель</p>
+                        <p class="in-different-stores_address">ТД «РИМ», ул. Окружная 5</p>
+                        <p class="in-different-stores_tel">8-922-035-31-28</p>
+                        <p class="in-different-stores_working-hours">
+                            <span>Режим работы</span>
+                            с 10:00 до 20:00
+                        </p>
+                    </div>
+                    <div class="in-different-stores_btn-wrapper">
+                        <button class="in-different-stores_btn">Забронировать</button>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+
+
+<section class="card-product_modal-wrapper active_">
+    <div class="card-product_modal booking-modal-wrapper">
+        <div class="booking-modal_title-wrapper">
+            <p class="booking-modal_title">Забронировать товар</p>
+            <button class="booking-modal_btn-go-to-back">Назад</button>
+        </div>
+        <div class="booking-modal_good-view">
+            <img class="booking-modal_good-view_img" src="./images/6488721d1c97c2b22d02f93991769f85.png" alt="">
+            <p class="booking-modal_good-view_description">Флорида большой диван<span>25 990 ₽</span></p>
+        </div>
+        <div class="booking-modal_store-wrapper">
+            <p class="booking-modal_store">
+                <span>Магазин</span>
+                Асм-мебель ТД «РИМ», ул. Окружная 5
+            </p>
+            <button class="booking-modal_store_btn">Изменить</button>
+        </div>
+        <div class="booking-modal_form-wrapper">
+            <p class="booking-modal_form_title">Контактные данные</p>
+            <form class="booking-modal_form" action="">
+                <div class="booking-modal_form_input-wrapper">
+                    <label class="card-product_modal-request_label">
+                        <input type="text" placeholder="Ваше имя">
+                    </label>
+                    <label class="card-product_modal-request_label">
+                        <input type="tel" placeholder="+7">
+                    </label>
+                </div>
+                <input class="booking-modal_btn-submit" type="submit" value="Оставить заявку">
+            </form>
+            <p class="booking-modal_subtitle">Нажимая «Оставить заявку», вы соглашаетесь с <a href="/police">политикой конфиденциальности</a></p>
+        </div>
+    </div>
+</section>
+
+
+<section class="card-product_modal-wrapper active">
+    <div class="card-product_modal add-in-basket-modal">
+        <div class="card-product_modal_head_btn-wrapper">
+            <p class="card-product_modal_title">Наличие в магазинах присутствия</p>
+            <button class="send-resume-modal_btn-close"></button>
+        </div>
+        <div class="add-in-basket-modal_description-wrapper">
+            <img class="add-in-basket-modal_img" src="./images/6488721d1c97c2b22d02f93991769f85.png" alt="">
+            <div class="add-in-basket-modal_description">
+                <p class="add-in-basket-modal_title">Флорида большой диван</p>
+                <p class="add-in-basket-modal_price">
+                    25 990 ₽
+                    <span>34 990 ₽</span>
+                </p>
+            </div>
+        </div>
+        <div class="add-in-basket-modal_btn-wrapper">
+            <button class="add-in-basket-modal_btn">Продолжить покупки</button>
+            <button class="add-in-basket-modal_btn green-btn">В корзину</button>
+        </div>
+    </div>
+</section>
+
 <?php
 include __DIR__ . '/footer.php';
 ?>

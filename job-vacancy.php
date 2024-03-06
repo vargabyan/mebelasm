@@ -302,6 +302,113 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
     </div>
 </section>
 
+
+<section class="send-resume-modal-wrapper ">
+    <div class="send-resume-modal">
+        <div class="send-resume-modal_header-wrapper">
+            <div class="send-resume-modal_header_btn-wrapper">
+                <p class="send-resume-modal_header"><span>Отправить резюме</span></p>
+                <button class="send-resume-modal_btn-close"></button>
+            </div>
+            <p class="send-resume-modal_header_subtitle">Расскажите о себе, чтобы мы могли связаться с вами </p>
+        </div>
+        <form class="send-resume-modal_form" action="">
+            <label class="send-resume-modal_form_label"><input type="text" placeholder="Ваше имя"></label>
+            <label class="send-resume-modal_form_label"><input type="text" placeholder="+7"></label>
+            <label>
+                <textarea class="send-resume-modal_form_label"
+                          placeholder="Расскажите о своем опыте , образовании и т.д."></textarea>
+            </label>
+            <label class="send-resume-modal_form_file-label">
+                Прикрепить резюме
+                <input type="file">
+            </label>
+            <label class="send-resume-modal_form_label"><input type="text"
+                                                               placeholder="Какую должность вы рассматриваете?"></label>
+            <div class="send-resume-modal_footer-wrapper">
+                <input class="send-resume-modal_btn-submit green-btn" type="submit" value="Оставить заявку">
+                <p class="send-resume-modal_footer_subtitle">
+                    Нажимая «Оставить заявку», вы соглашаетесь с
+                    <a class="" href="">политикой конфиденциальности</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<?php
+$job_vacancy_filter = [
+    [
+        'title' => 'Город',
+        'values' => [
+            'Екатеринбург',
+            'Санкт-Петербург',
+            'Москва',
+            'Новосибирск',
+            'Новосибирск',
+        ]
+    ],
+    [
+        'title' => 'Занятость',
+        'values' => [
+            'Екатеринбург',
+            'Занятость',
+            'Полная занятость',
+            'Посменно',
+        ]
+    ],
+    [
+        'title' => 'Опыт работы',
+        'values' => [
+            'Без опыта',
+            'От 1 года',
+            'От 3 лет',
+            'От 5 лет',
+        ]
+    ]
+]
+?>
+
+<section class="send-resume-modal-wrapper job-vacancy-filter-modal_active_">
+    <div class="send-resume-modal">
+        <div class="send-resume-modal_header_btn-wrapper">
+            <p class="send-resume-modal_header"><span>Добавить фильтры</span></p>
+            <button class="send-resume-modal_btn-close"></button>
+        </div>
+        <form class="job-vacancy-filter-modal_form" action="">
+            <div class="job-vacancy-filter-modal_item-wrapper">
+                <?php foreach ($job_vacancy_filter as $item) { ?>
+                    <p class="job-vacancy-filter-modal_item_title"><?= $item['title'] ?></p>
+                    <?php foreach ($item['values'] as $values) { ?>
+                        <label class="job-vacancy-filter-modal_input_container">
+                            <?= $values ?>
+                            <input type="checkbox">
+                            <span class="job-vacancy-filter-modal_input_checkmark"></span>
+                        </label>
+                    <?php } ?>
+                <?php } ?>
+            </div>
+            <div class="job-vacancy-filter-modal_footer-wrapper">
+                <button class="job-vacancy-filter-modal_btn-submit" type="button">Сбросить</button>
+                <input class="job-vacancy-filter-modal_btn-submit green-btn" type="submit" value="Оставить заявку">
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section class="send-resume-modal-wrapper modal-successful-wrapper_active_">
+    <div class="modal-successful">
+        <div class="modal-successful_title-wrapper">
+            <p class="modal-successful_title">Резюме успешно отправлено</p>
+            <button class="send-resume-modal_btn-close"></button>
+        </div class="modal-successful_">
+        <a class="modal-successful_btn green-btn" href="/">Супер</a>
+    </div>
+</section>
+
+
 <?php
 include __DIR__ . '/footer.php';
 ?>
