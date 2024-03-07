@@ -663,7 +663,7 @@ button {
     display: flex;
 }
 
-.catalog_item:nth-child(5) {
+.catalog_item[data-grid-special-page]:nth-child(5) {
     grid-column-end: span 2;
 }
 
@@ -7595,7 +7595,7 @@ button {
     }
 
 
-    .catalog_item:nth-child(5) {
+    .catalog_item[data-grid-special-page]:nth-child(5) {
         grid-column-end: span 1;
     }
 

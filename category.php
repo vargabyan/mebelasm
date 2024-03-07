@@ -399,7 +399,7 @@ $filterColorsParamsData = [
 <section class="container-core catalog" data-catalog-proucts-wrapper>
     <?php foreach ($catalogData as $item) { ?>
 
-        <a class="catalog_item" href="" data-catalog-item>
+        <a class="catalog_item" href="/card-product.php" data-catalog-item data-grid-special-page>
             <div class="catalog_item_gallery-wrapper">
                 <button class="catalog_item_add-to-favorites" data-catalog-item-add-to-favorites></button>
                 <div class="catalog_item_slider-wrapper">
