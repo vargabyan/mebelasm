@@ -62,7 +62,7 @@ $categoryData = [
 
 <div class="container-core category-and-catalog_header-wrapper" data-page-type="home">
     <h1 class="category-and-catalog_header">Категории</h1>
-    <a class="category-and-catalog_see-all" href="">Смотреть все</a>
+    <a class="category-and-catalog_see-all" href="/store-card.php">Смотреть все</a>
 </div>
 
 <section class="container-core category" data-page-type="home">
@@ -92,7 +92,7 @@ $catalogData = [
 
 <div class="container-core category-and-catalog_header-wrapper">
     <h1 class="category-and-catalog_header">Каталог</h1>
-    <a class="category-and-catalog_see-all" href="">Смотреть все</a>
+    <a class="category-and-catalog_see-all" href="/category.php">Смотреть все</a>
 </div>
 
 <section class="container-core catalog">
