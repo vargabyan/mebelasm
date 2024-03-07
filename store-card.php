@@ -58,42 +58,363 @@ $categoryData = [
 </section>
 
 
+<?php
+$catalogData = [
+    ['photo' => ['images/xn2sd9oi8sg0qb15dz4we23qm16lwz1v 1.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 42.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 43.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 42.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 43.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'], ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 42.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 43.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'], ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 42.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 43.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+];
+
+$filterCategoryParamsData = [
+    'Премиум мебель',
+    'Прямые диваны',
+    'Угловые диваны',
+    'Модульные диваны',
+    'Угловые диваны',
+    'Модульные диваны',
+    'Модульные диваны',
+    'Модульные диваны',
+];
+
+$filterColorsParamsData = [
+    ['color' => '#C69C4D', 'name' => 'Коричневый'],
+    ['color' => '#98908E', 'name' => 'Серый'],
+    ['color' => '#3C6B64', 'name' => 'Темно-зеленый'],
+    ['color' => '#C69C4D', 'name' => 'Коричневый'],
+    ['color' => '#98908E', 'name' => 'Серый'],
+    ['color' => '#3C6B64', 'name' => 'Темно-зеленый'],
+    ['color' => '#C69C4D', 'name' => 'Коричневый'],
+    ['color' => '#98908E', 'name' => 'Серый'],
+    ['color' => '#3C6B64', 'name' => 'Темно-зеленый'],
+]
+?>
+
+
 <section class="container-core filter-catalog">
-    <ul class="filter-catalog_pc">
-        <li>
-            <button class="filter-catalog_item">Категория</button>
+    <ul class="filter-catalog" data-filter-catalog-wrapper-pc>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Категория</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Выбор категории</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="filter-menu_dropdown">
+                            <?php foreach ($filterCategoryParamsData as $key => $item) { ?>
+                                <label class="filter-menu_dropdown_item_container"><?= $item ?>
+                                    <input type="radio" name="radio-<?= $key ?>">
+                                    <span class="filter-menu_dropdown_item_checkmark"></span>
+                                </label>
+                            <?php } ?>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button" data-filter-menu-dropdown-btn-cencel>
+                                Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Сначала популярные</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Выбор категории</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="filter-menu_dropdown">
+                            <?php foreach ($filterCategoryParamsData as $key => $item) { ?>
+                                <label class="filter-menu_dropdown_item_container"><?= $item ?>
+                                    <input type="radio" name="radio-<?= $key ?>">
+                                    <span class="filter-menu_dropdown_item_checkmark"></span>
+                                </label>
+                            <?php } ?>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button" data-filter-menu-dropdown-btn-cencel>
+                                Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Ткань</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Выбор категории</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="filter-menu_dropdown">
+                            <?php foreach ($filterCategoryParamsData as $key => $item) { ?>
+                                <label class="filter-menu_dropdown_item_container"><?= $item ?>
+                                    <input type="radio" name="radio-<?= $key ?>">
+                                    <span class="filter-menu_dropdown_item_checkmark"></span>
+                                </label>
+                            <?php } ?>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button" data-filter-menu-dropdown-btn-cencel>
+                                Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Цвет</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Цвет</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="filter-menu_dropdown">
+                            <?php foreach ($filterColorsParamsData as $key => $item) { ?>
+                                <label class="filter-menu_dropdown_item_container">
+                                    <div class="filter-menu_dropdown_item_color"
+                                         style="background: <?= $item['color'] ?>;"></div>
+                                    <?= $item['name'] ?>
+                                    <input type="radio" name="radio-<?= $key ?>">
+                                    <span class="filter-menu_dropdown_item_checkmark"></span>
+                                </label>
+                            <?php } ?>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button" data-filter-menu-dropdown-btn-cencel>
+                                Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Цвет</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Цвет</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="filter-menu_dropdown">
+                            <?php foreach ($filterColorsParamsData as $key => $item) { ?>
+                                <label class="filter-menu_dropdown_item_container">
+                                    <div class="filter-menu_dropdown_item_color"
+                                         style="background: <?= $item['color'] ?>;"></div>
+                                    <?= $item['name'] ?>
+                                    <input type="radio" name="radio-<?= $key ?>">
+                                    <span class="filter-menu_dropdown_item_checkmark"></span>
+                                </label>
+                            <?php } ?>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button" data-filter-menu-dropdown-btn-cencel>
+                                Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Размер</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Размер</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="menu_dropdown-for-sizes">
+                            <p class="menu_dropdown-for-sizes_title">
+                                Ширина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                            <p class="menu_dropdown-for-sizes_title">
+                                Глубина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button"
+                                    data-filter-sizes-menu-dropdown-btn-cencel>Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Размер</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Размер</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="menu_dropdown-for-sizes">
+                            <p class="menu_dropdown-for-sizes_title">
+                                Ширина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                            <p class="menu_dropdown-for-sizes_title">
+                                Глубина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button"
+                                    data-filter-sizes-menu-dropdown-btn-cencel>Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Размер</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Размер</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="menu_dropdown-for-sizes">
+                            <p class="menu_dropdown-for-sizes_title">
+                                Ширина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                            <p class="menu_dropdown-for-sizes_title">
+                                Глубина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button"
+                                    data-filter-sizes-menu-dropdown-btn-cencel>Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </li>
         <li>
-            <button class="filter-catalog_item">Сначала популярные</button>
-        </li>
-        <li>
-            <button class="filter-catalog_item">Ткань</button>
-        </li>
-        <li>
-            <button class="filter-catalog_item">Цвет</button>
-        </li>
-        <li>
-            <button class="filter-catalog_item">Цена</button>
-        </li>
-        <li>
-            <button class="filter-catalog_item">Размер</button>
-        </li>
-        <li>
-            <button class="filter-catalog_item">Размер</button>
-        </li>
-        <li>
-            <button class="filter-catalog_btn-show-all">Показать все</button>
-        </li>
-    </ul>
-    <ul class="filter-catalog_mobile">
-        <li>
-            <button class="filter-catalog_item">Категория</button>
-        </li>
-        <li>
-            <button class="filter-catalog_item">По умолчанию</button>
-        </li>
-        <li>
-            <button class="filter-catalog_btn-filter"></button>
+            <button class="filter-catalog_btn-show-all btn-open-filter" data-filter-catalog-btn-show-all>Показать все
+            </button>
+            <button class="filter-catalog_btn-show-all" data-filter-catalog-btn-show-all>Скрыть фильтр</button>
+            <button class="filter-catalog_btn-filter-mobile" data-filter-catalog-btn-show-all></button>
         </li>
     </ul>
 </section>
@@ -108,15 +429,17 @@ $catalogData = [
     ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
     ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
     ['photo' => ['images/image 42.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
-    ['photo' => ['images/image 43.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'], ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 43.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
     ['photo' => ['images/image 41.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
     ['photo' => ['images/image 42.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
+    ['photo' => ['images/image 43.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
     ['photo' => ['images/image 43.png'], 'status' => 'Черная пятница', 'prices' => '45 000', 'old-prices' => '60 000', 'title' => 'Лазурит 5 ст большой диван'],
 ];
 ?>
 
 
-<section class="container-core catalog">
+<section class="container-core catalog" data-catalog-proucts-wrapper>
     <?php foreach ($catalogData as $item) { ?>
 
         <a class="catalog_item" href="" data-catalog-item>
@@ -171,7 +494,7 @@ $catalogData = [
 </section>
 
 <section class="container-core pagination-wrapper">
-    <button class="btn-show-more">Показать еще</button>
+    <button class="btn-show-more" data-show-all-products>Показать еще</button>
 
     <div class="pagination">
         <div class="pagination_item-wrapper">

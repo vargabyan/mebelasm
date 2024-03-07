@@ -134,13 +134,22 @@ button {
     line-height: 26px
 }
 
-.header_about-company_nav-item:first-child p {
+.selection-city_label {
+    position: relative;
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.header_about-company_nav-item:first-child p:before {
+.selection-city_label select {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0;
+}
+
+.selection-city_label:before {
     display: block;
     content: '';
     width: 24px;
@@ -204,6 +213,13 @@ button {
     border: none;
     display: flex;
     padding-left: 62px;
+    cursor: pointer;
+
+    color: var(--Secondary-0);
+    font-size: 20px;;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+    text-decoration: none;
 }
 
 .header_nav-panel_other_catalog:before {
@@ -215,15 +231,6 @@ button {
     height: 32px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M4 11.3333H28M4 20.6666H17' stroke='white' stroke-width='2' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E");
     cursor: pointer;
-}
-
-.header_nav-panel_other_catalog a {
-    border: none;
-    color: var(--Secondary-0);
-    font-size: 20px;;
-    line-height: 130%;
-    letter-spacing: -0.4px;
-    text-decoration: none;
 }
 
 .header_nav-panel_other_search {
@@ -323,6 +330,7 @@ button {
     color: var(--Secondary-100);
     font-size: 18px;
     line-height: 26px;
+    text-decoration: none;
 }
 
 .header-mobile {
@@ -632,11 +640,31 @@ button {
 }
 
 .catalog_item {
-    display: flex;
+    /*display: flex;*/
+    display: none;
     height: 613px;
     flex-direction: column;
     border-radius: 20px;
     text-decoration: none;
+}
+
+.catalog_item:nth-child(1),
+.catalog_item:nth-child(2),
+.catalog_item:nth-child(3),
+.catalog_item:nth-child(4),
+.catalog_item:nth-child(5),
+.catalog_item:nth-child(6),
+.catalog_item:nth-child(7),
+.catalog_item:nth-child(8),
+.catalog_item:nth-child(9),
+.catalog_item:nth-child(10),
+.catalog_item:nth-child(11),
+.catalog_item:nth-child(12) {
+    display: flex;
+}
+
+.catalog_item:nth-child(5) {
+    grid-column-end: span 2;
 }
 
 .catalog_item_gallery-wrapper {
@@ -2115,8 +2143,7 @@ button {
     gap: 8px;
 }
 
-.card-about_card-product_btn-add-basket,
-.card-about_card-product_btn-order {
+.card-about_card-product_btn-add-basket {
     display: flex;
     height: 66px;
     padding: 20px 24px;
@@ -2133,6 +2160,25 @@ button {
     line-height: 130%;
     letter-spacing: -0.4px;
 }
+
+/*нет пока страница сказали сделать disabled */
+
+.card-about_card-product_btn-order {
+    display: flex;
+    height: 66px;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: none;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+}
+
+/*нет пока страница сказали сделать disabled */
 
 .card-about_card-product_btn-installment-plan {
     position: relative;
@@ -7546,6 +7592,11 @@ button {
         max-height: 100%;
         width: 100%;
         height: 100%;
+    }
+
+
+    .catalog_item:nth-child(5) {
+        grid-column-end: span 1;
     }
 
 

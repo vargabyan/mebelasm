@@ -21,7 +21,19 @@
         <nav class="header_about-company">
             <ul class="header_about-company_items-wrapper">
                 <li class="header_about-company_nav-item">
-                    <p>Екатеринбург</p>
+                    <label class="selection-city_label">
+                        <span data-selection-city-label-value>
+                            Екатеринбург
+                        </span>
+                        <select name="" id="" data-selection-city>
+                            <?php
+                            $City = [];
+                            require 'list-city.php';
+                            foreach ($City as $item) { ?>
+                                <option value=""><?= $item ?></option>
+                            <?php } ?>
+                        </select>
+                    </label>
                 </li>
                 <li class="header_about-company_nav-item">
                     <a href="/about-company.php">О компании</a>
@@ -50,9 +62,9 @@
                 <li class="header_nav-panel_other_logo-wrapper"><a class="header_nav-panel_other_logo" href="/"><img
                                 src="/images/Frame%202087327193%20(2).png" alt="logo"></a></li>
                 <li class="header_nav-panel_other_catalog-wrapper">
-                    <button class="header_nav-panel_other_catalog green-btn">
-                        <a href="/catalog.php">Каталог</a>
-                    </button>
+                    <a href="/catalog.php" class="header_nav-panel_other_catalog green-btn">
+                        Каталог
+                    </a>
                 </li>
                 <li class="header_nav-panel_other_search-wrapper">
                     <label class="header_nav-panel_other_search">
@@ -74,8 +86,8 @@
             </ul>
         </nav>
         <div class="header_sub-title-wrapper">
-            <p class="header_sub-title_item">Ткани</p>
-            <p class="header_sub-title_item">Подъемые механизмы</p>
+            <a class="header_sub-title_item" href="/we-work-with-business.php">Ткани</a>
+            <a class="header_sub-title_item" href="/lifting-mechanisms.php">Подъемые механизмы</a>
         </div>
     </section>
 

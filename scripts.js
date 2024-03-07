@@ -832,6 +832,32 @@ document.addEventListener('click', (e) => {
 })
 
 
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-show-all-products]')
+
+    if (btn) {
+        const wrapper = document.querySelector('[data-catalog-proucts-wrapper]')
+        const item = wrapper.querySelectorAll('[data-catalog-item]')
+
+        item.forEach((el) => {
+            el.style['display'] = 'flex';
+        })
+
+        btn.style['display'] = 'none';
+    }
+})
+
+
+document.addEventListener('change', (e) => {
+    const select = e.target.closest('[data-selection-city]')
+
+    if (select) {
+        const labelValue = document.querySelector('[data-selection-city-label-value]')
+        labelValue.textContent = select.options[select.selectedIndex].textContent;
+    }
+})
+
+
 
 
 
