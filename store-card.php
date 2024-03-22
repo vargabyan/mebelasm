@@ -3,10 +3,10 @@ include __DIR__ . '/head.php';
 ?>
 
 <section class="store-card-furniture-factory">
-    <div class="store-card-furniture-factory_map-wrapper">
-        <iframe class="store-card-furniture-factory_map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
+    <div class="store-card-furniture-factory_map-wrapper" data-store-card-furniture-factory-map-wrapper>
+        <iframe class="store-card-furniture-factory_map" data-store-card-furniture-factory_map src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
                 width="100%" height="800" frameborder="0"></iframe>
-        <button class="store-card-furniture-factory_map_btn">Развернуть карту</button>
+        <button class="store-card-furniture-factory_map_btn" data-store-card-furniture-factory-map-btn>Развернуть карту</button>
     </div>
     <div class="container-core store-card-furniture-factory_content">
         <img class="store-card-furniture-factory_content_img" src="images/cfc26de4f5ac1d83571fd33cfdf7c351.png" alt="">
@@ -293,7 +293,6 @@ $filterColorsParamsData = [
                                     <input type="text" placeholder="2 200">
                                 </label>
                             </div>
-                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
                         </div>
                         <div class="filter-menu_dropdown_btn-wrapper">
                             <button class="filter-menu_dropdown_btn" type="button"
@@ -345,7 +344,6 @@ $filterColorsParamsData = [
                                     <input type="text" placeholder="2 200">
                                 </label>
                             </div>
-                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
                         </div>
                         <div class="filter-menu_dropdown_btn-wrapper">
                             <button class="filter-menu_dropdown_btn" type="button"
@@ -397,7 +395,6 @@ $filterColorsParamsData = [
                                     <input type="text" placeholder="2 200">
                                 </label>
                             </div>
-                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
                         </div>
                         <div class="filter-menu_dropdown_btn-wrapper">
                             <button class="filter-menu_dropdown_btn" type="button"
@@ -518,10 +515,12 @@ $catalogData = [
 $review_data = [
     ['name' => 'Мария Н.', 'photo' => 'images/9c43ca130cef444d38465c21b41edf2f.png', 'color_product' => 'бежевый', 'date' => '12 июня. 2023', 'comment' => 'Диван аккуратный, удобный, мягкий. Привезли вовремя, менеджеры, сборщики всё молодцы. Нужен был как раз небольшой на кухню.', 'comment_photo' => 'images/04e79e6283bf03913bb8d8ffaef7f40e.png', 'quality' => 5, 'service' => 2, 'correspondence' => 3],
     ['name' => 'Мария Н.', 'photo' => 'images/9c43ca130cef444d38465c21b41edf2f.png', 'color_product' => 'бежевый', 'date' => '12 июня. 2023', 'comment' => 'Диван аккуратный, удобный, мягкий. Привезли вовремя, менеджеры, сборщики всё молодцы. Нужен был как раз небольшой на кухню.', 'comment_photo' => 'images/04e79e6283bf03913bb8d8ffaef7f40e.png', 'quality' => 5, 'service' => 2, 'correspondence' => 3],
+    ['name' => 'Мария Н.', 'photo' => 'images/9c43ca130cef444d38465c21b41edf2f.png', 'color_product' => 'бежевый', 'date' => '12 июня. 2023', 'comment' => 'Диван аккуратный, удобный, мягкий. Привезли вовремя, менеджеры, сборщики всё молодцы. Нужен был как раз небольшой на кухню.', 'comment_photo' => 'images/04e79e6283bf03913bb8d8ffaef7f40e.png', 'quality' => 5, 'service' => 2, 'correspondence' => 3],
+    ['name' => 'Мария Н.', 'photo' => 'images/9c43ca130cef444d38465c21b41edf2f.png', 'color_product' => 'бежевый', 'date' => '12 июня. 2023', 'comment' => 'Диван аккуратный, удобный, мягкий. Привезли вовремя, менеджеры, сборщики всё молодцы. Нужен был как раз небольшой на кухню.', 'comment_photo' => 'images/04e79e6283bf03913bb8d8ffaef7f40e.png', 'quality' => 5, 'service' => 2, 'correspondence' => 3],
 ]
 ?>
 
-<div class="container-core card-review" data-page-type="store-card">
+<div class="container-core card-review" data-page-type="store-card" data-card-review>
     <div class="cart-review_header-wrapper">
         <h3 class="cart-review_header">Отзывы <span>4</span></h3>
         <button class="cart-review_btn-write-review">Написать отзыв</button>
@@ -529,7 +528,7 @@ $review_data = [
 
     <div class="cart-review_item-wrapper">
         <?php foreach ($review_data as $review_item) { ?>
-            <div class="cart-review_item">
+            <div class="cart-review_item" data-cart-review-item>
                 <div class="cart-review_grade">
 
                     <div class="cart-review_grade_item">
@@ -599,7 +598,7 @@ $review_data = [
             </div>
         <?php } ?>
     </div>
-    <a class="card-review_btn-show-more-review" href="">Показать больше отзывов</a>
+    <button class="card-review_btn-show-more-review" data-card-review-btn-show-more-review>Показать больше отзывов</button>
 </div>
 
 
@@ -608,19 +607,20 @@ $question_and_answer = [
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
+    ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
+    ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
 ];
 ?>
 
-<section class="container-core questions-and-answer show-more">
+<section class="container-core questions-and-answer" data-questions-and-answer>
     <?php foreach ($question_and_answer as $item) { ?>
         <div class="questions-and-answer_item" data-questions-and-answer-item>
-            <div class="questions-and-answer_item-question"
-                 data-questions-and-answer-question><?= $item['question'] ?></div>
+            <div class="questions-and-answer_item-question" data-questions-and-answer-question><?= $item['question'] ?></div>
             <div class="questions-and-answer_item-answer" data-questions-and-answer-answer><?= $item['answer'] ?></div>
         </div>
     <?php } ?>
-    <div class="questions-and-answer_item">
-        <button class="questions-and-answer_btn-show-more">Показать больше</button>
+    <div class="questions-and-answer_item show-more" data-questions-and-answer-item>
+        <button class="questions-and-answer_btn-show-more" data-questions-and-answer-question data-questions-and-answer_btn-show-more>Показать больше</button>
     </div>
 </section>
 

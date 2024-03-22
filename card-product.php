@@ -85,7 +85,6 @@ $images = [
                             <p class="card-about_card-product_size_text-item">Размер</p>
                             <p class="card-about_card-product_size_text-item">Длина х Ширина х Высота</p>
                         </div>
-                        <p class="card-about_card-product_size_text">На картинке</p>
                     </div>
                     <div class="card-about_card-product_size" data-card-about-card-product-size>
                         <div class="card-about_card-product_size_item active" data-card-about-card-product-size-item>160 х 160 х 200</div>
@@ -111,12 +110,12 @@ $images = [
                     </div>
                 </div>
                 <div class="card-about_card-product_btn-wrapper">
-                    <button class="card-about_card-product_btn-add-basket" data-card-about-card-product-btn-add-basket>Добавить в корзину</button>
-                    <button class="card-about_card-product_btn-order">Сделать предзаказ</button>
+                    <button class="card-about_card-product_btn-add-basket has-product" data-card-about-card-product-btn-add-basket>Добавить в корзину</button>
+                    <button class="card-about_card-product_btn-order has-product_">Сделать предзаказ</button>
                     <button class="card-about_card-product_btn-installment-plan" data-Interest-free-installments-btn>В рассрочку, 0%</button>
                 </div>
                 <div class="card-about_card-product_btn-other-wrapper">
-                    <button class="card-about_card-product_btn-favorite">В избранное</button>
+                    <button class="card-about_card-product_btn-favorite" data-card-about-card-product-btn-favorite>В избранное</button>
                     <button class="card-about_card-product_btn-get-notifications" data-card-about-card-product-btn-get-notifications>Узнать о снижении цены</button>
                 </div>
             </div>
@@ -428,18 +427,20 @@ $question_and_answer = [
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
+    ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
+    ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
 ];
 ?>
 
-<section class="container-core questions-and-answer show-more">
+<section class="container-core questions-and-answer" data-questions-and-answer>
     <?php foreach ($question_and_answer as $item) { ?>
         <div class="questions-and-answer_item" data-questions-and-answer-item>
             <div class="questions-and-answer_item-question" data-questions-and-answer-question><?= $item['question'] ?></div>
             <div class="questions-and-answer_item-answer" data-questions-and-answer-answer><?= $item['answer'] ?></div>
         </div>
     <?php } ?>
-    <div class="questions-and-answer_item">
-        <button class="questions-and-answer_btn-show-more">Показать больше</button>
+    <div class="questions-and-answer_item show-more" data-questions-and-answer-item>
+        <button class="questions-and-answer_btn-show-more" data-questions-and-answer-question data-questions-and-answer_btn-show-more>Показать больше</button>
     </div>
 </section>
 

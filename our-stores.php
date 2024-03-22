@@ -8,7 +8,7 @@ breadcrumb([['url' => '', 'name' => 'Магазины']]);
 ?>
 
 
-<section class="container-core map-wrapper" data-page-type="our-stores" data-map-wrapper>
+<section class="container-core map-wrapper " data-map-wrapper>
     <h1 class="map_header site-header">Наши магазины</h1>
     <div class="map">
         <div class="map-and-list">
@@ -31,6 +31,29 @@ breadcrumb([['url' => '', 'name' => 'Магазины']]);
                 </select>
             </label>
             <div class="map_chart-wrapper active" data-content-map>
+                <section class="map-store-item-container" data-map-store-item-container>
+                    <div class="map-store-item-wrapper">
+                        <button class="map-store-item_btn-open" data-map-store-item-btn-open></button>
+                        <div class="map-store-item" data-map-store-item>
+                            <img class="map-store-item_img" src="/images/Component%2041.png" alt="">
+                            <div class="map-store-item_content">
+                                <div class="map-store-item_head-wrapper">
+                                    <div class="map-store-item_title-wrapper">
+                                        <h1 class="map-store-item_title">Асм-мебель</h1>
+                                        <button class="map-store-item_btn-cancel" data-map-store-item-btn-cancel></button>
+                                    </div>
+                                    <p class="map-store-item_subtitle">
+                                        ТРЦ «Сургут Сити Молл», Югорский тракт, 38, Сургут
+                                    </p>
+                                </div>
+                                <div class="map-store-item_btn-wrapper">
+                                    <a class="map-store-item_btn" href="">Подробнее</a>
+                                    <a class="map-store-item_btn" href="">Каталог</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
                         width="100%" height="800" frameborder="0"></iframe>
             </div>
@@ -75,6 +98,29 @@ breadcrumb([['url' => '', 'name' => 'Магазины']]);
                 </select>
             </label>
             <div class="map_chart-wrapper active" data-content-map>
+                <section class="map-store-item-container" data-map-store-item-container>
+                    <div class="map-store-item-wrapper">
+                        <button class="map-store-item_btn-open" data-map-store-item-btn-open></button>
+                        <div class="map-store-item" data-map-store-item>
+                            <img class="map-store-item_img" src="/images/Component%2041.png" alt="">
+                            <div class="map-store-item_content">
+                                <div class="map-store-item_head-wrapper">
+                                    <div class="map-store-item_title-wrapper">
+                                        <h1 class="map-store-item_title">Асм-мебель</h1>
+                                        <button class="map-store-item_btn-cancel" data-map-store-item-btn-cancel></button>
+                                    </div>
+                                    <p class="map-store-item_subtitle">
+                                        ТРЦ «Сургут Сити Молл», Югорский тракт, 38, Сургут
+                                    </p>
+                                </div>
+                                <div class="map-store-item_btn-wrapper">
+                                    <a class="map-store-item_btn" href="">Подробнее</a>
+                                    <a class="map-store-item_btn" href="">Каталог</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
                         width="100%" height="800" frameborder="0"></iframe>
             </div>
@@ -97,7 +143,7 @@ breadcrumb([['url' => '', 'name' => 'Магазины']]);
 </section>
 
 <section class="container-core map-wrapper " data-map-wrapper>
-    <h1 class="map_header site-header">Магазины группы компаний</h1>
+    <h1 class="map_header site-header">Наши магазины</h1>
     <div class="map">
         <div class="map-and-list">
             <button class="map-and-list_item active" data-select-map><span>На карте</span></button>
@@ -119,6 +165,29 @@ breadcrumb([['url' => '', 'name' => 'Магазины']]);
                 </select>
             </label>
             <div class="map_chart-wrapper active" data-content-map>
+                <section class="map-store-item-container" data-map-store-item-container>
+                    <div class="map-store-item-wrapper">
+                        <button class="map-store-item_btn-open" data-map-store-item-btn-open></button>
+                        <div class="map-store-item" data-map-store-item>
+                            <img class="map-store-item_img" src="/images/Component%2041.png" alt="">
+                            <div class="map-store-item_content">
+                                <div class="map-store-item_head-wrapper">
+                                    <div class="map-store-item_title-wrapper">
+                                        <h1 class="map-store-item_title">Асм-мебель</h1>
+                                        <button class="map-store-item_btn-cancel" data-map-store-item-btn-cancel></button>
+                                    </div>
+                                    <p class="map-store-item_subtitle">
+                                        ТРЦ «Сургут Сити Молл», Югорский тракт, 38, Сургут
+                                    </p>
+                                </div>
+                                <div class="map-store-item_btn-wrapper">
+                                    <a class="map-store-item_btn" href="">Подробнее</a>
+                                    <a class="map-store-item_btn" href="">Каталог</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
                         width="100%" height="800" frameborder="0"></iframe>
             </div>

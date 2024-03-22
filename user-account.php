@@ -13,18 +13,18 @@ include __DIR__ . '/head.php';
     <div class="user-account_content">
         <div class="user-account_menu-wrapper">
             <ul class="user-account_menu">
-                <li><a href="">Заказы</a></li>
-                <li><a href="">Профиль</a></li>
-                <li><a href="">Мои отзывы</a></li>
-                <li><a href="">Мои обращения</a></li>
-                <li><a href="">Бонусные рубли</a></li>
-                <li><a href="">Выйти</a></li>
+                <li><a href="#order">Заказы</a></li>
+                <li><a href="#profil">Профиль</a></li>
+                <li><a href="#review">Мои отзывы</a></li>
+                <li><a href="#">Мои обращения</a></li>
+                <li><a href="#bonus-coins">Бонусные рубли</a></li>
+                <li><a href="/">Выйти</a></li>
             </ul>
             <a class="user-account_messenger" href="">Написать в WhatsApp</a>
         </div>
         <div class="user-account_user-to-do">
             <div class="user-account_orders">
-                <h3 class="user-account_orders_title">Заказы<span>2</span></h3>
+                <h3 class="user-account_orders_title" id="order">Заказы<span>2</span></h3>
                 <div class="user-account_orders_btn-current-add-completed-wrapper">
                     <a class="user-account_orders_btn-current-add-completed_item active" href="">Текущие</a>
                     <a class="user-account_orders_btn-current-add-completed_item" href="">Выполненные</a>
@@ -83,7 +83,7 @@ include __DIR__ . '/head.php';
             </div>
 
             <div class="user-account_orders profile">
-                <h3 class="user-account_orders_title profile_title">Профиль</h3>
+                <h3 class="user-account_orders_title profile_title" id="profil">Профиль</h3>
                 <form action="">
                     <label class="user-account_profile_label"><input type="text" placeholder="Имя"></label>
                     <label class="user-account_profile_label"><input type="text" placeholder="Электронная почта"></label>
@@ -103,7 +103,7 @@ include __DIR__ . '/head.php';
             ?>
 
             <div class="user-account_orders">
-                <h3 class="user-account_orders_title">Мои отзывы<span>2</span></h3>
+                <h3 class="user-account_orders_title" id="review">Мои отзывы<span>2</span></h3>
 
                 <div class="user-account_review_content">
                     <div class="user-account_review-wrapper">
@@ -191,33 +191,38 @@ include __DIR__ . '/head.php';
             </div>
 
 
-            <div class="user-account_orders">
-                <h3 class="user-account_orders_title">Бонусные рубли<span>1 200</span></h3>
+            <div class="user-account_orders" data-user-account-orders>
+                <h3 class="user-account_orders_title" id="bonus-coins">Бонусные рубли<span>1 200</span></h3>
 
                 <div class="user-account_bonus_content">
 
-                    <div class="user-account_bonus_item">
+                    <div class="user-account_bonus_item" data-user-account-bonus-item>
                         <p class="user-account_bonus_item_number">Заказ №183</p>
                         <div class="user-account_bonus_item_coin">+ 400</div>
                     </div>
 
-                    <div class="user-account_bonus_item">
+                    <div class="user-account_bonus_item" data-user-account-bonus-item>
                         <p class="user-account_bonus_item_number">Заказ №183</p>
                         <div class="user-account_bonus_item_coin">+ 400</div>
                     </div>
 
-                    <div class="user-account_bonus_item">
+                    <div class="user-account_bonus_item" data-user-account-bonus-item>
                         <p class="user-account_bonus_item_number">Заказ №183</p>
                         <div class="user-account_bonus_item_coin">+ 400</div>
                     </div>
 
-                    <div class="user-account_bonus_item">
+                    <div class="user-account_bonus_item" data-user-account-bonus-item>
+                        <p class="user-account_bonus_item_number">Заказ №183</p>
+                        <div class="user-account_bonus_item_coin">+ 400</div>
+                    </div>
+
+                    <div class="user-account_bonus_item" data-user-account-bonus-item>
                         <p class="user-account_bonus_item_number">Заказ №183</p>
                         <div class="user-account_bonus_item_coin">+ 400</div>
                     </div>
 
                 </div>
-                <button class="user-account_bonus_btn-show-more">Показать еще</button>
+                <button class="user-account_bonus_btn-show-more" data-user-account-bonus-btn-show-more>Показать еще</button>
             </div>
 
         </div>

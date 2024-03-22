@@ -15,16 +15,16 @@ include __DIR__ . '/head.php';
             клиентам подобрать идеальный вариант для своего помещения.
         </p>
         <ul class="about-company_links">
-            <li><a class="about-company_link" href="">История развития</a></li>
-            <li><a class="about-company_link" href="">Магазины</a></li>
-            <li><a class="about-company_link" href="">Контакты</a></li>
-            <li><a class="about-company_link" href="">Вакансии</a></li>
+            <li><a class="about-company_link" href="#stories">История развития</a></li>
+            <li><a class="about-company_link" href="#store">Магазины</a></li>
+            <li><a class="about-company_link" href="#store">Контакты</a></li>
+            <li><a class="about-company_link" href="#vacancy">Вакансии</a></li>
         </ul>
     </div>
 </section>
 
 <section class="container-core company-group" data-company-group>
-    <h2 class="company-group_header">Группа компаний АСМ Мебель – <br> компания с историей в 30 лет. </h2>
+    <h2 class="company-group_header" id="stories">Группа компаний АСМ Мебель – <br> компания с историей в 30 лет. </h2>
 
     <div class="company-group_items">
         <?php for ($i = 0; $i < 4; $i++) { ?>
@@ -45,7 +45,7 @@ include __DIR__ . '/head.php';
 </section>
 
 <section class="we-need-specialists container-core">
-    <h1 class="we-need-specialists_header">Мы постоянно в поиске специалистов</h1>
+    <h1 class="we-need-specialists_header" id="vacancy">Мы постоянно в поиске специалистов</h1>
     <a class="we-need-specialists_watch-everything green-btn" href="">Смотреть все</a>
 
     <div class="job-vacancy_item-wrapper" data-page-type="about-company">
@@ -70,7 +70,7 @@ include __DIR__ . '/head.php';
 
 <section class="container-core map-wrapper" data-page-type="about-company" data-map-wrapper>
     <div class="about-company_header-wrapper">
-        <h1 class="about-company_header">Наши магазины</h1>
+        <h1 class="about-company_header" id="store">Наши магазины</h1>
         <a class="about-company_show-all" href="">Показать все</a>
     </div>
     <div class="map">
@@ -94,7 +94,7 @@ include __DIR__ . '/head.php';
                 </select>
             </label>
             <div class="map_chart-wrapper active" data-content-map>
-                <iframe class="map_chart"src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor" width="100%" height="800" frameborder="0"></iframe>
+                <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor" width="100%" height="800" frameborder="0"></iframe>
             </div>
             <div class="map_list-wrapper" data-content-city-list>
                 <?php for ($i = 0; $i < 12; $i++) { ?>

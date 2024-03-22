@@ -66,16 +66,29 @@
                         Каталог
                     </a>
                 </li>
-                <li class="header_nav-panel_other_search-wrapper">
-                    <label class="header_nav-panel_other_search">
-                        <input type="text" placeholder="Я ищу...">
-                    </label>
+                <li class="header_nav-panel_other_search-wrapper" data-header-nav-panel-other-search-wrapper>
+                    <div class="core-search-background" data-core-search-background></div>
+                    <form action="" class="core-search-wrapper" data-core-search-wrapper>
+                        <label class="header_nav-panel_other_search" data-core-search>
+                            <input type="text" placeholder="Я ищу..." class=>
+                        </label>
+                        <ul class="core-search_content" data-core-search-content>
+                            <?php for ($i = 0; $i < 40; $i++) { ?>
+                                <li>
+                                    <a class="core-search_content_item" href="">Модульные диваны</a>
+                                </li>
+                            <?php }?>
+                            <li>
+                                <a class="core-search_content_item watch-all" href="">Категории</a>
+                            </li>
+                        </ul>
+                    </form>
                 </li>
             </ul>
             <ul class="header_nav-panel_links-wrapper">
                 <li class="header_nav-panel_links_item"><a href="/contacts.php">Контакты</a></li>
                 <li class="header_nav-panel_links_item"><a href="/our-stores.php">Магазины</a></li>
-                <li class="header_nav-panel_links_item"><a href="/personal-area.php">Войти</a></li>
+                <li class="header_nav-panel_links_item"><button data-open-sign-in-sign-up>Войти</button></li>
                 <li class="header_nav-panel_links_item"><a href="">Избр.</a></li>
                 <li class="header_nav-panel_links_item">
                     <a class="core-basket-icon" href="/basket.php">
@@ -98,9 +111,24 @@
             </a>
             <p class="header-mobile_city">Екатеринбург</p>
         </div>
-        <label class="header-mobile_search">
-            <input type="text" placeholder="Я ищу...">
-        </label>
+        <div class="core-search-mobile-wrapper" data-core-searach-mobile-wrapper>
+            <form action="" class="core-search-mobile_input-wrapper" data-core-searach-mobile-btn-wrapper>
+                <label class="header-mobile_search" data-core-searach-mobile-input-label>
+                    <input type="text" placeholder="Я ищу...">
+                </label>
+                <button class="header-mobile_btn-cancel" data-core-searach-mobile-btn-cancel>Отмена</button>
+            </form>
+            <ul class="core-search_content" data-core-searach-mobile-content>
+                <?php for ($i = 0; $i < 40; $i++) { ?>
+                <li>
+                    <a class="core-search_content_item" href="">Модульные диваны</a>
+                </li>
+                <?php }?>
+                <li>
+                    <a class="core-search_content_item watch-all" href="">Категории</a>
+                </li>
+            </ul>
+        </div>
     </section>
 </header>
 
@@ -129,4 +157,38 @@
             </a>
         </li>
     </ul>
+</section>
+
+
+<section class="sing-in-sign-up-wrapper" data-sing-in-sign-up>
+    <div class="sing-in-sign-up">
+        <div class="sing-in-sign-up_header-wrapper">
+            <div class="sing-in-sign-up_btn-wrapper">
+                <div class="sing-in-sign-up_btn_item-wrapper">
+                    <button class="sing-in-sign-up_btn_item" data-btn-sign-in>Вход</button>
+                    <button class="sing-in-sign-up_btn_item not-active" data-btn-sign-up>Регистрация</button>
+                </div>
+                <button class="sing-in-sign-up-wrapper_btn-close" data-sing-in-sign-up-btn-close></button>
+            </div>
+            <p class="sing-in-sign-up_title">После авторизации вы сможете управлять заказами и оставлять отзывы</p>
+        </div>
+        <div class="sing-in-sign-up_forms-wrapper">
+            <form class="sing-in-sign-up_form active" action="" data-sing-in-form >
+                <label class="sing-in-sign-up_form_label"><input type="text" placeholder="+7"></label>
+                <label class="sing-in-sign-up_form_label"><input type="password" placeholder="Пароль"></label>
+                <div class="sing-in-sign-up_form_footer-btn-wrapper">
+                    <input class="sing-in-sign-up_form_footer-btn-item" type="submit" value="Войти">
+                    <a class="sing-in-sign-up_form_footer-btn-additional" href="">Забыл пароль или номер телефона?</a>
+                </div>
+            </form>
+            <form class="sing-in-sign-up_form" action="" data-sing-up-form >
+                <label class="sing-in-sign-up_form_label"><input type="text" placeholder="+7"></label>
+                <label class="sing-in-sign-up_form_label"><input type="password" placeholder="Пароль"></label>
+                <label class="sing-in-sign-up_form_label"><input type="password" placeholder="Пароль"></label>
+                <div class="sing-in-sign-up_form_footer-btn-wrapper">
+                    <input class="sing-in-sign-up_form_footer-btn-item" type="submit" value="Регистрация">
+                </div>
+            </form>
+        </div>
+    </div>
 </section>

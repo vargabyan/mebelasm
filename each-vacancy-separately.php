@@ -8,6 +8,12 @@ include __DIR__ . '/breadcrumb.php';
 breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
 ?>
 
+<?php
+if(isset($_GET["id"])){
+    $Data_id = $_GET["id"];
+}
+?>
+
 <section class="container-core each-vacancy-separately-wrapper">
     <h1 class="site-header each-vacancy-separately-header">Работа в компании</h1>
 
@@ -26,7 +32,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                         <li>Асм-мебель</li>
                     </ul>
                 </div>
-                <a class="job-vacancy_item_btn-respond" href="">Откликнуться</a>
+                <a class="job-vacancy_item_btn-respond" href="#send-cv">Откликнуться</a>
             </div>
         </div>
 
@@ -65,7 +71,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                 <li>официальная заработная плата (оклад + ежемесячная премия)</li>
             </ul>
             <p class="each-vacancy-separately_date-vacancy">Вакансия опубликована 18 ноября 2023 в Москве</p>
-            <div class="each-vacancy-separately_form-wrapper">
+            <div class="each-vacancy-separately_form-wrapper" id="send-cv" data-each-vacancy-separately_form-<?= $Data_id ?>>
                 <form action="">
                     <p class="each-vacancy-separately_form_title">Откликнуться на вакансию</p>
                     <label class="each-vacancy-separately_form_input"><input type="text" placeholder="Имя"></label>
@@ -79,11 +85,11 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
 
         <div class="each-vacancy-separately_similar-vacancies-wrapper">
             <h3 class="each-vacancy-separately_similar-vacancies-header">Похожие вакансии</h3>
-            <a class="each-vacancy-separately_similar-vacancies_btn-list-vacancy" href="">К списку с вакансиями</a>
+            <a class="each-vacancy-separately_similar-vacancies_btn-list-vacancy" href="/job-vacancy.php">К списку с вакансиями</a>
         </div>
 
-        <div class="job-vacancy_item-wrapper">
-            <div class="job-vacancy_item">
+        <div class="job-vacancy_item-wrapper" data-similar-vacancies-wrapper>
+            <div class="job-vacancy_item" data-job-vacancy-item>
                 <div class="job-vacancy_item_title-wrapper">
                     <p class="job-vacancy_item_title">Менеджер по подбору персонала</p>
                     <p class="job-vacancy_item_salaries">45 000 – 60 000 ₽</p>
@@ -98,7 +104,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                 <a class="job-vacancy_item_btn-respond" href="">Откликнуться</a>
             </div>
 
-            <div class="job-vacancy_item">
+            <div class="job-vacancy_item" data-job-vacancy-item>
                 <div class="job-vacancy_item_title-wrapper">
                     <p class="job-vacancy_item_title">Менеджер по подбору персонала</p>
                     <p class="job-vacancy_item_salaries">45 000 – 60 000 ₽</p>
@@ -109,12 +115,26 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                         <li>Асм-мебель</li>
                     </ul>
                 </div>
-                <a class="job-vacancy_item_btn-respond" href="">Откликнуться</a>
+                <a class="job-vacancy_item_btn-respond" href="/each-vacancy-separately.php?id=scroll">Откликнуться</a>
+            </div>
+
+            <div class="job-vacancy_item" data-job-vacancy-item>
+                <div class="job-vacancy_item_title-wrapper">
+                    <p class="job-vacancy_item_title">Менеджер по подбору персонала</p>
+                    <p class="job-vacancy_item_salaries">45 000 – 60 000 ₽</p>
+                </div>
+                <div class="job-vacancy_item_other">
+                    <ul class="job-vacancy_item_address">
+                        <li>Екатеринбург</li>
+                        <li>Асм-мебель</li>
+                    </ul>
+                </div>
+                <a class="job-vacancy_item_btn-respond" href="/each-vacancy-separately.php?id=scroll">Откликнуться</a>
             </div>
         </div>
 
         <section class="container-core">
-            <button class="each-vacancy-separately_btn-show-more green-btn">Показать еще</button>
+            <button class="each-vacancy-separately_btn-show-more green-btn" data-similar-vacancies-btn-open>Показать еще</button>
         </section>
 
         <div class="send-vc">

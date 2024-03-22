@@ -183,7 +183,8 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                                 <li>Асм-мебель</li>
                             </ul>
                         </div>
-                        <a class="job-vacancy_item_btn-respond" href="">Откликнуться</a>
+                        <a class="job-vacancy_item_btn-respond" href="/each-vacancy-separately.php?id=scroll">Откликнуться</a>
+                        <a class="job-vacancy_item_core-link" href="/each-vacancy-separately.php"></a>
                     </div>
 
                     <div class="job-vacancy_item">
@@ -197,7 +198,8 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
                                 <li>Асм-мебель</li>
                             </ul>
                         </div>
-                        <a class="job-vacancy_item_btn-respond" href="">Откликнуться</a>
+                        <a class="job-vacancy_item_btn-respond" href="/each-vacancy-separately.php?id=scroll">Откликнуться</a>
+                        <a class="job-vacancy_item_core-link" href="/each-vacancy-separately.php"></a>
                     </div>
                 <?php } ?>
             </div>

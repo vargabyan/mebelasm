@@ -77,6 +77,13 @@ new Swiper('.our-team_swiper', {
 
 
 new Swiper('.partners-swiper', {
+    loop: true,
+    speed: 2000,
+    allowTouchMove: false,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+    },
     breakpoints: {
         320: {
             spaceBetween: 12,
@@ -152,7 +159,10 @@ document.addEventListener('click', (e) => {
         const hiddenAnswer = wrapper.querySelector('[data-questions-and-answer-answer]');
 
         btnQuestion.classList.toggle('open');
-        hiddenAnswer.classList.toggle('open');
+
+        if (hiddenAnswer) {
+            hiddenAnswer.classList.toggle('open');
+        }
     }
 })
 
@@ -421,13 +431,76 @@ document.addEventListener('click', (e) => {
     }
 })
 
-document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-success-page-grade-wrapper]')
+document.addEventListener('mouseover', (e) => {
+    const btn = e.target.closest('[data-success-page_grade]')
 
     if (btn) {
+        const wrapper = btn.closest('[data-success-page-grade-items]')
+        const allItem = wrapper.querySelectorAll('[data-success-page_grade]')
+        let currentIndex = 0;
+
+        allItem.forEach( (item, index) => {
+            if (item === btn) { currentIndex = index }
+            item.classList.remove('mouseover')
+        })
+
+        allItem.forEach( (item, index) => {
+            if (index <= currentIndex) {
+                item.classList.add('mouseover')
+            }
+        })
+    }
+})
+
+document.addEventListener('mouseover', (e) => {
+    const container = document.querySelector('[data-success-page_grade-wrapper]')
+    const items = e.target.closest('[data-success-page-grade-items]')
+
+    if (container && !items) {
+        const allItem = document.querySelectorAll('[data-success-page_grade]')
+
+        allItem.forEach( item => {
+            item.classList.remove('mouseover')
+        })
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-success-page_grade]')
+
+    if (btn) {
+        const wrapper = btn.closest('[data-success-page-grade-items]')
+        const allItem = wrapper.querySelectorAll('[data-success-page_grade]')
+        let currentIndex = 0;
+
+        allItem.forEach( (item, index) => {
+            if (item === btn) { currentIndex = index }
+            item.classList.remove('active')
+        })
+
+        allItem.forEach( (item, index) => {
+            if (index <= currentIndex) {
+                item.classList.add('active')
+            }
+        })
+
+        const modalWrapper = document.querySelector('[data-help-us-become-better-modal-wrapper]')
+        modalWrapper.classList.add('active')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btnSubmit = e.target.closest('[data-help-us-become-better-modal-btn-footer-submit]')
+    const btnClose = e.target.closest('[data-help-us-become-better-modal-btn-footer-close]')
+
+    if (btnSubmit || btnClose) {
+        e.preventDefault()
         const wrapper = document.querySelector('[data-help-us-become-better-modal-wrapper]')
 
-        wrapper.classList.add('active')
+        wrapper.classList.remove('active')
+        document.querySelector('[data-success-page-grade-items]').style['display'] = 'none'
+        document.querySelector('[data-title-rate-the-service]').style['display'] = 'none'
+        document.querySelector('[data-title-thank-you]').style['display'] = 'block'
     }
 })
 
@@ -436,6 +509,12 @@ document.addEventListener('click', (e) => {
 
     if (btn) {
         const wrapper = document.querySelector('[data-help-us-become-better-modal-wrapper]')
+        const allGradeItem = document.querySelectorAll('[data-success-page_grade]')
+
+        allGradeItem.forEach( item => {
+            item.classList.remove('active')
+            item.classList.remove('mouseover')
+        })
 
         wrapper.classList.remove('active')
     }
@@ -856,6 +935,220 @@ document.addEventListener('change', (e) => {
         labelValue.textContent = select.options[select.selectedIndex].textContent;
     }
 })
+
+
+document.addEventListener('click', (e) => {
+    const container = document.querySelector('[data-header-nav-panel-other-search-wrapper]')
+    const searchBackground = container.querySelector('.active[data-core-search-background]')
+
+    if (e.target === searchBackground) {
+        const searchWrapper = container.querySelector('.active[data-core-search-wrapper]')
+        const searchContent = container.querySelector('[data-core-search-content]')
+
+        searchBackground.classList.remove('active')
+        searchWrapper.classList.remove('active')
+        searchContent.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-core-search]')
+
+    if (btn) {
+        const container = btn.closest('[data-header-nav-panel-other-search-wrapper]')
+        const searchBackground = container.querySelector('[data-core-search-background]')
+        const searchWrapper = container.querySelector('[data-core-search-wrapper]')
+        const searchContent = container.querySelector('[data-core-search-content]')
+
+
+        searchBackground.classList.add('active')
+        searchWrapper.classList.add('active')
+        searchContent.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btnCancel = e.target.closest('.active[data-core-searach-mobile-btn-cancel]')
+
+    if (btnCancel) {
+        const container = document.querySelector('[data-core-searach-mobile-wrapper]')
+        const btnWrapper = container.querySelector('.active[data-core-searach-mobile-btn-wrapper]')
+        const searchWrapper = container.querySelector('.active[data-core-searach-mobile-input-label]')
+        const searchContent = container.querySelector('.active[data-core-searach-mobile-content]')
+
+        container.classList.remove('active')
+        btnWrapper.classList.remove('active')
+        searchWrapper.classList.remove('active')
+        searchContent.classList.remove('active')
+        btnCancel.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const searchWrapper = e.target.closest('[data-core-searach-mobile-input-label]')
+
+    if (searchWrapper) {
+        const container = document.querySelector('[data-core-searach-mobile-wrapper]')
+        const btnWrapper = container.querySelector('[data-core-searach-mobile-btn-wrapper]')
+        const searchWrapper = container.querySelector('[data-core-searach-mobile-input-label]')
+        const searchContent = container.querySelector('[data-core-searach-mobile-content]')
+        const btnCancel = container.querySelector('[data-core-searach-mobile-btn-cancel]')
+
+        container.classList.add('active')
+        btnWrapper.classList.add('active')
+        searchWrapper.classList.add('active')
+        searchContent.classList.add('active')
+        btnCancel.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btnOpen = e.target.closest('[data-map-store-item-btn-open]')
+
+    if (btnOpen) {
+        const container = btnOpen.closest('[data-map-store-item-container]')
+        const hiddenItem = container.querySelector('[data-map-store-item]')
+
+        hiddenItem.classList.add('active')
+        container.style['width'] = '100%'
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btnCancel = e.target.closest('[data-map-store-item-btn-cancel]')
+
+    if (btnCancel) {
+        const container = btnCancel.closest('[data-map-store-item-container]')
+        const hiddenItem = container.querySelector('[data-map-store-item]')
+
+        hiddenItem.classList.remove('active')
+        container.style['width'] = ''
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-card-about-card-product-btn-favorite]')
+
+    if (btn) {
+        btn.classList.toggle('active')
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-questions-and-answer_btn-show-more]')
+
+    if (btn) {
+        const container = btn.closest('[data-questions-and-answer]')
+        const allHiddenItem = container.querySelectorAll('[data-questions-and-answer-item]')
+
+        allHiddenItem.forEach( item => {
+            item.classList.toggle('active');
+        })
+
+        btn.textContent = btn.classList.contains('open') ? 'Скрыть': 'Показать больше'
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-card-review-btn-show-more-review]')
+
+    if (btn) {
+        const container = btn.closest('[data-card-review]')
+        const allHiddenItem = container.querySelectorAll('[data-cart-review-item]')
+
+        allHiddenItem.forEach( item => {
+            item.classList.toggle('active');
+        })
+
+        btn.textContent = btn.textContent === 'Показать больше отзывов' ? 'Скрыть' : 'Показать больше отзывов'
+    }
+})
+
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    const has = document.querySelector('[data-each-vacancy-separately_form-scroll]')
+
+    if (has) {
+        window.scrollTo({top: Math.round(has.getBoundingClientRect().top)})
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-similar-vacancies-btn-open]')
+
+    if (btn) {
+        const container = document.querySelector('[data-similar-vacancies-wrapper]')
+        const allHiddenItem = container.querySelectorAll('[data-job-vacancy-item]')
+
+        allHiddenItem.forEach( item => {
+            item.classList.toggle('active');
+        })
+
+        btn.textContent = btn.textContent === 'Показать еще' ? 'Скрыть' : 'Показать еще'
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-store-card-furniture-factory-map-btn]')
+
+    if (btn) {
+        const wrapper = btn.closest('[data-store-card-furniture-factory-map-wrapper]')
+        const map = wrapper.querySelectorAll('[data-store-card-furniture-factory_map]')
+
+        map.forEach( item => {
+            item.classList.toggle('active');
+        })
+
+        btn.textContent = btn.textContent === 'Развернуть карту' ? 'Скрыть карту' : 'Развернуть карту'
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-user-account-bonus-btn-show-more]')
+
+    if (btn) {
+        const container = btn.closest('[data-user-account-orders]')
+        const allHiddenItem = container.querySelectorAll('[data-user-account-bonus-item]')
+
+        allHiddenItem.forEach( item => {
+            item.classList.toggle('active');
+        })
+
+        btn.textContent = btn.textContent === 'Показать еще' ? 'Скрыть' : 'Показать еще'
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-open-sign-in-sign-up]')
+
+    if (btn) {
+        const container = document.querySelector('[data-sing-in-sign-up]')
+
+        container.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-sing-in-sign-up-btn-close]')
+
+    if (btn) {
+        const container = document.querySelector('[data-sing-in-sign-up]')
+
+        container.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+
 
 
 

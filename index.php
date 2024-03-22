@@ -22,9 +22,9 @@ include __DIR__ . '/head.php';
                 <?php } ?>
             </div>
             <div class="home-core-slider_btn-and-pagination-wrapper">
-                <div class="home-core-slider_next"></div>
-                <div class="swiper-pagination"></div>
                 <div class="home-core-slider_prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="home-core-slider_next"></div>
             </div>
         </div>
     </div>
@@ -225,6 +225,29 @@ $we_offer = [
                 </select>
             </label>
             <div class="map_chart-wrapper active" data-content-map>
+                <section class="map-store-item-container" data-map-store-item-container>
+                    <div class="map-store-item-wrapper">
+                        <button class="map-store-item_btn-open" data-map-store-item-btn-open></button>
+                        <div class="map-store-item" data-map-store-item>
+                            <img class="map-store-item_img" src="/images/Component%2041.png" alt="">
+                            <div class="map-store-item_content">
+                                <div class="map-store-item_head-wrapper">
+                                    <div class="map-store-item_title-wrapper">
+                                        <h1 class="map-store-item_title">Асм-мебель</h1>
+                                        <button class="map-store-item_btn-cancel" data-map-store-item-btn-cancel></button>
+                                    </div>
+                                    <p class="map-store-item_subtitle">
+                                        ТРЦ «Сургут Сити Молл», Югорский тракт, 38, Сургут
+                                    </p>
+                                </div>
+                                <div class="map-store-item_btn-wrapper">
+                                    <a class="map-store-item_btn" href="">Подробнее</a>
+                                    <a class="map-store-item_btn" href="">Каталог</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
                         width="100%" height="800" frameborder="0"></iframe>
             </div>

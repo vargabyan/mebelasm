@@ -7,17 +7,16 @@ include __DIR__ . '/head.php';
         <div class="success-page_logo"></div>
         <h1 class="success-page_title">Заказ <span>№ 124 573</span> оформлен</h1>
         <p class="success-page_sub-title">С вами свяжется менеджер для уточнения деталей заказа.</p>
-        <div class="success-page_grade-wrapper" data-success-page-grade-wrapper>
-            <p class="success-page_grade_title">Оцените сервис</p>
-            <div class="success-page_grade_items">
-                <?php for ($i = 0; $i < 5; $i++) {
-                    if ($i < 4) { ?>
-                        <div class="success-page_grade active"></div>
-                    <?php } else { ?>
-                        <div class="success-page_grade"></div>
-                    <?php }
-                } ?>
-            </div>
+        <div class="success-page_grade-wrapper" data-success-page_grade-wrapper>
+            <p class="success-page_grade_title" data-title-rate-the-service>Оцените сервис</p>
+            <p class="success-page_grade_title" data-title-thank-you>спасибо, что помогаете нам стать лучше</p>
+            <form action="" class="success-page_grade_items" data-success-page-grade-items>
+                <?php for ($i = 0; $i < 5; $i++) { ?>
+                    <label class="success-page_grade" data-success-page_grade>
+                        <input type="checkbox" value="<?= $i ?>">
+                    </label>
+                <?php } ?>
+            </form>
         </div>
         <a class="success-page_go-to-home-page" href="/">На главную страницу</a>
     </div>
@@ -44,8 +43,8 @@ include __DIR__ . '/head.php';
                     </label>
                 </div>
             <div class="help-us-become-better-modal_btn-footer-wrapper">
-                <button class="help-us-become-better-modal_btn-footer" data-help-us-become-better-modal_btn-close type="button">Пропустить</button>
-                <input class="help-us-become-better-modal_btn-footer green-btn" type="submit" value="Отправить оценку">
+                <button class="help-us-become-better-modal_btn-footer" data-help-us-become-better-modal-btn-footer-close type="button">Пропустить</button>
+                <input class="help-us-become-better-modal_btn-footer green-btn" data-help-us-become-better-modal-btn-footer-submit type="submit" value="Отправить оценку">
             </div>
         </form>
     </div>

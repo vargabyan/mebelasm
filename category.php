@@ -270,7 +270,6 @@ $filterColorsParamsData = [
                                     <input type="text" placeholder="2 200">
                                 </label>
                             </div>
-                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
                         </div>
                         <div class="filter-menu_dropdown_btn-wrapper">
                             <button class="filter-menu_dropdown_btn" type="button"
@@ -322,7 +321,6 @@ $filterColorsParamsData = [
                                     <input type="text" placeholder="2 200">
                                 </label>
                             </div>
-                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
                         </div>
                         <div class="filter-menu_dropdown_btn-wrapper">
                             <button class="filter-menu_dropdown_btn" type="button"
@@ -374,7 +372,6 @@ $filterColorsParamsData = [
                                     <input type="text" placeholder="2 200">
                                 </label>
                             </div>
-                            <a class="menu_dropdown-for-sizes_link" href="">На картинке</a>
                         </div>
                         <div class="filter-menu_dropdown_btn-wrapper">
                             <button class="filter-menu_dropdown_btn" type="button"
