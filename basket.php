@@ -58,10 +58,9 @@ breadcrumb([['url' => '', 'name' => 'Корзина']]);
                         <label class="basket_item_form_switch"><input type="checkbox" checked><span class="basket_item_form_slider"></span></label>
                         Погрузка / разгрузка<span>+2 000 ₽</span>
                     </div>
-                    <div class="basket_item_form_file-wrapper">
-                        <label class="basket_item_form_file"><input type="file"></label>
+                    <button type="button" class="basket_item_form_file-wrapper" data-btn-add-complect>
                         Комплектующие
-                    </div>
+                    </button>
                 </form>
             </div>
         <?php } ?>
@@ -75,20 +74,6 @@ breadcrumb([['url' => '', 'name' => 'Корзина']]);
             <p class="basket_pay-for-it_total">Итого<span>90 500 ₽</span></p>
         </div>
         <button class="basket_pay-for-it_btn-check-in green-btn">Оформить заказ</button>
-    </div>
-</section>
-
-
-<section class="modal-additional-for-mobile" data-modal-additional-for-mobile>
-    <div class="modal-additional-for-mobile_content">
-        <div class="modal-additional-for-mobile_title-wrapper">
-            <p class="modal-additional-for-mobile_title">Действия с товаром</p>
-            <button class="modal-additional-for-mobile_btn-close" data-modal-additional-for-mobile-btn-close></button>
-        </div>
-        <div class="basket_item_action-wrapper">
-            <button class="basket_item_action">В избранное</button>
-            <button class="basket_item_action">Удалить</button>
-        </div>
     </div>
 </section>
 
@@ -159,6 +144,42 @@ $catalogData = [
         </a>
 
     <?php } ?>
+</section>
+
+
+<section class="modal-additional-for-mobile" data-modal-additional-for-mobile>
+    <div class="modal-additional-for-mobile_content">
+        <div class="modal-additional-for-mobile_title-wrapper">
+            <p class="modal-additional-for-mobile_title">Действия с товаром</p>
+            <button class="modal-additional-for-mobile_btn-close" data-modal-additional-for-mobile-btn-close></button>
+        </div>
+        <div class="basket_item_action-wrapper">
+            <button class="basket_item_action">В избранное</button>
+            <button class="basket_item_action">Удалить</button>
+        </div>
+    </div>
+</section>
+
+
+<section class="modal-additional-wrapper" data-modal-additional-wrapper>
+    <div class="modal-additional">
+        <div class="modal-additional_title-wrapper">
+            <p class="modal-additional_title">Добавить комплектующие</p>
+            <button class="modal-additional_btn-close" data-modal-additional-btn-close></button>
+        </div>
+        <div class="modal-additional_items-wrapper">
+            <?php for ($i = 0; $i < 4; $i++) { ?>
+                <div class="modal-additional_item" data-modal-additional-item>
+                    <img class="modal-additional_item_img" src="images/6488721d1c97c2b22d02f93991769f85.png" alt="">
+                    <div class="modal-additional_item_description">
+                        <p class="modal-additional_item_name">Флорида большой диван</p>
+                        <p class="modal-additional_item_prices">25 990 ₽ <span>34 990 ₽</span></p>
+                        <button class="modal-additional_item_btn-add" data-modal-additional-item-btn-add>добавить</button>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
 </section>
 
 <?php

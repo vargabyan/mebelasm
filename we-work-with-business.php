@@ -205,7 +205,7 @@ $categoryData = [
                     <p class="contact_information_contacts_title">По любым вопросам:</p>
                     <a class="contact_information_contacts_item" href="tel:+7 922 224-49-31">+7 922 224-49-31</a>
                     <a class="contact_information_contacts_item" href="mailto:sale@mebelasm.ru">sale@mebelasm.ru</a>
-                    <p class="contact_information_contacts_item">Уфаул, ул. Сельская Богородская, 51 оф. 203</p>
+                    <p class="contact_information_contacts_item" data-btn-copy>Уфаул, ул. Сельская Богородская, 51 оф. 203</p>
                 </div>
                 <div class="contact_information_person-data-wrapper">
                     <img class="contact_information_person_photo" src="images/Ellipse 324 (1).png" alt="">
@@ -253,6 +253,12 @@ $question_and_answer = [
             what is right for you and your family. With us your real estate will become a reality!
         </p>
         <button class="seo_btn-show-all" data-seo-btn-show-all>Show all</button>
+    </div>
+</section>
+
+<section class="modal-copied-wrapper" data-modal-copied-wrapper>
+    <div class="modal-copied">
+        <p class="modal-copied-title">Скопировано</p>
     </div>
 </section>
 

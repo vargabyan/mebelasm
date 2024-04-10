@@ -104,7 +104,7 @@ $filterColorsParamsData = [
 <section class="container-core filter-catalog">
     <ul class="filter-catalog" data-filter-catalog-wrapper-pc>
         <li data-filter-catalog-item>
-            <button class="filter-catalog_item" data-btn-open-drop-menu>Категория</button>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Диваны</button>
             <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
                 <div class="filter-menu_dropdown_wrapper">
                     <div class="filter-menu_dropdown_title-wrapper">
@@ -191,21 +191,18 @@ $filterColorsParamsData = [
             </div>
         </li>
         <li data-filter-catalog-item>
-            <button class="filter-catalog_item" data-btn-open-drop-menu>Цвет</button>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Габариты</button>
             <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
                 <div class="filter-menu_dropdown_wrapper">
                     <div class="filter-menu_dropdown_title-wrapper">
-                        <p class="filter-menu_dropdown_title">Цвет</p>
+                        <p class="filter-menu_dropdown_title">Выбор категории</p>
                         <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
                                 data-filter-menudropdown-btn-close></button>
                     </div>
                     <form action="">
                         <div class="filter-menu_dropdown">
-                            <?php foreach ($filterColorsParamsData as $key => $item) { ?>
-                                <label class="filter-menu_dropdown_item_container">
-                                    <div class="filter-menu_dropdown_item_color"
-                                         style="background: <?= $item['color'] ?>;"></div>
-                                    <?= $item['name'] ?>
+                            <?php foreach ($filterCategoryParamsData as $key => $item) { ?>
+                                <label class="filter-menu_dropdown_item_container"><?= $item ?>
                                     <input type="radio" name="radio-<?= $key ?>">
                                     <span class="filter-menu_dropdown_item_checkmark"></span>
                                 </label>
@@ -246,6 +243,89 @@ $filterColorsParamsData = [
                         <div class="filter-menu_dropdown_btn-wrapper">
                             <button class="filter-menu_dropdown_btn" type="button" data-filter-menu-dropdown-btn-cencel>
                                 Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Степень жесткости</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Цвет</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="filter-menu_dropdown">
+                            <?php foreach ($filterColorsParamsData as $key => $item) { ?>
+                                <label class="filter-menu_dropdown_item_container">
+                                    <div class="filter-menu_dropdown_item_color"
+                                         style="background: <?= $item['color'] ?>;"></div>
+                                    <?= $item['name'] ?>
+                                    <input type="radio" name="radio-<?= $key ?>">
+                                    <span class="filter-menu_dropdown_item_checkmark"></span>
+                                </label>
+                            <?php } ?>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button" data-filter-menu-dropdown-btn-cencel>
+                                Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Размер</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Размер</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="menu_dropdown-for-sizes">
+                            <p class="menu_dropdown-for-sizes_title">
+                                Ширина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                            <p class="menu_dropdown-for-sizes_title">
+                                Глубина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button"
+                                    data-filter-sizes-menu-dropdown-btn-cencel>Сбросить
                             </button>
                             <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
                                    data-filter-menu-dropdown-btn-submit>
@@ -517,13 +597,65 @@ $review_data = [
     ['name' => 'Мария Н.', 'photo' => 'images/9c43ca130cef444d38465c21b41edf2f.png', 'color_product' => 'бежевый', 'date' => '12 июня. 2023', 'comment' => 'Диван аккуратный, удобный, мягкий. Привезли вовремя, менеджеры, сборщики всё молодцы. Нужен был как раз небольшой на кухню.', 'comment_photo' => 'images/04e79e6283bf03913bb8d8ffaef7f40e.png', 'quality' => 5, 'service' => 2, 'correspondence' => 3],
     ['name' => 'Мария Н.', 'photo' => 'images/9c43ca130cef444d38465c21b41edf2f.png', 'color_product' => 'бежевый', 'date' => '12 июня. 2023', 'comment' => 'Диван аккуратный, удобный, мягкий. Привезли вовремя, менеджеры, сборщики всё молодцы. Нужен был как раз небольшой на кухню.', 'comment_photo' => 'images/04e79e6283bf03913bb8d8ffaef7f40e.png', 'quality' => 5, 'service' => 2, 'correspondence' => 3],
     ['name' => 'Мария Н.', 'photo' => 'images/9c43ca130cef444d38465c21b41edf2f.png', 'color_product' => 'бежевый', 'date' => '12 июня. 2023', 'comment' => 'Диван аккуратный, удобный, мягкий. Привезли вовремя, менеджеры, сборщики всё молодцы. Нужен был как раз небольшой на кухню.', 'comment_photo' => 'images/04e79e6283bf03913bb8d8ffaef7f40e.png', 'quality' => 5, 'service' => 2, 'correspondence' => 3],
-]
+];
+$review_core_grade = ['quality' => 5, 'service' => 2, 'correspondence' => 3]
 ?>
 
 <div class="container-core card-review" data-page-type="store-card" data-card-review>
     <div class="cart-review_header-wrapper">
         <h3 class="cart-review_header">Отзывы <span>4</span></h3>
         <button class="cart-review_btn-write-review">Написать отзыв</button>
+    </div>
+
+    <div class="user-account_review_grade">
+        <div class="cart-review_grade_item">
+            <p class="cart-review_grade_item_names">Качество<span><?= $review_core_grade['quality'] ?></span>
+            </p>
+            <div class="cart-review_stars">
+                <?php for ($i = 0; $i < 5; $i++) {
+                    if ($i < $review_core_grade['quality']) {
+                        ?>
+                        <div class="cart-review_star active"></div>
+                    <?php } else {
+                        ?>
+                        <div class="cart-review_star"></div>
+                        <?php
+                    }
+                } ?>
+            </div>
+        </div>
+        <div class="cart-review_grade_item">
+            <p class="cart-review_grade_item_names">Сервис<span><?= $review_core_grade['service'] ?></span>
+            </p>
+            <div class="cart-review_stars">
+                <?php for ($i = 0; $i < 5; $i++) {
+                    if ($i < $review_core_grade['service']) {
+                        ?>
+                        <div class="cart-review_star active"></div>
+                    <?php } else {
+                        ?>
+                        <div class="cart-review_star"></div>
+                        <?php
+                    }
+                } ?>
+            </div>
+        </div>
+        <div class="cart-review_grade_item">
+            <p class="cart-review_grade_item_names">
+                Соответствие<span><?= $review_core_grade['correspondence'] ?></span></p>
+            <div class="cart-review_stars">
+                <?php for ($i = 0; $i < 5; $i++) {
+                    if ($i < $review_core_grade['correspondence']) {
+                        ?>
+                        <div class="cart-review_star active"></div>
+                    <?php } else {
+                        ?>
+                        <div class="cart-review_star"></div>
+                        <?php
+                    }
+                } ?>
+            </div>
+        </div>
     </div>
 
     <div class="cart-review_item-wrapper">

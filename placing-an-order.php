@@ -6,7 +6,7 @@ include __DIR__ . '/head.php';
     <div class="placing-an-order_breadcrumb-wrapper">
         <?php
         include __DIR__ . '/breadcrumb.php';
-        breadcrumb([['url' => '', 'name' => 'Оформление заказа']]);
+        breadcrumb([['url' => '/basket', 'name' => 'Корзина'], ['url' => '', 'name' => 'Оформление заказа']]);
         ?>
         <div class="placing-an-order_header-wrapper">
             <h1 class="site-header">Оформление заказа</h1>

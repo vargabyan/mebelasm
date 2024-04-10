@@ -68,11 +68,8 @@ include __DIR__ . '/head.php';
     </div>
 </section>
 
-<section class="container-core map-wrapper" data-page-type="about-company" data-map-wrapper>
-    <div class="about-company_header-wrapper">
-        <h1 class="about-company_header" id="store">Наши магазины</h1>
-        <a class="about-company_show-all" href="">Показать все</a>
-    </div>
+<section class="container-core map-wrapper " data-map-wrapper>
+    <h1 class="map_header site-header">Наши магазины</h1>
     <div class="map">
         <div class="map-and-list">
             <button class="map-and-list_item active" data-select-map><span>На карте</span></button>
@@ -85,8 +82,11 @@ include __DIR__ . '/head.php';
                 <a class="map_cities_pc_item" href="">Ханты-Мансийск</a>
                 <a class="map_cities_pc_item" href="">Челябинск</a>
             </div>
-            <label class="map_cities_mobile">
-                <select class="map_cities_mobile_items-wrapper">
+            <label class="map_cities_mobile" data-selection-city-wrapper-label>
+                <span data-selection-city-label-value>
+                    Екатеринбург
+                </span>
+                <select class="map_cities_mobile_items-wrapper" name="" id="" data-selection-city>
                     <option value="">Екатеринбург</option>
                     <option value="">Нижневартовск</option>
                     <option value="">Ханты-Мансийск</option>
@@ -94,7 +94,31 @@ include __DIR__ . '/head.php';
                 </select>
             </label>
             <div class="map_chart-wrapper active" data-content-map>
-                <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor" width="100%" height="800" frameborder="0"></iframe>
+                <section class="map-store-item-container" data-map-store-item-container>
+                    <div class="map-store-item-wrapper">
+                        <button class="map-store-item_btn-open" data-map-store-item-btn-open></button>
+                        <div class="map-store-item" data-map-store-item>
+                            <img class="map-store-item_img" src="/images/Component%2041.png" alt="">
+                            <div class="map-store-item_content">
+                                <div class="map-store-item_head-wrapper">
+                                    <div class="map-store-item_title-wrapper">
+                                        <h1 class="map-store-item_title">Асм-мебель</h1>
+                                        <button class="map-store-item_btn-cancel" data-map-store-item-btn-cancel></button>
+                                    </div>
+                                    <p class="map-store-item_subtitle">
+                                        ТРЦ «Сургут Сити Молл», Югорский тракт, 38, Сургут
+                                    </p>
+                                </div>
+                                <div class="map-store-item_btn-wrapper">
+                                    <a class="map-store-item_btn" href="">Подробнее</a>
+                                    <a class="map-store-item_btn" href="">Каталог</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <iframe class="map_chart" src="https://yandex.ru/map-widget/v1/?um=constructor%3A10eef986681734feab3b80015657da25d13c89ec382418a3a4980545fc42e8a5&amp;source=constructor"
+                        width="100%" height="800" frameborder="0"></iframe>
             </div>
             <div class="map_list-wrapper" data-content-city-list>
                 <?php for ($i = 0; $i < 12; $i++) { ?>
@@ -113,6 +137,7 @@ include __DIR__ . '/head.php';
         </div>
     </div>
 </section>
+
 
 <section class="container-core partners">
     <h3 class="partners_header">Партнеры</h3>
@@ -145,6 +170,7 @@ include __DIR__ . '/head.php';
         <div class="partners-slider-opacity"></div>
     </div>
 </section>
+
 
 <section class="container-core our-team" data-page-type="about-company">
     <div class="our-team_header-wrapper">

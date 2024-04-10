@@ -7,7 +7,7 @@ include __DIR__ . '/head.php';
     <div class="work-with-business_item">
         <?php
         include __DIR__ . '/breadcrumb.php';
-        breadcrumb([['url' => '', 'name' => 'Магазины']]);
+        breadcrumb([['url' => '', 'name' => 'Для бизнеса']]);
         ?>
         <h1 class="work-with-business_header">Работаем с бизнесом</h1>
         <p class="work-with-business_sub-title">Поставляем фабричную мебель со скидкой до 30%</p>

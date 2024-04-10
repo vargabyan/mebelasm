@@ -6,7 +6,7 @@ include __DIR__ . '/head.php';
     <div class="home-core-slider_pc">
         <div class="home-core-slider_offer">
             <p class="home-core-slider_offer_text">
-                Скидки до 50% на диваны
+                Скидки до 50% <br> на диваны
                 <span>Новогодняя распродажа</span>
             </p>
             <a class="home-core-slider_offer_detail" href="">Подробнее</a>
@@ -184,10 +184,10 @@ $catalogData = [
 
 <?php
 $we_offer = [
-    ['title' => 'Гарантия до 18 месяцев', 'image' => '/images/56a332892a2fee4a1bc8b60acae96067.png'],
-    ['title' => 'Гибкая система <br> скидок', 'image' => '/images/56a332892a2fee4a1bc8b60acae96067.png'],
-    ['title' => 'Собственное <br> производство', 'image' => '/images/56a332892a2fee4a1bc8b60acae96067.png'],
-    ['title' => 'Мебель по ГОСТУ', 'image' => '/images/56a332892a2fee4a1bc8b60acae96067.png'],
+    ['title' => 'Гарантия до 18 месяцев', 'image' => '/images/free-icon-shield-8307847 1.png'],
+    ['title' => 'Гибкая система <br> скидок', 'image' => '/images/free-icon-percentage-1055214 1.png'],
+    ['title' => 'Собственное <br> производство', 'image' => '/images/free-icon-sofa-2887417 1.png'],
+    ['title' => 'Мебель <br> по ГОСТУ', 'image' => '/images/layer.png"'],
 ]
 ?>
 
@@ -216,8 +216,11 @@ $we_offer = [
                 <a class="map_cities_pc_item" href="">Ханты-Мансийск</a>
                 <a class="map_cities_pc_item" href="">Челябинск</a>
             </div>
-            <label class="map_cities_mobile">
-                <select class="map_cities_mobile_items-wrapper">
+            <label class="map_cities_mobile" data-selection-city-wrapper-label>
+                <span data-selection-city-label-value>
+                    Екатеринбург
+                </span>
+                <select class="map_cities_mobile_items-wrapper" name="" id="" data-selection-city>
                     <option value="">Екатеринбург</option>
                     <option value="">Нижневартовск</option>
                     <option value="">Ханты-Мансийск</option>

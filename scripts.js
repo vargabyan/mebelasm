@@ -634,8 +634,10 @@ document.addEventListener('click', (e) => {
         const dropMenu = wrapper.querySelector('[data-filter-menu-dropdown-background]');
         dropMenu.classList.toggle('open-filter-drop-menu')
 
-        const locationParam = (dropMenu.offsetWidth - btn.offsetWidth) / 2;
-        dropMenu.style['left'] = `-${locationParam}px`
+        if (window.innerWidth > 570) {
+            const locationParam = (dropMenu.offsetWidth - btn.offsetWidth) / 2;
+            dropMenu.style['left'] = `-${locationParam}px`
+        }
 
         if (window.innerWidth < 570) {
             document.querySelector('body').style['overflow'] = 'hidden';
@@ -931,7 +933,8 @@ document.addEventListener('change', (e) => {
     const select = e.target.closest('[data-selection-city]')
 
     if (select) {
-        const labelValue = document.querySelector('[data-selection-city-label-value]')
+        const wrapper =  select.closest('[data-selection-city-wrapper-label]')
+        const labelValue = wrapper.querySelector('[data-selection-city-label-value]')
         labelValue.textContent = select.options[select.selectedIndex].textContent;
     }
 })
@@ -1145,6 +1148,189 @@ document.addEventListener('click', (e) => {
 
         container.classList.remove('active');
         document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-btn-add-complect]')
+
+    if (btn) {
+        const container = document.querySelector('[data-modal-additional-wrapper]')
+
+        container.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-modal-additional-btn-close]')
+
+    if (btn) {
+        const container = document.querySelector('[data-modal-additional-wrapper]')
+
+        container.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-modal-additional-item-btn-add]')
+
+    if (btn) {
+        const container = btn.closest('[data-modal-additional-wrapper]')
+        const allBtn = container.querySelectorAll('[data-modal-additional-item-btn-add].active')
+
+        allBtn.forEach( item => {
+            item.classList.remove('active');
+        })
+
+        btn.classList.add('active');
+
+        container.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-mobile-menu-modal-btn-open]')
+
+    if (btn) {
+        const container = document.querySelector('[data-mobile-menu-modal]')
+
+        container.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-mobile-menu-modal-btn-close]')
+
+    if (btn) {
+        const container = btn.closest('[data-mobile-menu-modal]')
+
+        container.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-sing-in-sign-up-btn-forget-password]')
+
+    if (btn) {
+        const oldModal = btn.closest('[data-sing-in-sign-up]')
+        const modal = document.querySelector('[data-sing-in-sign-up-restpre-password]')
+
+        oldModal.classList.remove('active');
+        modal.classList.add('active');
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-sing-in-sign-up-btn-close]')
+
+    if (btn) {
+        const modal = btn.closest('[data-sing-in-sign-up-restpre-password]')
+        const allTitle = modal.querySelectorAll('[data-restore-password-title]')
+        const allForm = modal.querySelectorAll('[data-sing-up-form]')
+
+        modal.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+
+        allTitle[0].classList.add('not-active')
+        allTitle[1].classList.remove('not-active')
+        allForm[0].classList.add('active')
+        allForm[1].classList.remove('active')
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-sing-in-sign-up-restpre-password-btn-submit]')
+
+    if (btn) {
+        e.preventDefault()
+        const modal = btn.closest('[data-sing-in-sign-up-restpre-password]')
+        const allTitle = modal.querySelectorAll('[data-restore-password-title]')
+        const allForm = modal.querySelectorAll('[data-sing-up-form]')
+
+        allTitle[0].classList.remove('not-active')
+        allTitle[1].classList.add('not-active')
+        allForm[0].classList.remove('active')
+        allForm[1].classList.add('active')
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-sing-in-sign-up-restpre-password-go-to-auth]')
+
+    if (btn) {
+        const oldModal = document.querySelector('[data-sing-in-sign-up]')
+        const modal = btn.closest('[data-sing-in-sign-up-restpre-password]')
+        const allTitle = modal.querySelectorAll('[data-restore-password-title]')
+        const allForm = modal.querySelectorAll('[data-sing-up-form]')
+
+        oldModal.classList.add('active');
+        modal.classList.remove('active');
+
+        allTitle[0].classList.add('not-active')
+        allTitle[1].classList.remove('not-active')
+        allForm[0].classList.add('active')
+        allForm[1].classList.remove('active')
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-sing-in-sign-up-restpre-password-btn-sign-up]')
+
+    if (btn) {
+        e.preventDefault()
+        const modal = btn.closest('[data-sing-in-sign-up]')
+        const allTitle = modal.querySelectorAll('[data-sing-in-sign-up-title]')
+        const allForm = modal.querySelectorAll('[data-sing-in-form], [data-sing-up-form]')
+
+        allTitle[0].classList.add('el-hidden')
+        allTitle[1].classList.add('el-hidden')
+        allTitle[2].classList.remove('el-hidden')
+        allForm[0].classList.remove('active')
+        allForm[1].classList.remove('active')
+        allForm[2].classList.add('active')
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-sing-in-sign-up-go-to-auth]')
+
+    if (btn) {
+        e.preventDefault()
+        const modal = btn.closest('[data-sing-in-sign-up]')
+        const allTitle = modal.querySelectorAll('[data-sing-in-sign-up-title]')
+        const allForm = modal.querySelectorAll('[data-sing-in-form], [data-sing-up-form]')
+
+        allTitle[0].classList.remove('el-hidden')
+        allTitle[0].classList.remove('not-active')
+        allTitle[1].classList.remove('el-hidden')
+        allTitle[1].classList.add('not-active')
+        allTitle[2].classList.add('el-hidden')
+        allForm[0].classList.add('active')
+        allForm[1].classList.remove('active')
+        allForm[2].classList.remove('active')
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-btn-copy]')
+
+    if (btn) {
+        const modal = document.querySelector('[data-modal-copied-wrapper]')
+
+        modal.classList.add('active')
+
+        setTimeout(() => {
+            modal.classList.add('animation')
+        }, 100)
+        setTimeout(() => {
+            modal.classList.remove('active', 'animation')
+        }, 2500)
     }
 })
 

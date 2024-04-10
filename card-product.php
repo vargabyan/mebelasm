@@ -29,7 +29,7 @@ $images = [
                 <div class="card-product_grade_stars-item active"></div>
                 <div class="card-product_grade_stars-item active"></div>
                 <div class="card-product_grade_stars-item"></div>
-                <p class="card-product_grade_stars-value">5.0</p>
+                <p class="card-product_grade_stars-value">4.0</p>
             </div>
             <button class="card-product_grade_share">Поделиться</button>
             <button class="card-product_grade_add-favorites">Добавить к сравнению</button>

@@ -5,7 +5,7 @@ include __DIR__ . '/head.php';
 
 <?php
 include __DIR__ . '/breadcrumb.php';
-breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
+breadcrumb([['url' => '/job-vacancy.php', 'name' => 'Работа в компании'], ['url' => '', 'name' => 'Менеджер по подбору персонала']]);
 ?>
 
 <?php
@@ -75,7 +75,7 @@ if(isset($_GET["id"])){
                 <form action="">
                     <p class="each-vacancy-separately_form_title">Откликнуться на вакансию</p>
                     <label class="each-vacancy-separately_form_input"><input type="text" placeholder="Имя"></label>
-                    <label class="each-vacancy-separately_form_input"><input type="text" placeholder="+7"></label>
+                    <label class="each-vacancy-separately_form_input"><input type="tel" placeholder="+7"></label>
                     <label class="each-vacancy-separately_form_textarea"><textarea placeholder="Расскажите, почему вы нам подходите?"></textarea></label>
                     <label class="each-vacancy-separately_form_add-file"><input type="file">Прикрепить резюме</label>
                     <label class="each-vacancy-separately_form_btn-submit green-btn"><input type="submit" value="Откликнуться"></label>

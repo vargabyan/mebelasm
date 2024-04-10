@@ -4,7 +4,7 @@ include __DIR__ . '/head.php';
 
 <?php
 include __DIR__ . '/breadcrumb.php';
-breadcrumb([['url' => '', 'name' => 'Малые формы']]);
+breadcrumb([['url' => '/catalog.php', 'name' => 'Каталог'], ['url' => '', 'name' => 'Малые формы']]);
 ?>
 
 
@@ -200,7 +200,7 @@ $filterColorsParamsData = [
             </div>
         </li>
         <li data-filter-catalog-item>
-            <button class="filter-catalog_item" data-btn-open-drop-menu>Цвет</button>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Цена</button>
             <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
                 <div class="filter-menu_dropdown_wrapper">
                     <div class="filter-menu_dropdown_title-wrapper">
@@ -473,19 +473,19 @@ $question_and_answer = [
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
     ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
+    ['question' => 'Как узнать стоимость мебели?', 'answer' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus distinctio doloribus'],
 ];
 ?>
 
-<section class="container-core questions-and-answer show-more">
+<section class="container-core questions-and-answer" data-questions-and-answer>
     <?php foreach ($question_and_answer as $item) { ?>
         <div class="questions-and-answer_item" data-questions-and-answer-item>
-            <div class="questions-and-answer_item-question"
-                 data-questions-and-answer-question><?= $item['question'] ?></div>
+            <div class="questions-and-answer_item-question" data-questions-and-answer-question><?= $item['question'] ?></div>
             <div class="questions-and-answer_item-answer" data-questions-and-answer-answer><?= $item['answer'] ?></div>
         </div>
     <?php } ?>
-    <div class="questions-and-answer_item">
-        <button class="questions-and-answer_btn-show-more">Показать больше</button>
+    <div class="questions-and-answer_item show-more" data-questions-and-answer-item>
+        <button class="questions-and-answer_btn-show-more" data-questions-and-answer-question data-questions-and-answer_btn-show-more>Показать больше</button>
     </div>
 </section>
 

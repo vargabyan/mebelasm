@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2f48040a-cb1f-4ee5-8455-9c35798faa29" name="mebelasm">
+        <fileTransfer rootFolder="/home/c84317/mebelasm.vm-9aa0b6b3.na4u.ru/www" accessType="SFTP" host="h47.netangels.ru" port="22" sshConfigId="bf7f04cc-f4a7-4447-a0f0-f12977865049" sshConfig="c84317@h47.netangels.ru:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
