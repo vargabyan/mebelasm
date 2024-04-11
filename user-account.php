@@ -90,7 +90,7 @@ include __DIR__ . '/head.php';
                     <label class="user-account_profile_label">Для получения скидки на ДР
                         <input type="text" placeholder="Дата рождения">
                     </label>
-                    <label class="user-account_profile_label"><input type="text" placeholder="+7"></label>
+                    <label class="user-account_profile_label"><input type="text" placeholder="+7" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></label>
                     <hr class="user-account_orders_line profile-line">
                     <label class="user-account_profile_btn-save"><input type="submit" value="Сохранить"></label>
                 </form>

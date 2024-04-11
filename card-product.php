@@ -18,7 +18,7 @@ $images = [
 ]
 ?>
 
-<h1 class="container-core site-header">Флорида большой диван</h1>
+<h1 class="container-core site-header card-product_header">Флорида большой диван</h1>
 
 <section class="container-core card-product-wrapper">
     <div class="card-product_grade-wrapper">

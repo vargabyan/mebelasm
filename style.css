@@ -5453,7 +5453,6 @@ button {
     display: flex;
     padding: 70px 120px;
     flex-direction: column;
-    align-items: center;
     gap: 40px;
 }
 
@@ -9612,6 +9611,18 @@ button {
     }
 
 
+    .card-product_header {
+        position: absolute;
+        width: 320px;
+        left: 0;
+        right: 0;
+        top: 465px;
+
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
     .card-product_grade {
         margin-top: 20px;
     }
@@ -9623,6 +9634,7 @@ button {
     .card-product {
         display: flex;
         flex-direction: column;
+        gap: 68px;
     }
 
     .card-product_sliders-wrapper {
