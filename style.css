@@ -8392,6 +8392,41 @@ button {
         flex-wrap: wrap;
     }
 
+    .job-vacancy {
+        flex-direction: column;
+    }
+
+    .job-vacancy_sample-of-cities_form {
+        display: none;
+    }
+
+    .job-vacancy_btn-open-filter {
+        background-color: unset;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        width: 48px;
+        height: 48px;
+        padding: 12px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: 20px;
+        bottom: 90px;
+        z-index: 99;
+        border-radius: var(--Main-System-12px);
+        background: var(--Secondary-0);
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.10);
+    }
+
+    .job-vacancy_btn-open-filter:after {
+        display: block;
+        content: '';
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M3 8L15 8M15 8C15 9.65686 16.3431 11 18 11C19.6569 11 21 9.65685 21 8C21 6.34315 19.6569 5 18 5C16.3431 5 15 6.34315 15 8ZM9 16L21 16M9 16C9 17.6569 7.65685 19 6 19C4.34315 19 3 17.6569 3 16C3 14.3431 4.34315 13 6 13C7.65685 13 9 14.3431 9 16Z' stroke='%23167D2F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
     .job-vacancy_main_btn-looks-vacancy {
         margin-top: 64px;
 
@@ -8409,7 +8444,7 @@ button {
     }
 
     .job-vacancy {
-        gap: 18px;
+        gap: 0;
     }
 
     .job-vacancy_sample-of-cities_form {
@@ -8419,6 +8454,79 @@ button {
 
     .pagination-wrapper[data-page-type="job-vacancy"] .pagination_btn-show-more {
         display: none;
+    }
+
+
+    .send-resume-modal-wrapper.active {
+        z-index: 99;
+    }
+
+    .send-resume-modal {
+        max-width: 100%;
+        height: 100%;
+        padding:  var(--Main-System-20px);
+        gap: var(--Main-System-24px);
+        border-radius: unset;
+        box-shadow: unset;
+    }
+
+    .send-resume-modal_header {
+        font-size: 18px;
+        line-height: 24px
+    }
+
+    .send-resume-modal_header_subtitle {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .send-resume-modal_form {
+        height: 100%;
+    }
+
+    .send-resume-modal_form_label input, textarea {
+        height: 52px;
+
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .send-resume-modal_form textarea {
+        height: 72px;
+        resize: none;
+    }
+
+    .send-resume-modal_form_file-label {
+        padding: 18px 0;
+        gap: var(--Main-System-4px);
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .send-resume-modal_form_file-label:before {
+        width: var(--Main-System-16px);
+        height: var(--Main-System-16px);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    .send-resume-modal_footer-wrapper {
+        height: 100%;
+        justify-content: end;
+    }
+
+    .send-resume-modal_btn-submit {
+        height: 48px;
+        padding: 14px;
+
+        font-size: 16px;
+        line-height: 20px
+    }
+
+    .send-resume-modal_footer_subtitle {
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px
     }
 
 }
@@ -8722,7 +8830,12 @@ button {
     }
 
     .breadcrumb ul {
-        flex-wrap: wrap;
+       white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .breadcrumb ul::-webkit-scrollbar {
+       display: none;
     }
 
     .breadcrumb_home {
@@ -10253,6 +10366,8 @@ button {
     }
 
     .our-advantages_header {
+        max-width: 95%;
+
         font-size: 32px;
         font-weight: 700;
         line-height: 40px
@@ -10308,6 +10423,15 @@ button {
         border-radius: 12px;
     }
 
+
+    .completed-projects_content_item-wrapper {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .completed-projects_content_item-wrapper::-webkit-scrollbar {
+        display: none;
+    }
 
     .completed-projects_header {
         font-size: 18px;
@@ -10553,24 +10677,6 @@ button {
         gap: 20px;
     }
 
-    .job-vacancy {
-        flex-direction: column;
-    }
-
-    .job-vacancy_sample-of-cities_form {
-        display: none;
-    }
-
-    .job-vacancy_btn-open-filter {
-        display: block;
-        border: none;
-        padding: 0;
-        background: unset;
-
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 20px;
-    }
 
     .job-vacancy_main {
         width: 100%;
@@ -10623,6 +10729,7 @@ button {
 
 
     .job-vacancy_category {
+        display: flex;
         flex-direction: column;
         padding: 0;
         gap: 0;
@@ -12250,79 +12357,6 @@ button {
     .mobile-bottom-mini-menu_basket span {
         top: -4px;
         right: 4px;
-    }
-
-
-    .send-resume-modal-wrapper.active {
-        z-index: 99;
-    }
-
-    .send-resume-modal {
-        max-width: 100%;
-        height: 100%;
-        padding:  var(--Main-System-20px);
-        gap: var(--Main-System-24px);
-        border-radius: unset;
-        box-shadow: unset;
-    }
-
-    .send-resume-modal_header {
-        font-size: 18px;
-        line-height: 24px
-    }
-
-    .send-resume-modal_header_subtitle {
-        font-size: 16px;
-        line-height: 24px
-    }
-
-    .send-resume-modal_form {
-        height: 100%;
-    }
-
-    .send-resume-modal_form_label input, textarea {
-        height: 52px;
-
-        font-size: 16px;
-        line-height: 24px
-    }
-
-    .send-resume-modal_form textarea {
-        height: 72px;
-        resize: none;
-    }
-
-    .send-resume-modal_form_file-label {
-        padding: 18px 0;
-        gap: var(--Main-System-4px);
-
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .send-resume-modal_form_file-label:before {
-        width: var(--Main-System-16px);
-        height: var(--Main-System-16px);
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    }
-
-    .send-resume-modal_footer-wrapper {
-        height: 100%;
-        justify-content: end;
-    }
-
-    .send-resume-modal_btn-submit {
-        height: 48px;
-        padding: 14px;
-
-        font-size: 16px;
-        line-height: 20px
-    }
-
-    .send-resume-modal_footer_subtitle {
-        text-align: center;
-        font-size: 14px;
-        line-height: 20px
     }
 
 

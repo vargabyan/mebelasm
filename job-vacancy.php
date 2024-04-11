@@ -13,7 +13,7 @@ breadcrumb([['url' => '', 'name' => 'Работа в компании']]);
 
     <div class="job-vacancy">
         <div class="job-vacancy_sample-of-cities">
-            <button class="job-vacancy_btn-open-filter" data-job-vacancy-btn-open-filter>фильтры</button>
+            <button class="job-vacancy_btn-open-filter" data-job-vacancy-btn-open-filter></button>
             <form class="job-vacancy_sample-of-cities_form" action="">
                 <ul class="job-vacancy_sample-of-cities_item-wrapper">
                     <li>Город</li>

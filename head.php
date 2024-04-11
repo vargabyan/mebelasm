@@ -187,7 +187,7 @@
         <div class="sing-in-sign-up_forms-wrapper">
             <form class="sing-in-sign-up_form active" action="" data-sing-in-form >
             <p class="sing-in-sign-up_title">После авторизации вы сможете управлять заказами и оставлять отзывы</p>
-                <label class="sing-in-sign-up_form_label"><input type="text" placeholder="+7"></label>
+                <label class="sing-in-sign-up_form_label"><input type="tel" placeholder="+7" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></label>
                 <label class="sing-in-sign-up_form_label"><input type="password" placeholder="Пароль"></label>
                 <div class="sing-in-sign-up_form_footer-btn-wrapper">
                     <input class="sing-in-sign-up_form_footer-btn-item" type="submit" value="Войти">

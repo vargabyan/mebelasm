@@ -547,7 +547,7 @@ $question_and_answer = [
                         <input type="text" placeholder="Ваше имя">
                     </label>
                     <label class="card-product_modal-request_label">
-                        <input type="tel" placeholder="+7">
+                        <input type="tel" placeholder="+7" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                     </label>
                 </div>
                 <input class="booking-modal_btn-submit" type="submit" value="Оставить заявку">
