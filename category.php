@@ -384,6 +384,57 @@ $filterColorsParamsData = [
                 </div>
             </div>
         </li>
+        <li data-filter-catalog-item>
+            <button class="filter-catalog_item" data-btn-open-drop-menu>Размер</button>
+            <div class="filter-menu_dropdown_background" data-filter-menu-dropdown-background>
+                <div class="filter-menu_dropdown_wrapper">
+                    <div class="filter-menu_dropdown_title-wrapper">
+                        <p class="filter-menu_dropdown_title">Размер</p>
+                        <button class="filter-menu_dropdown_btn-close modal-additional-for-mobile_btn-close"
+                                data-filter-menudropdown-btn-close></button>
+                    </div>
+                    <form action="">
+                        <div class="menu_dropdown-for-sizes">
+                            <p class="menu_dropdown-for-sizes_title">
+                                Ширина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                            <p class="menu_dropdown-for-sizes_title">
+                                Глубина
+                                <span>См</span>
+                            </p>
+                            <div class="menu_dropdown-for-sizes_item-wrapper">
+                                <label class="menu_dropdown-for-sizes_item">
+                                    От
+                                    <input type="text" placeholder="1 200">
+                                </label>
+                                <label class="menu_dropdown-for-sizes_item">
+                                    До
+                                    <input type="text" placeholder="2 200">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-menu_dropdown_btn-wrapper">
+                            <button class="filter-menu_dropdown_btn" type="button"
+                                    data-filter-sizes-menu-dropdown-btn-cencel>Сбросить
+                            </button>
+                            <input class="filter-menu_dropdown_btn green-btn" type="submit" value="Готово"
+                                   data-filter-menu-dropdown-btn-submit>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
         <li>
             <button class="filter-catalog_btn-show-all btn-open-filter" data-filter-catalog-btn-show-all>Показать все
             </button>

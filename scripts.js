@@ -105,6 +105,67 @@ new Swiper('.partners-swiper', {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    const compareProduct = new Swiper('.compare-product_swiper', {
+        pagination: {
+            el: '.compare-product_swiper-pagination',
+            dynamicBullets: true,
+            dynamicMainBullets: 3,
+        },
+        navigation: {
+            nextEl: '.compare-product_swiper-button-next',
+            prevEl: '.compare-product_swiper-button-prev',
+        },
+        breakpoints: {
+            360: {
+                slidesPerView: 2,
+                spaceBetween: 12
+            },
+            950: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1250: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+            1600: {
+                slidesPerView: 5,
+                spaceBetween: 20
+            }
+        }
+    });
+
+    const compareProductParams = new Swiper('.compare-product_params_swiper', {
+        breakpoints: {
+            360: {
+                slidesPerView: 2,
+                spaceBetween: 12
+            },
+            950: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1250: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+            1600: {
+                slidesPerView: 5,
+                spaceBetween: 20
+            }
+        }
+    });
+
+    compareProduct.controller.control = compareProductParams;
+    compareProductParams.forEach(slid => {
+        slid.controller.control = compareProduct;
+    })
+
+})
+
+
 document.addEventListener('click', (e) => {
     const btnAddBasket = e.target.closest('[data-catalog-item-add-basket]');
     const btnAddFavorites = e.target.closest('[data-catalog-item-add-to-favorites]');
@@ -806,10 +867,32 @@ document.addEventListener('click', (e) => {
 
 
 document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-btn-submit-your-application]')
+
+    if (btn) {
+        const model = document.querySelector('[data-modal-submit-your-application]')
+
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-close]')
+
+    if (btn && btn.closest('[data-modal-submit-your-application]')) {
+        const model = btn.closest('[data-modal-submit-your-application]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-Interest-free-installments-btn]')
 
     if (btn) {
-        const model = btn.querySelector('[data-modal-Interest-free-installments]')
+        const model = document.querySelector('[data-modal-Interest-free-installments]')
 
         model.classList.add('active')
         document.querySelector('body').style['overflow'] = 'hidden';
@@ -1335,6 +1418,102 @@ document.addEventListener('click', e => {
 })
 
 
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-compare-product-params-btn]');
+
+    if (btn) {
+        const wrapper = btn.closest('[data-compare-product-params-item]');
+        const hiddenEl = wrapper.querySelector('[data-compare-product-params-slider-wrapper]');
+
+        btn.classList.toggle('rotate');
+        hiddenEl.classList.toggle('active');
+    }
+})
+
+
+document.addEventListener('scroll', () => {
+    const fixedEl = document.querySelector('[data-compare-product_swiper-wrapper]');
+    const fixedElHeight = fixedEl.getBoundingClientRect().height + 40;
+    const switchingPoint = document.querySelector('[data-compare-product]');
+    const elPosition = switchingPoint.getBoundingClientRect();
+
+    if (elPosition.top <= 0) {
+
+        fixedEl.classList.add('fixed');
+        switchingPoint.style['paddingTop'] = `${fixedElHeight}px`;
+    } else {
+
+        fixedEl.classList.remove('fixed');
+        switchingPoint.style['paddingTop'] = '';
+    }
+})
+
+document.addEventListener('mouseover', e => {
+    const btn = e.target.closest('[data-compare-product-item-btn-option]');
+
+    if (btn) {
+        const wrapper = btn.closest('[data-compare-product-item]');
+        const hiddenEl = wrapper.querySelector('[data-compare-product-item-option-wrapper]');
+
+        hiddenEl.classList.add('active');
+    }
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    let mousePosition;
+    document.addEventListener('mousemove', e => {
+        mousePosition = e.target;
+    });
+
+    document.addEventListener('mouseout', e => {
+        const btn = e.target.closest('[data-compare-product-item-btn-option]');
+        const hiddenEl = e.target.closest('[data-compare-product-item-option-wrapper]');
+
+        if (btn || hiddenEl) {
+            setTimeout(() => {
+                const hiddenHasActive = document.querySelectorAll('.active[data-compare-product-item-option-wrapper]');
+                const hasBtn = mousePosition.closest('[data-compare-product-item-btn-option]');
+                const hasHiddenEl = mousePosition.closest('[data-compare-product-item-option-wrapper]');
+
+                if (!hasBtn && !hasHiddenEl) {
+                    hiddenHasActive.forEach(item => {item.classList.remove('active');});
+                }
+            }, 300)
+        }
+    })
+
+})
+
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-compare-product-item-btn-add-basket]');
+
+    if (btn) {
+        e.preventDefault();
+        btn.classList.toggle('active');
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-compare-product-item-option-btn-add-favorits]');
+
+    if (btn) {
+        e.preventDefault();
+        btn.classList.toggle('active');
+        btn.classList.contains('active') ? btn.textContent = 'Добавлено!' : btn.textContent = 'В избранное';
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-catalog-item-add-to-favorites]');
+
+    if (btn) {
+        e.preventDefault();
+        btn.classList.toggle('active-color-green');
+    }
+})
 
 
 

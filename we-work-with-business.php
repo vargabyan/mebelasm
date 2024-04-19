@@ -21,15 +21,15 @@ include __DIR__ . '/head.php';
 <?php
 $categoryData = [
     ['photo' => 'images/347 копия 1.png', 'title' => 'Премиум <br> мебель'],
-    ['photo' => 'images/image 41.png', 'title' => 'Прямые диваны'],
-    ['photo' => 'images/image 42.png', 'title' => 'Угловые диваны'],
-    ['photo' => 'images/image 43.png', 'title' => 'Модульные диваны'],
-    ['photo' => 'images/image 44.png', 'title' => 'Кресла и пуфы'],
-    ['photo' => 'images/image 41.png', 'title' => 'Прямые диваны'],
-    ['photo' => 'images/image 41.png', 'title' => 'Прямые диваны'],
-    ['photo' => 'images/image 42.png', 'title' => 'Угловые диваны'],
-    ['photo' => 'images/image 43.png', 'title' => 'Модульные диваны'],
-    ['photo' => 'images/image 44.png', 'title' => 'Кресла и пуфы'],
+    ['photo' => 'images/image 41.png', 'title' => 'Прямые диваны', 'price' => '17 200'],
+    ['photo' => 'images/image 42.png', 'title' => 'Угловые диваны', 'price' => '17 200'],
+    ['photo' => 'images/image 43.png', 'title' => 'Модульные диваны', 'price' => '17 200'],
+    ['photo' => 'images/image 44.png', 'title' => 'Кресла и пуфы', 'price' => '17 200'],
+    ['photo' => 'images/image 41.png', 'title' => 'Прямые диваны', 'price' => '17 200'],
+    ['photo' => 'images/image 41.png', 'title' => 'Прямые диваны', 'price' => '17 200'],
+    ['photo' => 'images/image 42.png', 'title' => 'Угловые диваны', 'price' => '17 200'],
+    ['photo' => 'images/image 43.png', 'title' => 'Модульные диваны', 'price' => '17 200'],
+    ['photo' => 'images/image 44.png', 'title' => 'Кресла и пуфы', 'price' => '17 200'],
 ];
 ?>
 
@@ -42,7 +42,10 @@ $categoryData = [
 
         <a class="category_item" href="">
             <img class="category_img" src="<?= $item['photo'] ?>" alt="">
-            <p class="category_title"><?= $item['title'] ?></p>
+            <p class="category_title">
+                <?= $item['title'] ?>
+                <span>От <?= $item['price'] ?>₽</span>
+            </p>
         </a>
 
     <?php } ?>
@@ -139,7 +142,7 @@ $categoryData = [
             <p class="order-restaurants-furniture_sub-title">Мы предлагаем столы, стулья, барные стойки и гардеробы для ресторанов. Наша мебель обладает стильным дизайном, долговечна и проста в обслуживании.</p>
         </div>
         <div class="order-restaurants-furniture_btn-wrapper">
-            <button class="order-restaurants-furniture_btn-submit-your-application">Оставить заявку</button>
+            <button class="order-restaurants-furniture_btn-submit-your-application" data-btn-submit-your-application>Оставить заявку</button>
             <img class="order-restaurants-furniture_img" src="images/ed3861f734f8ee40955ee840063d04c5.png" alt="">
         </div>
     </div>
@@ -261,6 +264,34 @@ $question_and_answer = [
         <p class="modal-copied-title">Скопировано</p>
     </div>
 </section>
+
+
+<section class="card-product_modal-wrapper" data-modal-submit-your-application>
+    <div class="card-product_modal">
+        <div class="card-product_modal_head-wrapper">
+            <div class="card-product_modal_head_btn-wrapper">
+                <p class="card-product_modal_title">Оставьте заявку</p>
+                <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close></button>
+            </div>
+            <p class="card-product_modal_subtitle">Оставьте заявку, чтобы мы смогли связаться с вами</p>
+        </div>
+        <form class="card-product_modal-request" action="">
+            <div class="card-product_modal-request_input-wrapper">
+                <label class="card-product_modal-request_label">
+                    <input type="text" placeholder="Ваше имя">
+                </label>
+                <label class="card-product_modal-request_label">
+                    <input type="tel" placeholder="+7" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </label>
+            </div>
+            <div class="card-product_modal-request_footer_btn-wrapper">
+                <input class="card-product_modal_btn green-btn" type="submit" value="Оставить заявку">
+                <p class="card-product_modal-request_footer_subtitle">Нажимая «Оставить заявку», вы соглашаетесь с <a href="/policy">политикой конфиденциальности</a></p>
+            </div>
+        </form>
+    </div>
+</section>
+
 
 <?php
 include __DIR__ . '/footer.php';

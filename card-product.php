@@ -456,7 +456,7 @@ $question_and_answer = [
         </div>
         <form class="card-product_modal-request" action="">
             <label class="card-product_modal-request_label">
-                <input type="tel" placeholder="+7">
+                <input type="tel" placeholder="+7" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
             </label>
             <div class="card-product_modal-request_footer_btn-wrapper">
                 <input class="card-product_modal_btn green-btn" type="submit" value="Оставить заявку">
@@ -482,7 +482,7 @@ $question_and_answer = [
                     <input type="text" placeholder="Ваше имя">
                 </label>
                 <label class="card-product_modal-request_label">
-                    <input type="tel" placeholder="+7">
+                    <input type="tel" placeholder="+7" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                 </label>
             </div>
             <div class="card-product_modal-request_footer_btn-wrapper">
