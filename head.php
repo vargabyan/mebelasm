@@ -89,7 +89,7 @@
                 <li class="header_nav-panel_links_item"><a href="/contacts.php">Контакты</a></li>
                 <li class="header_nav-panel_links_item"><a href="/our-stores.php">Магазины</a></li>
                 <li class="header_nav-panel_links_item"><button data-open-sign-in-sign-up>Войти</button></li>
-                <li class="header_nav-panel_links_item"><a href="">Избр.</a></li>
+                <li class="header_nav-panel_links_item"><a href="/favorites.php">Избр.</a></li>
                 <li class="header_nav-panel_links_item">
                     <a class="core-basket-icon" href="/basket.php">
                         Корзина
@@ -157,10 +157,10 @@
             <a href="/contacts.php">Контакты</a>
         </li>
         <li class="mobile-bottom-mini-menu_item">
-            <a href="our-stores.php">Магазины</a>
+            <a href="/our-stores.php">Магазины</a>
         </li>
         <li class="mobile-bottom-mini-menu_item">
-            <a href="">Избр.</a>
+            <a href="/favorites.php">Избр.</a>
         </li>
         <li class="mobile-bottom-mini-menu_item">
             <a class="mobile-bottom-mini-menu_basket" href="/basket.php">
