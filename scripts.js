@@ -158,10 +158,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    compareProduct.controller.control = compareProductParams;
-    compareProductParams.forEach(slid => {
-        slid.controller.control = compareProduct;
-    })
+    if (document.querySelector('.compare-product_swiper') && document.querySelector('.compare-product_params_swiper')) {
+
+        compareProduct.controller.control = compareProductParams;
+        compareProductParams.forEach(slid => {
+            slid.controller.control = compareProduct;
+        })
+    }
 
 })
 
@@ -1433,29 +1436,60 @@ document.addEventListener('click', e => {
 
 document.addEventListener('scroll', () => {
     const fixedEl = document.querySelector('[data-compare-product_swiper-wrapper]');
-    const fixedElHeight = fixedEl.getBoundingClientRect().height + 40;
-    const switchingPoint = document.querySelector('[data-compare-product]');
-    const elPosition = switchingPoint.getBoundingClientRect();
 
-    if (elPosition.top <= 0) {
+    if (fixedEl) {
+        const fixedElHeight = fixedEl.getBoundingClientRect().height + 40;
+        const switchingPoint = document.querySelector('[data-compare-product]');
+        const elPosition = switchingPoint.getBoundingClientRect();
 
-        fixedEl.classList.add('fixed');
-        switchingPoint.style['paddingTop'] = `${fixedElHeight}px`;
-    } else {
+        if (elPosition.top <= 0) {
 
-        fixedEl.classList.remove('fixed');
-        switchingPoint.style['paddingTop'] = '';
+            fixedEl.classList.add('fixed');
+            switchingPoint.style['paddingTop'] = `${fixedElHeight}px`;
+        } else {
+
+            fixedEl.classList.remove('fixed');
+            switchingPoint.style['paddingTop'] = '';
+        }
     }
 })
 
 document.addEventListener('mouseover', e => {
     const btn = e.target.closest('[data-compare-product-item-btn-option]');
+    const innerWidth = window.innerWidth;
 
-    if (btn) {
+    if (btn && innerWidth >= 570) {
         const wrapper = btn.closest('[data-compare-product-item]');
         const hiddenEl = wrapper.querySelector('[data-compare-product-item-option-wrapper]');
 
         hiddenEl.classList.add('active');
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-compare-product-item-btn-option]');
+    const innerWidth = window.innerWidth;
+
+    if (btn && innerWidth <= 570) {
+        const wrapper = btn.closest('[data-compare-product-item]');
+        const hiddenEl = wrapper.querySelector('[data-compare-product-item-option-wrapper]');
+
+        hiddenEl.classList.toggle('active');
+    }
+})
+
+
+document.addEventListener('click', e => {
+    const clickBtn = e.target.closest('[data-compare-product-item-btn-option]');
+    const clickHiddenEl = e.target.closest('[data-compare-product-item-option-wrapper]');
+    const innerWidth = window.innerWidth;
+
+    if (innerWidth <= 570 && !clickBtn && !clickHiddenEl) {
+        const allHiddenEl = document.querySelectorAll('[data-compare-product-item-option-wrapper]');
+
+        allHiddenEl.forEach(item => {
+            item.classList.remove('active');
+        })
     }
 })
 
@@ -1468,6 +1502,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('mouseout', e => {
+        const btn = e.target.closest('[data-compare-product-item-btn-option]');
+        const hiddenEl = e.target.closest('[data-compare-product-item-option-wrapper]');
+        const innerWidth = window.innerWidth;
+
+        if (innerWidth >= 570 && btn || hiddenEl) {
+            setTimeout(() => {
+                const hiddenHasActive = document.querySelectorAll('.active[data-compare-product-item-option-wrapper]');
+                const hasBtn = mousePosition.closest('[data-compare-product-item-btn-option]');
+                const hasHiddenEl = mousePosition.closest('[data-compare-product-item-option-wrapper]');
+
+                if (!hasBtn && !hasHiddenEl) {
+                    hiddenHasActive.forEach(item => {item.classList.remove('active');});
+                }
+            }, 300)
+        }
+    })
+
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    let mousePosition;
+    document.addEventListener('click', e => {
+        mousePosition = e.target;
+    });
+
+    document.addEventListener('click', e => {
         const btn = e.target.closest('[data-compare-product-item-btn-option]');
         const hiddenEl = e.target.closest('[data-compare-product-item-option-wrapper]');
 
@@ -1508,6 +1569,15 @@ document.addEventListener('click', e => {
 
 document.addEventListener('click', e => {
     const btn = e.target.closest('[data-catalog-item-add-to-favorites]');
+
+    if (btn) {
+        e.preventDefault();
+        btn.classList.toggle('active-color-green');
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-catalog-item-add-basket]');
 
     if (btn) {
         e.preventDefault();
