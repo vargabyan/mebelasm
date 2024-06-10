@@ -165,6 +165,12 @@ include __DIR__ . '/head.php';
                 <div class="swiper-slide">
                     <div class="partners_item"></div>
                 </div>
+                <div class="swiper-slide">
+                    <div class="partners_item"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partners_item"></div>
+                </div>
             </div>
         </div>
         <div class="partners-slider-opacity"></div>

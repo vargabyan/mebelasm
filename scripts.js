@@ -84,6 +84,8 @@ new Swiper('.partners-swiper', {
         delay: 0,
         disableOnInteraction: false
     },
+    slidesPerView: 3,
+    spaceBetween: 30,
     breakpoints: {
         320: {
             spaceBetween: 12,

@@ -4,17 +4,17 @@ include __DIR__ . '/head.php';
 
 <section class="container-core home-core-slider-wrapper">
     <div class="home-core-slider_pc">
-        <div class="home-core-slider_offer">
-            <p class="home-core-slider_offer_text">
-                Скидки до 50% <br> на диваны
-                <span>Новогодняя распродажа</span>
-            </p>
-            <a class="home-core-slider_offer_detail" href="">Подробнее</a>
-        </div>
         <div class="swiper home-core-slider_swiper">
             <div class="swiper-wrapper">
                 <?php for($i = 0; $i < 5; $i++) { ?>
                     <div class="swiper-slide">
+                        <div class="home-core-slider_offer">
+                            <p class="home-core-slider_offer_text">
+                                Скидки до 50% <br> на диваны
+                                <span>Новогодняя распродажа</span>
+                            </p>
+                            <a class="home-core-slider_offer_detail" href="">Подробнее</a>
+                        </div>
                         <div class="home-core-slider-item">
                             <img src="/images/40ffc326f5a1c0f4f8cb5141d439db0c.jpeg" alt="">
                         </div>
