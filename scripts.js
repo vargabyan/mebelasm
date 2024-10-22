@@ -408,13 +408,14 @@ document.addEventListener('click', (e) => {
                 const contents = wrapper.querySelectorAll('[data-basket-item-content]')
 
                 contents[index].classList.toggle('active')
+                btn.classList.toggle('open')
 
             }
         })
     }
 })
 
-document.addEventListener('click', (e) => {
+/*document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-btn-open-modal-additional-for-mobile]')
 
     if (btn) {
@@ -422,9 +423,9 @@ document.addEventListener('click', (e) => {
 
         content.classList.add('active')
     }
-})
+})*/
 
-document.addEventListener('click', (e) => {
+/*document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-modal-additional-for-mobile-btn-close]')
 
     if (btn) {
@@ -432,7 +433,7 @@ document.addEventListener('click', (e) => {
 
         content.classList.remove('active')
     }
-})
+})*/
 
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-contacts-page_modal-for-mobile_label]')
@@ -505,12 +506,14 @@ document.addEventListener('mouseover', (e) => {
         const allItem = wrapper.querySelectorAll('[data-success-page_grade]')
         let currentIndex = 0;
 
-        allItem.forEach( (item, index) => {
-            if (item === btn) { currentIndex = index }
+        allItem.forEach((item, index) => {
+            if (item === btn) {
+                currentIndex = index
+            }
             item.classList.remove('mouseover')
         })
 
-        allItem.forEach( (item, index) => {
+        allItem.forEach((item, index) => {
             if (index <= currentIndex) {
                 item.classList.add('mouseover')
             }
@@ -525,7 +528,7 @@ document.addEventListener('mouseover', (e) => {
     if (container && !items) {
         const allItem = document.querySelectorAll('[data-success-page_grade]')
 
-        allItem.forEach( item => {
+        allItem.forEach(item => {
             item.classList.remove('mouseover')
         })
     }
@@ -539,12 +542,14 @@ document.addEventListener('click', (e) => {
         const allItem = wrapper.querySelectorAll('[data-success-page_grade]')
         let currentIndex = 0;
 
-        allItem.forEach( (item, index) => {
-            if (item === btn) { currentIndex = index }
+        allItem.forEach((item, index) => {
+            if (item === btn) {
+                currentIndex = index
+            }
             item.classList.remove('active')
         })
 
-        allItem.forEach( (item, index) => {
+        allItem.forEach((item, index) => {
             if (index <= currentIndex) {
                 item.classList.add('active')
             }
@@ -577,7 +582,7 @@ document.addEventListener('click', (e) => {
         const wrapper = document.querySelector('[data-help-us-become-better-modal-wrapper]')
         const allGradeItem = document.querySelectorAll('[data-success-page_grade]')
 
-        allGradeItem.forEach( item => {
+        allGradeItem.forEach(item => {
             item.classList.remove('active')
             item.classList.remove('mouseover')
         })
@@ -718,7 +723,7 @@ document.addEventListener('click', (e) => {
         const dropMenu = btn.closest('[data-filter-menu-dropdown-background]')
         const allInput = dropMenu.querySelectorAll('.filter-menu_dropdown_item_container input:checked')
 
-        allInput.forEach( inp => {
+        allInput.forEach(inp => {
             inp.checked = false;
         })
     }
@@ -730,7 +735,7 @@ document.addEventListener('click', (e) => {
         const dropMenu = btn.closest('[data-filter-menu-dropdown-background]')
         const allInput = dropMenu.querySelectorAll('.menu_dropdown-for-sizes_item input')
 
-        allInput.forEach( inp => {
+        allInput.forEach(inp => {
             inp.value = '';
         })
     }
@@ -841,7 +846,7 @@ document.addEventListener('click', (e) => {
         const wrapperForm = btn.closest('[data-job-vacancy-filter-modal-form]')
         const inputItem = wrapperForm.querySelectorAll('[data-job-vacancy-filter-modal-input-container] input:checked')
 
-        inputItem.forEach( item => {
+        inputItem.forEach(item => {
             item.checked = false;
         })
     }
@@ -1021,7 +1026,7 @@ document.addEventListener('change', (e) => {
     const select = e.target.closest('[data-selection-city]')
 
     if (select) {
-        const wrapper =  select.closest('[data-selection-city-wrapper-label]')
+        const wrapper = select.closest('[data-selection-city-wrapper-label]')
         const labelValue = wrapper.querySelector('[data-selection-city-label-value]')
         labelValue.textContent = select.options[select.selectedIndex].textContent;
     }
@@ -1137,11 +1142,11 @@ document.addEventListener('click', (e) => {
         const container = btn.closest('[data-questions-and-answer]')
         const allHiddenItem = container.querySelectorAll('[data-questions-and-answer-item]')
 
-        allHiddenItem.forEach( item => {
+        allHiddenItem.forEach(item => {
             item.classList.toggle('active');
         })
 
-        btn.textContent = btn.classList.contains('open') ? 'Скрыть': 'Показать больше'
+        btn.textContent = btn.classList.contains('open') ? 'Скрыть' : 'Показать больше'
     }
 })
 
@@ -1152,7 +1157,7 @@ document.addEventListener('click', (e) => {
         const container = btn.closest('[data-card-review]')
         const allHiddenItem = container.querySelectorAll('[data-cart-review-item]')
 
-        allHiddenItem.forEach( item => {
+        allHiddenItem.forEach(item => {
             item.classList.toggle('active');
         })
 
@@ -1177,7 +1182,7 @@ document.addEventListener('click', (e) => {
         const container = document.querySelector('[data-similar-vacancies-wrapper]')
         const allHiddenItem = container.querySelectorAll('[data-job-vacancy-item]')
 
-        allHiddenItem.forEach( item => {
+        allHiddenItem.forEach(item => {
             item.classList.toggle('active');
         })
 
@@ -1192,7 +1197,7 @@ document.addEventListener('click', (e) => {
         const wrapper = btn.closest('[data-store-card-furniture-factory-map-wrapper]')
         const map = wrapper.querySelectorAll('[data-store-card-furniture-factory_map]')
 
-        map.forEach( item => {
+        map.forEach(item => {
             item.classList.toggle('active');
         })
 
@@ -1208,7 +1213,7 @@ document.addEventListener('click', (e) => {
         const container = btn.closest('[data-user-account-orders]')
         const allHiddenItem = container.querySelectorAll('[data-user-account-bonus-item]')
 
-        allHiddenItem.forEach( item => {
+        allHiddenItem.forEach(item => {
             item.classList.toggle('active');
         })
 
@@ -1268,7 +1273,7 @@ document.addEventListener('click', (e) => {
         const container = btn.closest('[data-modal-additional-wrapper]')
         const allBtn = container.querySelectorAll('[data-modal-additional-item-btn-add].active')
 
-        allBtn.forEach( item => {
+        allBtn.forEach(item => {
             item.classList.remove('active');
         })
 
@@ -1300,7 +1305,6 @@ document.addEventListener('click', (e) => {
         document.querySelector('body').style['overflow'] = '';
     }
 })
-
 
 document.addEventListener('click', e => {
     const btn = e.target.closest('[data-sing-in-sign-up-btn-forget-password]')
@@ -1515,7 +1519,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const hasHiddenEl = mousePosition.closest('[data-compare-product-item-option-wrapper]');
 
                 if (!hasBtn && !hasHiddenEl) {
-                    hiddenHasActive.forEach(item => {item.classList.remove('active');});
+                    hiddenHasActive.forEach(item => {
+                        item.classList.remove('active');
+                    });
                 }
             }, 300)
         }
@@ -1541,7 +1547,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const hasHiddenEl = mousePosition.closest('[data-compare-product-item-option-wrapper]');
 
                 if (!hasBtn && !hasHiddenEl) {
-                    hiddenHasActive.forEach(item => {item.classList.remove('active');});
+                    hiddenHasActive.forEach(item => {
+                        item.classList.remove('active');
+                    });
                 }
             }, 300)
         }
@@ -1584,6 +1592,338 @@ document.addEventListener('click', e => {
     if (btn) {
         e.preventDefault();
         btn.classList.toggle('active-color-green');
+    }
+})
+const mightSuitBtn = document.querySelectorAll('[data-might-suit-btn]');
+mightSuitBtn.forEach(suitBtn => {
+    suitBtn?.addEventListener('click', (event) => {
+        const mightSuitWrapper = event.target.closest('[data-might-suit-wrapper]');
+        const openingBlock = mightSuitWrapper.querySelector('[data-open-block]');
+        mightSuitWrapper.classList.toggle('open');
+        if (openingBlock.style.maxHeight) {
+            openingBlock.removeAttribute('style');
+        } else {
+            openingBlock.style.maxHeight = openingBlock.scrollHeight + 'px';
+        }
+
+    })
+})
+const changeBuyerTypeBtn = document.querySelector('[data-change-buyer-type-btn]');
+changeBuyerTypeBtn?.addEventListener('click', (event) => {
+    const dataChangeBuyerWrapper = event.target.closest('[data-data-change-buyer-wrapper]');
+    dataChangeBuyerWrapper.classList.toggle('change-buyer');
+})
+
+
+
+const deliveryButtons = document.querySelectorAll('[data-delivery-pen]');
+deliveryButtons.forEach((button, index) => {
+    button?.addEventListener('click', (event) => {
+        const tubsBlock = event.target.closest('[data-delivery-tubs-block]');
+        const contents = tubsBlock.querySelectorAll('[data-delivery-pen-content]');
+        contents.forEach(content => {
+            content.classList.remove('active');
+        });
+        contents[index].classList.add('active');
+    });
+});
+
+
+new Swiper('.delivery-data-slider', {
+    direction: 'vertical',
+    spaceBetween: 8,
+    slidesPerView: 'auto',
+    mousewheel: true,
+    scrollbar: {
+        el: ".delivery-swiper-scrollbar",
+        hide: true,
+        direction: 'vertical',
+        draggable: true,
+    },
+    slidesPerGroup: 6,
+
+});
+
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-btn-open-add-review]')
+
+    if (btn) {
+        const model = document.querySelector('[data-modal-add-review]')
+
+        model.classList.add('active')
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-send-resume-modal-btn-close]')
+
+    if (btn && btn.closest('[data-modal-add-review]')) {
+        const model = btn.closest('[data-modal-add-review]')
+
+        model.classList.remove('active')
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+const reviewGradeActions = (attrName) => {
+
+    document.addEventListener('mouseover',  e => {
+        const btn = e.target.closest(`[data-grade-${attrName}-star-label] input`);
+
+        if (btn) {
+            const wrapper = btn.closest(`[data-grade-${attrName}-stars-wrapper]`);
+            const allItem = wrapper.querySelectorAll(`[data-grade-${attrName}-star-label]`);
+            let currentIndex;
+
+            allItem.forEach( (item, index) => {
+                if (btn === item.querySelector('input')) {
+                    currentIndex = index;
+                }
+            })
+            allItem.forEach( (item, index) => {
+                if (index  <= currentIndex) {
+                    item.classList.add('active');
+                }
+            })
+        }
+        else {
+            const allItem = document.querySelectorAll(`[data-grade-${attrName}-star-label]`);
+
+            allItem.forEach( (item) => {
+                item.classList.remove('active');
+            })
+        }
+    })
+    document.addEventListener('mouseover',  e => {
+        const btn = e.target.closest(`[data-grade-${attrName}-star-label] input`);
+
+        if (btn) {
+            const wrapper = btn.closest(`[data-grade-${attrName}-stars-wrapper]`);
+            const allItem = wrapper.querySelectorAll(`[data-grade-${attrName}-star-label]`);
+            let currentIndex;
+
+            allItem.forEach( (item, index) => {
+                if (btn === item.querySelector('input')) {
+                    currentIndex = index;
+                }
+            })
+            allItem.forEach( (item, index) => {
+                if (index  > currentIndex) {
+                    item.classList.remove('active');
+                }
+            })
+        }
+    })
+    document.addEventListener('click',  e => {
+        const btn = e.target.closest(`[data-grade-${attrName}-star-label] input`);
+
+        if (btn && btn.checked) {
+            const wrapper = btn.closest(`[data-grade-${attrName}-stars-wrapper]`);
+            const allItem = wrapper.querySelectorAll(`[data-grade-${attrName}-star-label]`);
+            let currentIndex;
+
+            allItem.forEach( (item, index) => {
+                if (btn === item.querySelector('input')) {
+                    currentIndex = index;
+                }
+            })
+            allItem.forEach( (item, index) => {
+                if (btn !== item.querySelector('input')) {
+                    item.querySelector('input').checked = false;
+                }
+                if (index < currentIndex){
+                    item.classList.add('active');
+                }
+            })
+        }
+    })
+    document.addEventListener('mouseover',  e => {
+        const wrapper = e.target.closest(`[data-grade-${attrName}-stars-wrapper]`);
+        const checkedItem = document.querySelector(`[data-grade-${attrName}-star-label] input:checked`);
+
+        if (!wrapper) {
+            const allItem = document.querySelectorAll(`[data-grade-${attrName}-star-label]`);
+            let currentIndex;
+
+            allItem.forEach( (item, index) => {
+                if (checkedItem === item.querySelector('input')) {
+                    currentIndex = index;
+                }
+            })
+            allItem.forEach( (item, index) => {
+                if (index  <= currentIndex) {
+                    item.classList.add('active');
+                }
+                else if (index  > currentIndex) {
+                    item.classList.remove('active');
+                }
+            })
+        }
+    })
+
+}
+document.addEventListener('DOMContentLoaded', () => {
+    reviewGradeActions('quality');
+    reviewGradeActions('service');
+    reviewGradeActions('correspondence');
+});
+
+
+document.querySelector('[data-review-uploader-img] input').addEventListener('input',  function () {
+    const files = this.files;
+    const wrapper = document.querySelector('[data-review-show-uploader-img]');
+    wrapper.innerHTML = '';
+
+    wrapper.classList.add('active');
+
+    Object.keys(files).forEach( index => {
+        const reader = new FileReader();
+
+        reader.onload = function() {
+            wrapper.innerHTML += `<div class="add-review-modal_img_item" data-add-review-modal-img-item id="${index}">
+                    <button class="send-resume-modal_btn-close" type="button" data-review-show-uploader-img-btn-delete></button>
+                    <img src="${reader.result}" alt="img">
+                </div>`
+        };
+
+        reader.onerror = function() {
+            console.log(reader.error);
+        };
+
+        reader.readAsDataURL(files[index]);
+    })
+
+}, false)
+
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-review-show-uploader-img-btn-delete]');
+
+    if (btn) {
+        const item = btn.closest('[data-add-review-modal-img-item]');
+        const fileInput = document.querySelector('[data-review-uploader-img] input');
+        const filesArray = Array.from(fileInput.files);
+        const dataTransfer = new DataTransfer();
+
+        filesArray.splice(item.id, 1);
+        filesArray.forEach(file => dataTransfer.items.add(file));
+        fileInput.files = dataTransfer.files;
+        item.remove();
+
+        const wrapper = document.querySelector('[data-review-show-uploader-img]');
+
+        if (!wrapper.children.length) {
+            wrapper.classList.remove('active');
+        }
+    }
+})
+
+
+document.addEventListener('click', async function(e) {
+    const btn = e.target.closest('[data-review-add-btn-submit]');
+
+    if (btn) {
+        e.preventDefault();
+        const form = btn.closest('[data-add-review-form]');
+        const files = document.querySelector('[data-review-uploader-img] input').files;
+        const fileData = new FormData();
+        const reviewContent = document.querySelector('[data-add-review-modal]');
+        const reviewSuccessContent = document.querySelector('[data-add-review-success-modal]');
+        const reviewWarningContent = document.querySelector('[data-add-review-warning-modal]');
+
+        fileData.append('logo', files);
+        const requestBody = {
+            review_text: form.elements['review-text'].value,
+            grade_correspondence: form.elements['grade-correspondence'].value,
+            grade_quality: form.elements['grade-quality'].value,
+            grade_service: form.elements['grade-service'].value,
+            files: fileData,
+        }
+
+        try {
+            const responseData = await fetch('/api/user/add-new-review', {
+                method: 'POST',
+                body: JSON.stringify(requestBody),
+                headers: {
+                    'Content-Type': 'text/html',
+                }
+            })
+
+            if (!responseData.ok) {
+                reviewContent.classList.remove('active');
+                reviewWarningContent.classList.add('active');
+                return;
+            }
+
+            reviewContent.classList.remove('active');
+            reviewSuccessContent.classList.add('active');
+
+        } catch (error) {
+            console.error('Error:', error.message);
+        }
+    }
+})
+
+
+document.addEventListener('change', function(e) {
+    const form = e.target.closest('[data-add-review-form]');
+
+    if (form) {
+        const files = document.querySelector('[data-review-uploader-img] input').files;
+
+        if (form.elements['review-text'].value && form.elements['grade-correspondence'].value &&
+            form.elements['grade-quality'].value && form.elements['grade-service'].value && Object.keys(files).length) {
+            const submitBtn = form.querySelector('[data-review-add-btn-submit]');
+
+            submitBtn.disabled = false;
+        }
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-modal-review-btn-close]')
+
+    if (btn) {
+        const reviewContent = document.querySelector('[data-add-review-modal]');
+        const reviewSuccessContent = document.querySelector('[data-add-review-success-modal]');
+        const reviewWarningContent = document.querySelector('[data-add-review-warning-modal]');
+        const form = document.querySelector('[data-add-review-form]');
+        const allItem = document.querySelectorAll('.active[data-grade-correspondence-star-label], .active[data-grade-quality-star-label], .active[data-grade-service-star-label]');
+        const submitBtn = form.querySelector('[data-review-add-btn-submit]');
+        const imgWrapper = document.querySelector('[data-review-show-uploader-img]');
+        const imgItem = imgWrapper.querySelectorAll('[data-add-review-modal-img-item]');
+        const fileInput = document.querySelector('[data-review-uploader-img] input');
+
+        fileInput.value = '';
+        imgItem.forEach(img => {
+            img.remove();
+        })
+        if (!imgWrapper.children.length) {
+            imgWrapper.classList.remove('active');
+        }
+        submitBtn.disabled = true;
+        reviewContent.classList.add('active');
+        reviewSuccessContent.classList.remove('active');
+        reviewWarningContent.classList.remove('active');
+        form.elements['review-text'].value = '';
+        form.elements['grade-correspondence'].value= '';
+        form.elements['grade-quality'].value = '';
+        form.elements['grade-service'].value = '';
+
+        console.log(typeof allItem)
+
+        Object.keys(allItem).forEach( index => {
+            const input = allItem[index].querySelector('input:checked');
+
+            allItem[index].classList.remove('active');
+            if (input) {
+                input.checked = false;
+            }
+        })
     }
 })
 

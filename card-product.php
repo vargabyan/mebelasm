@@ -138,7 +138,7 @@ $images = [
         <div class="card-review">
             <div class="cart-review_header-wrapper">
                 <h3 class="cart-review_header">Отзывы <span>4</span></h3>
-                <button class="cart-review_btn-write-review">Написать отзыв</button>
+                <button class="cart-review_btn-write-review" data-btn-open-add-review>Написать отзыв</button>
             </div>
 
             <?php foreach ($review_data as $review_item) { ?>
@@ -578,6 +578,117 @@ $question_and_answer = [
             <button class="add-in-basket-modal_btn" data-add-in-basket-modal-btn-continue>Продолжить покупки</button>
             <a class="add-in-basket-modal_btn green-btn" href="/basket.php">В корзину</a>
         </div>
+    </div>
+</section>
+
+
+<section class="card-product_modal-wrapper" data-modal-add-review>
+    <div class="card-product_modal add-review-modal active" data-add-review-modal>
+        <div class="card-product_modal_head_btn-wrapper">
+            <p class="card-product_modal_title">Оставить отзыв</p>
+            <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close data-modal-review-btn-close></button>
+        </div>
+        <div class="add-in-basket-modal_description-wrapper">
+            <img class="add-in-basket-modal_img" src="./images/6488721d1c97c2b22d02f93991769f85.png" alt="">
+            <p class="add-in-basket-modal_title">Флорида большой диван</p>
+        </div>
+        <form class="card-product_modal-request" action="api/add-review" data-add-review-form>
+            <div class="card-product_modal-request_input-wrapper">
+                <div class="add-review-modal_grade-wrapper">
+                    <span>Качество</span>
+                    <div class="grade-stars-wrapper" data-grade-quality-stars-wrapper>
+                        <label class="grade_star_label" data-grade-quality-star-label>
+                            <input type="radio" name="grade-quality" value="1">
+                        </label>
+                        <label class="grade_star_label" data-grade-quality-star-label>
+                            <input type="radio" name="grade-quality" value="2">
+                        </label>
+                        <label class="grade_star_label" data-grade-quality-star-label>
+                            <input type="radio" name="grade-quality" value="3">
+                        </label>
+                        <label class="grade_star_label" data-grade-quality-star-label>
+                            <input type="radio" name="grade-quality" value="4">
+                        </label>
+                        <label class="grade_star_label" data-grade-quality-star-label>
+                            <input type="radio" name="grade-quality" value="5">
+                        </label>
+                    </div>
+                </div>
+                <div class="add-review-modal_grade-wrapper">
+                    <span>Сервис</span>
+                    <div class="grade-stars-wrapper" data-grade-service-stars-wrapper>
+                        <label class="grade_star_label" data-grade-service-star-label>
+                            <input type="radio" name="grade-service" value="1">
+                        </label>
+                        <label class="grade_star_label" data-grade-service-star-label>
+                            <input type="radio" name="grade-service" value="2">
+                        </label>
+                        <label class="grade_star_label" data-grade-service-star-label>
+                            <input type="radio" name="grade-service" value="3">
+                        </label>
+                        <label class="grade_star_label" data-grade-service-star-label>
+                            <input type="radio" name="grade-service" value="4">
+                        </label>
+                        <label class="grade_star_label" data-grade-service-star-label>
+                            <input type="radio" name="grade-service" value="5">
+                        </label>
+                    </div>
+                </div>
+                <div class="add-review-modal_grade-wrapper">
+                    <span>Соответствие</span>
+                    <div class="grade-stars-wrapper" data-grade-correspondence-stars-wrapper>
+                        <label class="grade_star_label" data-grade-correspondence-star-label>
+                            <input type="radio" name="grade-correspondence" value="1">
+                        </label>
+                        <label class="grade_star_label" data-grade-correspondence-star-label>
+                            <input type="radio" name="grade-correspondence" value="2">
+                        </label>
+                        <label class="grade_star_label" data-grade-correspondence-star-label>
+                            <input type="radio" name="grade-correspondence" value="3">
+                        </label>
+                        <label class="grade_star_label" data-grade-correspondence-star-label>
+                            <input type="radio" name="grade-correspondence" value="4">
+                        </label>
+                        <label class="grade_star_label" data-grade-correspondence-star-label>
+                            <input type="radio" name="grade-correspondence" value="5">
+                        </label>
+                    </div>
+                </div>
+                <label class="card-product_modal-request_label">
+                    <textarea name="review-text" placeholder="Что думаете о товаре?"></textarea>
+                </label>
+                <div class="add-review-modal_img-wrapper" data-review-show-uploader-img></div>
+                <label class="card-product_modal-request_file_label" data-review-uploader-img>
+                    <input type="file" multiple accept="image/*">
+                    <span></span>
+                    Добавить фото
+                </label>
+            </div>
+            <div class="card-product_modal-request_footer_btn-wrapper">
+                <input class="card-product_modal_btn green-btn" disabled type="submit" value="Отправить" data-review-add-btn-submit>
+                <p class="card-product_modal-request_footer_subtitle">Нажимая кнопку “Отправить”, вы соглашаетесь с условиями
+                    <br><a href="/policy">политикой конфиденциальности</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <div class="card-product_modal add-review-status-modal success" data-add-review-success-modal>
+        <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close data-modal-review-btn-close></button>
+        <div class="add-review-status-modal_content">
+            <span class="add-review-status-modal_icon"></span>
+            <p class="add-review-status-modal_title">Спасибо за отзыв!</p>
+            <span class="add-review-status-modal_subtitle">Ваш отзыв пройдет модерацию <br> и скоро будет на сайте</span>
+        </div>
+        <a class="green-btn" href="/">На главную</a>
+    </div>
+    <div class="card-product_modal add-review-status-modal warning" data-add-review-warning-modal>
+        <button class="send-resume-modal_btn-close" data-send-resume-modal-btn-close data-modal-review-btn-close></button>
+        <div class="add-review-status-modal_content">
+            <span class="add-review-status-modal_icon"></span>
+            <p class="add-review-status-modal_title">Что-то пошло не так</p>
+            <span class="add-review-status-modal_subtitle">Попробуйте обновить страницу <br> и заполните данные повторно</span>
+        </div>
+        <a class="green-btn" href="/">На главную</a>
     </div>
 </section>
 
