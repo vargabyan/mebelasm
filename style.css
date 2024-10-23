@@ -9048,7 +9048,6 @@ button {
     align-items: center;
 }
 
-.add-review-status-modal.active,
 .add-review-status-modal.active {
     display: flex;
 }
@@ -9058,6 +9057,7 @@ button {
 }
 
 .add-review-status-modal_content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14733,6 +14733,20 @@ button {
     .footer_other_about-organisation_item {
         font-size: 12px;
         line-height: 16px;
+    }
+
+
+    .card-product_modal-wrapper {
+        overflow-y: unset;
+        padding: 0;
+    }
+
+    .card-product_modal {
+        overflow-y: auto;
+    }
+
+    .add-review-modal .card-product_modal-request {
+        height: max-content;
     }
 }
 
